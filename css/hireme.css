@@ -1,0 +1,37 @@
+.pagebanner h1{
+    transform: translateY(-200px);
+    font-family:  'Vidaloka', serif;
+    transition: all 0.6s linear;
+}
+
+.pagebanner{background:url('./images/ashish.jpg');}
+h2,h3,h4,h5{font-family:  'Vidaloka', serif;}
+.hire ul{list-style-type: lower-roman;}
+.hire ul li {font-size:20px ;font-weight: 600;}
+.hire ul li a{color: #000;text-decoration: none;}
+.hirehead{border-bottom:2px solid #000;animation: borders 0.4s infinite ,textt 0.6s infinite;}
+.card{padding:10px}
+@keyframes awe{
+0%{text-shadow:1px -1px 1px green}
+10%{text-shadow:2px -2px 2px rgb(95, 185, 95)}
+20%{text-shadow:3px -3px 3px rgb(27, 150, 199)}
+30%{text-shadow:4px -4px 4px rgb(35, 54, 221)}
+40%{text-shadow:5px 5px 5px rgb(250, 63, 241)}
+50%{text-shadow:6px 6px 6px rgb(168, 34, 157)}
+60%{text-shadow:7px 7px 7px green}
+70%{text-shadow:8px -8px 8px green}
+80%{text-shadow:9px -9px 9px green}
+90%{text-shadow:10px -10px 10px green}
+100%{text-shadow:1px -1px 1px green}
+}
+
+@media screen and (min-width:600px){
+    .hirecontent{margin-top: 50px;}
+}
+@media screen and (max-width:600px){
+    .hirecontent{text-align: center;}
+}
+.hire{margin-bottom: 30px;}
+
+.hiremebtn{padding: 15px 25px; color: #f1f1f1;background: #000}
+a.hiremebtn:hover{color: #f1f1f1;}
