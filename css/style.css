@@ -202,12 +202,12 @@ footer .footer-bottom>a{text-decoration: none;color: #9e9a9a;}
 
 
 ul#mobile-demo{background:#000;z-index: 7674;
-  border-right: 1px solid rgb(8, 6, 6);
+  border-right: 0.2px solid rgb(175, 169, 169);
   
 }
 #mobile-demo li .user-view .background{background-size: cover;background-position: center;}
 
 #mobile-demo li{color: #f1f1f1;border-bottom: 0.2px solid rgb(31, 29, 29);}
-#mobile-demo li:not(:first-child):hover{background:rgba(0, 0, 0, .28);transition: all 0.4s ease;}
+#mobile-demo li:not(:first-child):hover{background:rgba(218, 216, 233, 0.28);transition: all 0.4s ease;}
 #mobile-demo li:first-child{border-bottom: none;}
 #mobile-demo li a{color: #f1f1f1;}
