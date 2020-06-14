@@ -21,13 +21,13 @@
                 class="fa fa-github"></i></a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-                  <li><a href="./index.html">Home</a></li>
-                  <li><a href="./frontend">Frontend</a></li>
-                  <li><a href="./backend">Backend</a></li>
-                  <li><a href="./database">Database</a></li>
-                  <li><a href="./seo">SEO</a></li>
-                  <li><a href="./english/english.html">English</a></li>
-                  <li><a href="./career-path">Full stack developer career path</a></li>
+                  <li><a href="/index.html">Home</a></li>
+                  <li><a href="/frontend/frontend.html">Frontend</a></li>
+                  <li><a href="/backend/backend.html">Backend</a></li>
+                  <li><a href="/database/database.html">Database</a></li>
+                  <li><a href="/seo/seo.html">SEO</a></li>
+                  <li><a href="/english/english.html">English</a></li>
+                  <li><a href="/full-stack-developer-career-path/career-path.html">Full stack developer career path</a></li>
                   
         </ul>
       </div>
@@ -37,26 +37,35 @@
     <ul class="sidenav" id="mobile-demo">
       <li><div class="user-view">
         <div class="background">
-          <img src="./banner2-min.jpg">
+          <img src="/banner2-min.jpg">
         </div>
-        <a href=""><img class="circle" src="./images/ashish.jpg"></a>
+        <a href=""><img class="circle" src="/images/ashish.jpg"></a>
         <a href=""><span class="white-text name">Ashish Kumar | full stack developer </span></a>
         <a href="#"><span class="white-text email">ashishbhu221306@gmail.com</span></a>
       </div></li>
-      <li><a href="http://127.0.0.1:53415/index.html">Home</a></li>
-      <li><a href="./frontend">Frontend</a></li>
-      <li><a href="./backend">Backend</a></li>
-      <li><a href="./database">Database</a></li>
-      <li><a href="./seo">SEO</a></li>
-      <li><a href="http://127.0.0.1:53415/english/english.html">English</a></li>
-      <li><a href="./career-path">Full stack developer career path</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/frontend/frontend.html">Frontend</a></li>
+      <li><a href="/backend/backend.html">Backend</a></li>
+      <li><a href="/database/database.html">Database</a></li>
+      <li><a href="/seo/seo.html">SEO</a></li>
+      <li><a href="/english/english.html">English</a></li>
+      <li><a href="/full-stack-developer-career-path/career-path.html">Full stack developer career path</a></li>
             
             
             
     </ul>
  
 <!--second nav-->
-
+<script>
+  $(document).ready(function(){
+  $('.sidenav').sidenav();
+  //$('.footer-widget ul li a').append('<i class="fa fa-hand-o-right"></i>')
+});
+//full screen
+document.addEventListener('dblclick',()=>{
+document.querySelector('html').requestFullscreen();
+})
+</script>
 
 
    

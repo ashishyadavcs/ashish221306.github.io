@@ -1,0 +1,70 @@
+body{font-size: 18px;}
+.wrapper{height: 90vh;background: #000;}
+.wrapper div{box-sizing: border-box;
+
+}
+.wrapper .left{width: 20%;;float: left;margin: 0;overflow-y: auto;
+padding-top:14px;background: linear-gradient(135deg,red,yellow);
+border-right: 0.2px solid rgb(175, 169, 169);
+
+box-shadow:inset 2px 2px 6px 2px red;
+
+
+
+
+
+height: 100%; /* Full-height: remove this if you want "auto" height */
+width:20%; /* Set the width of the sidebar */
+position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+z-index: 1; /* Stay on top */
+top: 0; /* Stay at the top */
+left: 0;
+background-color: #111; /* Black */
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 20px;
+
+
+
+
+
+
+
+margin-top:60px ;
+
+
+
+
+}
+
+
+.wrapper .right{width: 80%;float: left;overflow-y: auto;color: #f1f1f1;}
+.wrapper .right h1{color: #f1f1f1;} 
+
+body{background: rgba(0, 0, 0, 0.85);color: #f1f1f1;}
+.wrapper .clear{clear: both;}
+
+
+.wrapper .left ul{list-style: none;margin: 0;padding: 0;}
+.wrapper .left ul li{display: block;color: #f1f1f1;
+margin-bottom: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
+.wrapper .left ul li a{display: block;color: #f1f1f1;
+    margin-bottom: 1px;padding:15px 10px;}
+    .leftnav ul li i{margin-right: 7px;color:greenyellow;}
+    .wrapper .left ul li a:hover{transition: all 0.5s ease-in-out;text-decoration: none;}
+    .wrapper .left ul li a.active{background: rgb(235, 32, 143);}
+    .wrapper .left ul li:hover{background:rgba(0,0,0,0.9);}
+    .wrapper .left::-webkit-scrollbar{width: 0;}
+    .wrapper .center::-webkit-scrollbar{width: 0px;}
+    
+
+
+    @media screen and (max-width:700px){
+        .wrapper .right{width: 100%;float:none;overflow: hidden;}
+        .wrapper .left{display: none;}
+    }
+    
+
+
+    /*---sidenav-----------------------*/
+
+   
