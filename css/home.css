@@ -39,7 +39,7 @@ border-radius: 0 0 0 170px 0;}
     border-radius: 10px;
    
 }
-.service:hover{transform: scale(1.09);z-index: 77;transition: all 0.7s linear;}
+.service:hover{z-index: 77;transition: all 0.7s linear;}
 
 @media screen and (max-width:600px){
    .service{margin: 4% -7%;} 
