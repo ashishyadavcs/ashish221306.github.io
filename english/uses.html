@@ -3,6 +3,8 @@
 <head>
   <!--head start-->
 <meta charset="utf-8">
+<title>Uses in English</title>
+<meta name="description" content="English uses | can | could | may | might | used to | about to etc">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,7 +25,9 @@
 <link rel="stylesheet" href="css/rightdiv.css">
 </head>
 <!--head end-->
-<header ng-include="'.././mainnav.html'"></header>
+<header>
+    <div ng-include="'.././mainnav.html'"></div>
+</header>
 <body data-ng-app>
  
  
@@ -34,8 +38,27 @@
   <ul>
     <li><a href="english.html">Introduction</a></li>
     <li><a href="translation.html">Translation</a></li>
-    <li><a class="active" href="vocabulary.html">Vocabulary</a></li>
-    <li><a href="tense.html">Tense</a></li>
+    <li><a href="vocabulary.html">Vocabulary</a></li>
+    <li><a class="active" href="uses.html">uses</a></li>
+    <li><a  href="">Tense <i class="material-icons">play_arrow</i></a><li>
+        <ul class="drop">
+            <li><a href="./tense.html">Present Indefinite Tense</a></li>
+            <li><a href="./present-continuous-tense.html">Present Continuous Tense</a></li>
+            <li><a href="./present-perfect-tense.html">Present Perfect Tense</a></li>
+            <li><a href="./present-perfect-continuous-tense.html">Present Perfect continuous Tense</a></li>
+            
+            <li><a href="./Past-tense.html">Past Indefinite Tense</a></li>
+            <li><a href="./past-continuous-tense.html">Past Continuous Tense</a></li>
+            <li><a href="./past-perfect-tense.html">Past Perfect Tense</a></li>
+            <li><a href="./past-perfect-continuous-tense.html">Past Perfect continuous Tense</a></li>
+        
+        
+            
+            <li><a href="./future-tense.html">Future Indefinite Tense</a></li>
+            <li><a href="./future-continuous-tense.html">Future Continuous Tense</a></li>
+            <li><a href="./future-perfect-tense.html">Future Perfect Tense</a></li>
+            <li><a href="./future-perfect-continuous-tense.html">Future Perfect continuous Tense</a></li>
+        </ul>
     <li><a href="active-passive.html">Active-Passive</a></li>
     <li><a href="direct-indirect.html">Direct-Indirect</a></li>
   </ul>
@@ -45,106 +68,11 @@
    <div class="right">
 <div class="rightdiv">
   <div class="left2">
-      <!--main content-->
+      <!--main-->
 
-<h1 class="text-center">Vocabulary</h1>
-<div class="service">
-    <div class="header">
-      <h2>Basic<b>Vocabulary</b></h2>
-    </div>
-   <div class="body">
-    <table class="table table-borderless">
-        <thead>
-            <td>English</td>
-            <td>Hindi</td>
-           
-        </thead>
-        
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Away</td>
-    <td> </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>But</td>
-    <td>लेकिन </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-<tr>
-    <td>Animal</td>
-    <td>जानवर </td>
-</tr>
-<tr>
-    <td>Jump</td>
-    <td> कूदना </td>
-    
-</tr>
-    </table>
-   
-   </div>
-  </div>
+<h1 class="text-center">USES (प्रयोग )</h1>
+<p>पूरा पढ़ने के लिये लिंक पर click करें </p>
+<div ng-include="'use/uselink.html'"></div>
 
 
 
@@ -152,15 +80,19 @@
 
 
 
-
-
-
-
+<ul class="pagin">
+    <li class="page-item "><a class="pagelink" href="#">Previous</a></li>
+    <li class="page-item active"><a class="pagelink" href="#">1</a></li>
+    <li class="page-item"><a class="pagelink" href="#">2</a></li>
+    <li class="page-item"><a class="pagelink" href="#">3</a></li>
+    <li class="page-item"><a class="pagelink" href="#">Next</a></li>
+  </ul>
 
 
 
 
       <!--main end-->
+
   </div>
   <div class="right2" ng-include="'right2.html'">
   </div>
@@ -181,7 +113,19 @@
 <a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
 </div>  
 
- 
+ <script>
+     $('.wrapper .left ul li').click(function(){
+         $('.wrapper .left ul li> ul').slideToggle('0.5s')
+         $('.wrapper .left ul >li i').toggleClass('rotate')
+        
+     })
+     $ ('.wrapper .left ul li >ul li a').append('<i class="fa fa-hand-o-right"></i>')
+
+     $('.navbar-fixed nav .navbar-wrapper #leftnav').click(function(){
+         $('.wrapper .left .leftnav').css('display','block')
+     })
+     $('.left2 .link .list .list-item').prepend('<i class="fa fa-hand-o-right"></i>')
+</script>
 </body>
 <!--footer-->
 

@@ -1,16 +1,17 @@
-body{font-size: 18px;}
+body{font-size: 18px;color: #f1f1f1;word-spacing: 2px;}
+
+@media screen and (max-width:700px){
+    body{font-size: 19px;word-spacing: 2px;}
+    
+    
+}
 .wrapper{height: 90vh;}
 .wrapper div{box-sizing: border-box;
 
 }
-.wrapper .left{width: 20%;;float: left;margin: 0;overflow-y: auto;
-padding-top:14px;background: linear-gradient(135deg,red,yellow);
+.wrapper .left{width: 20%;;float: left;
+padding-top:14px;background: linear-gradient(135deg,rgb(20, 18, 18),rgb(17, 17, 17));
 border-right: 0.2px solid rgb(175, 169, 169);
-
-box-shadow:inset 2px 2px 6px 2px red;
-
-
-
 
 
 height: 100%; /* Full-height: remove this if you want "auto" height */
@@ -40,22 +41,33 @@ margin-top:60px ;
 .wrapper .right{width: 80%;float: left;overflow-y: auto;color: #f1f1f1;}
 .wrapper .right h1{color: #f1f1f1;} 
 
-body{color: #f1f1f1;}
+
 .wrapper .clear{clear: both;}
 
 
 .wrapper .left ul{list-style: none;margin: 0;padding: 0;}
 .wrapper .left ul li{display: block;color: #f1f1f1;
 margin-bottom: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
-.wrapper .left ul li a{display: block;color: #f1f1f1;
+.wrapper .left ul li >a{display: block;color: #f1f1f1;
     margin-bottom: 1px;padding:15px 10px;}
     .leftnav ul li i{margin-right: 7px;color:greenyellow;}
-    .wrapper .left ul li a:hover{transition: all 0.5s ease-in-out;text-decoration: none;}
-    .wrapper .left ul li a.active{background: rgb(235, 32, 143);}
-    .wrapper .left ul li:hover{background:rgba(0,0,0,0.9);}
+    .wrapper .left ul >li a:hover{transition: all 0.5s ease-in-out;text-decoration: none;}
+    .wrapper .left ul >li a.active{background: rgb(235, 32, 143);}
+    .wrapper .left .leftmenu>ul >li:hover{background:rgba(0,0,0,0.6);}
+    .wrapper .left ul >li i{float:right;}
     .wrapper .left::-webkit-scrollbar{width: 0;}
     .wrapper .center::-webkit-scrollbar{width: 0px;}
+    .wrapper .left ul li >ul{display: none;}
+    .wrapper .left ul li >ul li{padding-left: 20px;}
     
+
+    .show{display: block;}
+    .rotate{
+        transition: 0.6s;
+        transform: rotate(90deg);
+    }
+    
+  
 
 
     @media screen and (max-width:700px){
