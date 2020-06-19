@@ -1,10 +1,11 @@
 
 
 
-.rightdiv{background: rgb(1, 1, 24);border-bottom: 0.2px solid rgb(175, 169, 169);}
+.rightdiv{background: #121212;border-bottom: 0.2px solid rgb(175, 169, 169);}
 .rightdiv div{box-sizing: border-box;}
 .rightdiv .left2{width: 75%;float: left;padding: 6% 1%;color: #f1f1f1;   
 margin-bottom: 40px;
+border-right: 2px solid #ccc;
 }
 
 .rightdiv .left2 a{color: #f1f1f1;}
@@ -14,8 +15,7 @@ margin-bottom: 40px;
 .rightdiv .left2 p{margin:0;padding: 10px;}
 .rightdiv .right2{width: 25%;float: left;color: #f1f1f1;padding: 6% 1%;
 
-;
-    border-left: 0.2px solid rgb(175, 169, 169);}
+    }
 
 @media screen and (max-width:700px){
     
@@ -31,9 +31,12 @@ margin-bottom: 40px;
 
 .custom-button{padding: 10px 15px;
 margin: 6px;
-background: transparent;text-decoration: none;border-radius: 20px;
-display: inline-block;color: rgb(233, 67, 205);
-border: 1px solid rgb(233, 67, 205) ;}
+box-shadow: 0 2px 10px #251818;
+border: 1px solid rgb(187, 184, 184);
+border-radius: 8px;
+background: #6c49b8;
+display: inline-block;
+color: #fff;}
 
 
 .service{height: auto;}

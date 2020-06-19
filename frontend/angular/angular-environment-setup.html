@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Environment Setup</title>
+<meta name="description" content="How to set angular environment in node js">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/rightdiv.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Environment Setup </h1>
+ <p>Environment Setup required for angular</p>
+ <ol class="list">
+     <li class="list-item">Node js</li>
+     <li class="list-item">NPM</li>
+     <li class="list-item">Angular CLI</li>
+     <li class="list-item">IDE For writing your code</li>
+ </ol>
+ <p>Nodejs is javascript runtime environment to run javascript out of browser.
+    <b class="text-success">Node js</b> should be greater than <b class="text-success">version 4</b> and <b class="text-primary">NPM</b> should be greater than <b class="text-primary">version 3 </b>
+ </p>
+ 
+ <h2 class="subheading1">Node js</h2>
+ <p>
+     To check if node js is installed or not on your system. type <b class="text-success">node -v</b> in your <command> prompt or your IDE terminal. This will show you the version of node js currently installed on your system / laptop.
+    <b class=" cmd">
+        node -v
+    </b>
+    if it does not show anything it means node js is not installed on your system.You will have to download Node js.aboutmedetails
+    <a class="custom-button" target="_BLANK" href=" https://nodejs.org/en/download/">download Node js</a> <br>
+    or you can download from Node.JS official website <a target="_BLANK" href=" https://nodejs.org/en/download/"> https://nodejs.org/en/download/</a>
+ </p>
+
+ <h2 class="subheading1">NPM</h2>
+ <p>
+     NPM is node package manager which is used to download angular packeges in our project. type <b class="text-success">node -v</b> in your <command> prompt or your IDE terminal. This will show you the version of npm currently installed in your node js.
+    <b class=" cmd">
+        npm -v
+    </b>
+ it is installed with Node js which means that when you download Node.js , you automatically get npm installed on your computer. to update npm you can run this command.
+<b class="cmd">
+npm install npm@latest -g
+</b>
+ </p>
+ <h2 class="subheading1">Angular CLI</h2>
+ <p>
+     Angular CLI is used to run angular commands. To download angular CLI run following command in node js command line or command prompt <b class="text-danger">but Node js should be already downloaded.</b>
+    <b class="cmd mb-2">
+        > npm install -g @angular/cli
+    </b>
+ </p>
+ 
+ <p>
+    <i class="text-success">now your system is ready to create first angular project.</i>
+ </p>
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular CLI | angular commands</title>
+<meta name="description" content="all important angular commands">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Commands</h1>
+ <p>Angular CLI makes it easy to start with any 
+    Angular project. Angular CLI comes with commands that help us create and start on our project very fast. Let us now go through the commands available to create a project,
+    a component and services, change the port, etc.
+<br>
+<br>
+To work with Angular CLI , you need to have  installed it on our system. Let us use the following command for the same −
+<b class="cmd">
+    npm install -g @angular/cli
+</b>
+</p>
+
+<p> TO create new project you can run following command in command prompt or IDE terminal <b class="text-success"> preferred -> Visual Studio Code </b> 
+<b class="cmd">
+ng new nameofapp
+</b> 
+to run your project go to your project directory and  run following command -
+<b class="cmd">
+ng serve
+</b>
+
+ng serve will compile your app and you can see output in your browser on <b class="text-info">https://localhost:4200</b>
+
+to open your project automtically in browser run following command-
+<b class="cmd">
+ng serve --open
+</b>
+</p>
+
+<div class="thumbnail">
+    <p>4200 is the default port when you run a new project , you can change this default port by following command </p>
+    <b class="cmd">
+        ng serve --host 0.0.0.0 --port newport <br>
+        <hr>
+        eg. ng serve --host 0.0.0.0 --port 3000
+    </b>
+</div>
+ <section>
+     <h2>Important commands</h2>
+     <table class="table table-bordered table-responsive">
+         <thead style="background: green;">
+             <td> To generate new</td>
+             <td>command </td>
+         </thead>
+         <tbody>
+             <tr>
+                 <td>component</td>
+                 <td>ng g component componentname</td>
+             </tr>
+             <tr>
+                <td>Directive</td>
+                <td>ng g directive new-directive</td>
+            </tr>
+            <tr>
+                <td>Pipe</td>
+                <td>ng g pipe new-pipe</td>
+            </tr>
+            <tr>
+                <td>Module</td>
+                <td>ng g module my-module</td>
+            </tr>
+            <tr>
+                <td>ng add </td>
+                <td>It is used to add support for an external library to your project.</td>
+            </tr>
+            <tr>
+                <td>ng build</td>
+                <td>It compiles an Angular app into an output directory named dist/ at the given output path. 
+                    Must be executed from within a workspace directory.</td>
+            </tr>
+            <tr>
+                <td>new</td>
+                <td>It creates a new workspace and an initial Angular app.</td>
+            </tr>
+         </tbody>
+     </table>
+ </section>
+<section class="sub">
+<h2>All Angular CLI commands</h2>
+<ol>
+    <li>
+    <h4>ng add</h4>
+    <b class="cmd">ng add [collectionname] <br>
+        <hr>
+    <i>colection name defines the lirary name which you want to add</i>
+    </b>
+    
+    <p>ng add command is used to add an external library .
+         It adds a package for a pulished npm library.
+          and makes your default app to use that library.
+        </p>
+    </li>
+    <li>
+        <h4>ng build</h4>
+        <b class="cmd">ng build</b>
+        <p>Ng build command is used to generate project for production build. so that you may upload it on server </p>
+    </li>
+
+    <li>
+        <h4>ng config</h4>
+        <b class="cmd">
+            ng config json-path value <br>
+           
+
+        </b>
+        <p class="alert alert-info">
+            jsonPath: The configuration key to set or query, in JSON path format. For example: "a[3].foo.bar[2]". If no new value is provided, returns the current value of this key.<br>
+
+            value: If provided, a new value for the given configuration key.
+           </p>
+        <p>ang config command is used to configure you angular application in angular.json file.</p>
+    </li>
+
+    <li>
+        <h4>ng e2e</h4>
+        <b class="cmd">
+            ng e2e project<br> <hr>
+            project -> It specifies the name of the project you want to 
+                build. It can be an app or a library.
+        </b>
+        <p>It is used to build and serve an Angular app, 
+            then runs end-to-end tests using Protractor.</p>
+    </li>
+
+    <li>
+        <h4>ng generate class</h4>
+        <b class="cmd">
+            ng generate class 
+            
+        </b>
+        or
+        <b class="cmd">
+            ng ge class <br>
+            
+        </b>
+        <p></p>
+    </li>
+
+    <li>
+        <h4>ng generate directive</h4>
+        <b class="cmd">
+            ng generate directive  <br>
+                ng g directive  
+        </b>
+        <p>It is used to create a new generic directive definition in the given or default project.</p>
+    </li>
+
+    <li>
+        <h4>ng generate service servicename</h4>
+        <b class="cmd">
+           ng generate service servicename 
+        </b>
+        or
+        <b class="cmd">
+        ng g s servicename
+        </b>
+        <p>It is used to create a new, generic service definition in the given or default project.</p>
+    </li>
+</ol>
+</section>
+ 
+ 
+ 
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>
