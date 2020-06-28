@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Module in angular</title>
+<meta name="description" content="module in angular - Module in Angular refers to a place where you can group the components, directives, pipes, and services, which are related to the application.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Module in angular</h1>
+ <p>Module in Angular refers to a place where you can group the components, directives, pipes, and services, which are related to the application.
+
+    <br>
+    <br>
+    In case you are developing a website, the header, footer, left, center and the right section become part of a module. <br>
+    <br>
+    To define module, we can use the NgModule. When you create a new project using the Angular –cli command, the ngmodule is created in the app.module.ts file by default and it looks as follows −
+
+ </p>
+ <pre class="code">
+    import { BrowserModule } from '@angular/platform-browser';
+    import { NgModule } from '@angular/core';
+    import { AppComponent } from './app.component';
+    
+    @NgModule({
+       declarations: [
+          AppComponent
+       ],
+       imports: [
+          BrowserModule
+       ],
+       providers: [],
+       bootstrap: [AppComponent]
+    })
+    
+    export class AppModule { }
+ </pre>
+<p class="code">The NgModule needs to be imported as follows −</p>
+<p>The structure for the ngmodule is as shown below −</p>
+<pre class="code">
+    @NgModule({
+        declarations: [
+           AppComponent
+        ],
+        imports: [
+           BrowserModule
+        ],
+        providers: [],
+        bootstrap: [AppComponent]
+     })
+</pre>
+<p>It starts with <b class="text-success">@NgModule</b>and contains an object which has declarations, import s, providers and bootstrap.</p>
+<h3 class="subheading2">Declaration</h3>
+
+<p>It is an array of components created. If any new component gets created, it will be imported first and the reference will be included in declarations as shown below −</p>
+
+<pre class="code">
+    declarations: [
+   AppComponent,
+   NewCmpComponent
+     ]
+</pre>
+<h3 class="subheading2">Import</h3>
+<p>It is an array of modules required to be used in the application. It can also be used by the components in the Declaration array. For example, right now in the @NgModule we see the Browser Module imported. In case your application needs forms, you can include the module as follows −</p>
+
+<p class="code">import { FormsModule } from '@angular/forms';</p>
+<p>The import in the @NgModule will be like the following −</p>
+<pre class="code">
+    imports: [
+   BrowserModule,
+   FormsModule
+]
+</pre>
+<h3 class="subheading2">Providers</h3>
+<p>This will include the services created.</p>
+<h3>Bootstrap</h3>
+<p>This includes the main app component for starting the execution.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

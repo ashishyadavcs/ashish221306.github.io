@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Pipes</title>
+<meta name="description" content="how to use pipes in angular">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Pipe</h1>
+ <p>Pipes were earlier called filters in Angular1 and called pipes in Angular 2 and 4.
+
+    The | character is used to transform data. Following is the syntax for the same .
+<br>
+<br>
+In Angular 1, filters are used which are later called Pipes onwards Angular2. In Angular 7, it is known as pipe and used to transform data. It is denoted by symbol |
+
+<pre class="cmd">
+    &lcub;{ title | uppercase }&rcub;
+</pre>
+Pipe takes integers, strings, arrays, and date as input separated with |. It transforms the data in the format as required and displays the same in the browser.
+
+Let's see an example using pipes. Here, we display the title text in upper and lower case by using pipes.
+<br>
+
+</p>
+<h2 class="subheading1">Example:</h2>
+<p>Define a variable named "title" in component.ts file.</p>
+<pre class="code">
+import { Component } from '@angular/core';  
+  
+@Component({  
+  selector: 'app-root',  
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css']  
+})  
+export class AppComponent {  
+  title = 'my-first-app';  
+}
+</pre>
+<p>Use the pipe symbol in component.html file:</p>
+<pre  class="code">
+    <code>
+        <h1>  
+            <span>{{</span> title | uppercase <span>}}</span> <br/></h1>  
+         <h1>  
+            <span>{{</span> title | lowercase }} <span><br/></h1> </span>
+    </code>
+     </pre>
+
+<p>Output:<br>
+
+    Run ng serve and see the result. You will see the following result.</p>
+    <img class="img img-responsive center-block" src="./image/angular7-pipes-output1.png">
+
+    <h2 class="subheading1">Angular 7 Built-in Pipes</h2>
+    <ol>
+        <li>Lowercasepipe</li>
+        <li>Uppercasepipe</li>
+        <li>Datepipe</li>
+        <li>Currencypipe</li>
+        <li>Jsonpipe</li>
+        <li>Percentpipe</li>
+        <li>Decimalpipe</li>
+        <li>Slicepipe</li>
+    </ol>
+
+    <p>You have seen the lowercasepipe and uppercasepipe examples.
+        Now, let's take some examples to see how the other pipes work.</p>
+<h2>Example </h2>
+    <p>Define the required variables in component.ts file.
+        <br>
+       <b class="text-success"> component.ts file:</b>
+    </p>
+   <pre class="code">
+       <code>
+        import { Component } from '@angular/core';  
+  
+        @Component({  
+          selector: 'app-root',  
+          templateUrl: './app.component.html',  
+          styleUrls: ['./app.component.css']  
+        })  
+        export class AppComponent {  
+          title = 'my-first-app';  
+          todaydate = new Date();  
+          jsonval = {name: 'Alex', age: '25', address:{a1: 'Paris', a2: 'France'}};  
+          months = ['Jan', 'Feb', 'Mar', 'April', 'May', 'Jun',  
+            'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];  
+        }  
+       </code>
+   </pre>
+
+   <p>Use the different built-in pipe symbols in component.html file:</p>
+<pre class="code">
+       
+</pre>
+<br>
+<b>output :</b>
+
+<img class="img img-responsive center-block" src="./image/angular7-pipes-output2.png">
+
+
+<div class="sub card">
+    <h2 class="subheading1">Create custom pipe</h2>
+<p>To create a custom pipe, create a new ts file and use the code according to the work you have to do. You have to import Pipe, PipeTransform from Angular/Core. Let's create a sqrt custom pipe.
+<b class="text-success">component.ts file:</b>
+<pre class="code">
+import {Pipe, PipeTransform} from '@angular/core';  
+@Pipe ({  
+  name : 'sqrt'  
+})  
+export class SqrtPipe implements PipeTransform {  
+  transform(val : number) : number {  
+    return Math.sqrt(val);  
+  }  
+}  
+</pre>
+Now, it's turn to make changes in the app.module.ts. Create a class named as SqrtPipe. This class will implement the PipeTransform. The transform method defined in the class will take argument as the number and will return the number after taking the square root.
+
+As, we have created a new file so, we need to add the same in app.module.ts.
+</p>
+<pre class="code">
+import { BrowserModule } from '@angular/platform-browser';  
+import { NgModule } from '@angular/core';  
+import { AppComponent } from './app.component';  
+import { NewCmpComponent } from './new-cmp/new-cmp.component';  
+import { ChangeTextDirective } from './change-text.directive';  
+import { SqrtPipe } from './app.sqrt';  
+@NgModule({  
+   declarations: [  
+      SqrtPipe,  
+      AppComponent,  
+      NewCmpComponent,  
+      ChangeTextDirective  
+   ],  
+   imports: [  
+      BrowserModule  
+   ],  
+   providers: [],  
+   bootstrap: [AppComponent]  
+})  
+export class AppModule { } 
+</pre> 
+<p>Now, use sqrt pipe in component.html file.</p>
+<b class="text-successs">component.html</b>
+<div class="code">
+   <pre>
+    <ol class="dp-xml" start="1" style="background-color: rgba(220, 206, 206, 0.3); border: none; font-family: verdana; font-size: 13px; margin: 0px; padding: 0px;"><li class="alt" style="border: none; line-height: 21px; margin: 4px 0px 0px; padding: 0px 3px 0px 10px !important; width: 850px;"><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;"><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h1</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">Example&nbsp;of&nbsp;Custom&nbsp;Pipe</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;/</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h1</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">&nbsp;&nbsp;</span></span></li><li class="" style="border: none; line-height: 21px; margin: 4px 0px 0px; padding: 0px 3px 0px 10px !important;"><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;"><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h2</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">Square&nbsp;root&nbsp;of&nbsp;625&nbsp;is:&nbsp;{{625&nbsp;|&nbsp;sqrt}}</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;/</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h2</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">br</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">/&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">&nbsp;&nbsp;</span></span></li><li class="alt" style="border: none; line-height: 21px; margin: 4px 0px 0px; padding: 0px 3px 0px 10px !important; width: 850px;"><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;"><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h2</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">Square&nbsp;root&nbsp;of&nbsp;169&nbsp;is:&nbsp;{{169&nbsp;|&nbsp;sqrt}}</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&lt;/</span><span class="tag-name" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">h2</span><span class="tag" style="background-color: inherit; border: none; color: #006699; font-weight: bold; margin: 0px; padding: 0px;">&gt;</span><span style="background-color: inherit; border: none; margin: 0px; padding: 0px;">&nbsp;&nbsp;</span></span></li></ol>
+   </pre>
+    </div>
+
+    <b class="text-success">output</b>
+    <pre class="code">
+        Example of Custom Pipe
+
+Square root of 625 is: {{625 | sqrt}}
+
+
+Square root of 169 is: {{169 | sqrt}}
+    </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

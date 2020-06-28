@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Forms</title>
+<meta name="description" content="">
+<meta name="keywords" content="Forms in angular , template driven form | reactive Form">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Forms </h1>
+ <p>There are two types of form in angular</p>
+ <ol>
+     <li><a href="#tdf">Template Driven Form</a></li>
+     <li><a href="#rf">Reactive Form</a></li>
+
+ </ol>
+
+ <div class="sub" id="tdf">
+    <h2 class="subheading1" >Template Driven Form</h2>
+    <p>With a template driven form, most of the work is done in the template;
+         and with the model driven form, most of the work is done in the component class.
+       Let us now consider working on the Template driven form. We will create a simple login form and add the email id,
+        password and submit the button in the form. To start with, we need to import to FormsModule from <b class="text-success">@angular/core</b> which is done in <b class="text-success">app.module.ts</b>  as follows −</p>
+ 
+ <pre class="code">
+    import { BrowserModule } from '@angular/platform-browser';
+    import { NgModule } from '@angular/core';
+    import { RouterModule} from '@angular/router';
+    
+    import { HttpModule } from '@angular/http';
+    import { FormsModule } from '@angular/forms';
+    import { AppComponent } from './app.component';
+    
+    import { MyserviceService } from './myservice.service';
+    import { NewCmpComponent } from './new-cmp/new-cmp.component';
+    import { ChangeTextDirective } from './change-text.directive';
+    import { SqrtPipe } from './app.sqrt';
+    
+    @NgModule({
+       declarations: [
+          SqrtPipe,
+          AppComponent,
+          NewCmpComponent,
+          ChangeTextDirective
+       ],
+       imports: [
+          BrowserModule,
+          HttpModule,
+          FormsModule,
+          RouterModule.forRoot([
+             {path: 'new-cmp',component: NewCmpComponent}
+          ])
+       ],
+       providers: [MyserviceService],
+       bootstrap: [AppComponent]
+    })
+    
+    export class AppModule { }
+ </pre>
+ <p>So in app.module.ts, we have imported the FormsModule and the same is added in the imports array as shown in the highlighted code.
+
+    Let us now create our form in the app.component.html file.</p>
+ <pre class="code">
+    &lt;form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" &gt;
+    &lt;input type = "text" name = "emailid" placeholder = "emailid" ngModel&gt;
+    &lt;br/&gt;
+    &lt;input type = "password" name = "passwd" placeholder = "passwd" ngModel&gt;
+    &lt;br/&gt;
+    &lt;input type = "submit" value = "submit"&gt;
+ &lt;/form&gt;
+ </pre>
+
+ <p>We have created a simple form with input tags having email id, password and the submit button. We have assigned type, name, and placeholder to it.
+
+    In template driven forms, we need to create the model form controls by adding the ngModel directive and the name attribute. Thus, wherever we want Angular to access our data from forms, add ngModel to that tag as shown above. Now, if we have to read the emailid and passwd, we need to add the ngModel across it.
+    
+    If you see, we have also added the ngForm to the #userlogin. The ngForm directive needs to be added to the form template that we have created. We have also added function onClickSubmit and assigned userlogin.value to it.
+    
+    Let us now create the function in the app.component.ts and fetch the values entered in the form.</p>
+    
+
+<pre class="code">
+    import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+   title = 'Angular 4 Project!';
+   todaydate;
+   componentproperty;
+   constructor(private myservice: MyserviceService) { }
+   ngOnInit() {
+      this.todaydate = this.myservice.showTodayDate();
+   }
+   onClickSubmit(data) {
+      alert("Entered Email id : " + data.emailid);
+   }
+}
+
+</pre>
+<p>In the above app.component.ts file, we have defined the function onClickSubmit. When you click on the form submit button, the control will come to the above function.
+<br>
+    This is how the browser is displayed −</p>
+
+    <img alt="template driven form" class="img img-responsive center-block" src="./image/onclicksubmit_login.jpg">
+<p>The form looks like as shown below. Let us enter the data in it and in the submit function, the email id is already entered.</p>
+
+<img alt="template driven form" class="img img-responsive center-block" src="./image/email_entered_login.jpg">
+</div>
+
+ <div class="sub" id="rf">
+     <h2>Reactive form / Model driven form</h2>
+     <p>In the model driven form, we need to import the ReactiveFormsModule from @angular/forms and use the same in the imports array.
+         <br>
+         There is a change which goes in <b class="text-success">app.module.ts</b>
+     </p>
+     <pre class="code">
+        import { BrowserModule } from '@angular/platform-browser';
+        import { NgModule } from '@angular/core';
+        import { RouterModule} from '@angular/router';
+        
+        import { HttpModule } from '@angular/http';
+        import { ReactiveFormsModule } from '@angular/forms';
+        import { AppComponent } from './app.component';
+        
+        import { MyserviceService } from './myservice.service';
+        import { NewCmpComponent } from './new-cmp/new-cmp.component';
+        import { ChangeTextDirective } from './change-text.directive';
+        import { SqrtPipe } from './app.sqrt';
+        
+        @NgModule({
+           declarations: [
+              SqrtPipe,
+              AppComponent,
+              NewCmpComponent,
+              ChangeTextDirective
+           ],
+           imports: [
+              BrowserModule,
+              HttpModule,
+              ReactiveFormsModule,
+              RouterModule.forRoot([
+                 {
+                    path: 'new-cmp',
+                    component: NewCmpComponent
+                 }
+              ])
+           ],
+           providers: [MyserviceService],
+           bootstrap: [AppComponent]
+        })
+        export class AppModule { }
+     </pre>
+     <p>In app.component.ts, we need to import a few modules for the model driven form. For example, <b class="text-info">import { FormGroup, FormControl } from '@angular/forms'</b>.</p>
+ 
+    <pre class="code">
+        import { Component } from '@angular/core';
+import { MyserviceService } from './myservice.service';
+import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 4 Project!';
+   todaydate;
+   componentproperty;
+   emailid;
+   formdata;
+   constructor(private myservice: MyserviceService) { }
+   ngOnInit() {
+      this.todaydate = this.myservice.showTodayDate();
+      this.formdata = new FormGroup({
+         emailid: new FormControl("angular@gmail.com"),
+         passwd: new FormControl("abcd1234")
+      });
+   }
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+    </pre>
+ <p>The variable formdata is initialized at the start of the class and the same is initialized with FormGroup as shown above. The variables emailid and passwd are initialized with default values to be displayed in the form. You can keep it blank in case you want to.
+
+    This is how the values will be seen in the form UI</p>
+    <img alt="model driven form" class="img img-responsive center-block"  src="./image/form_ui.jpg">
+    <p>We have used formdata to initialize the form values; we need to use the same in the form UI <b class="text-success">app.component.html</b>.</p>
+    
+<pre class="code">
+    &lt;form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" &gt;
+   &lt;input type = "text" name = "emailid" placeholder = "emailid" ngModel&gt;
+   &lt;br/&gt;
+   &lt;input type = "password" name = "passwd" placeholder = "passwd" ngModel&gt;
+   &lt;br/&gt;
+   &lt;input type = "submit" value = "submit"&gt;
+   &lt;/form&gt;
+</pre>
+<p>In the .html file, we have used formGroup in square bracket for the form; for example, <b class="text-success">[formGroup]=”formdata”</b>. On submit, the function is called onClickSubmit for which formdata.value is passed.
+
+    The input tag formControlName is used. It is given a value that we have used in the app.component.ts file.
+    
+    On clicking submit, the control will pass to the function <b class="text-success">onClickSubmit</b>, which is defined in the <b class="text-primary">app.component.ts</b> file.</p>
+
+  <a href="./image/mdf.jpg"><img alt="model driven form" class="img img-responsive center-block" src="./image/mdf.jpg"></a>
+
+<h2 class="subheading1">Form Validation</h2>
+<p>You can use the built-in form validation or also use the custom validation approach. We will use both the approaches in the form. We will continue with the same example that we created in one of our previous sections. With Angular 4,
+     we need to import Validators from @angular/forms as shown below −</p>
+
+
+
+<p class="code">import { FormGroup, FormControl, Validators} from '@angular/forms'</p>
+
+<p>Angular has built-in validators such as <b class="text-info">mandatory field, minlength, maxlength, and pattern</b>. These are to be accessed using the Validators module.
+
+<br>
+<br>
+You can just add validators or an array of validators required to tell Angular if a particular field is mandatory.</p>
+
+<p>Let us now try the same on one of the input textboxes, i.e., email id. For the email id, we have added the following validation parameters −</p>
+<br>
+<ol class="circle">
+  <li>  Required</li>
+<li>Pattern matching</li>
+</ol>
+
+<p>This is how a code undergoes validation in <b class="text-success">app.component.ts</b>.</p>
+
+<pre class="code">
+    import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+   title = 'Angular 4 Project!';
+   todaydate;
+   componentproperty;
+   emailid;
+   formdata;
+   ngOnInit() {
+      this.formdata = new FormGroup({
+         emailid: new FormControl("", Validators.compose([
+            Validators.required,
+            Validators.pattern("[^ @]*@[^ @]*")
+         ])),
+         passwd: new FormControl("")
+      });
+   }
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+</pre>
+<p>In <b>Validators.compose</b>, you can add the list of things you want to validate on the input field. Right now, we have added the required and the pattern matching parameters to take only valid email.
+<br>
+<br>
+In the <b class="text-success">app.component.html</b>, the submit button is disabled if any of the form inputs are not valid. This is done as follows −
+</p>
+<pre class="code">
+    <span class="tag" style="color: #000088;">&lt;div&gt;</span><span class="pln" style="color: black;">
+    </span><span class="tag" style="color: #000088;">&lt;form</span><span class="pln" style="color: black;"> [</span><span class="atn" style="color: #660066;">formGroup</span><span class="pln" style="color: black;">] </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"formdata"</span><span class="pln" style="color: black;"> (</span><span class="atn" style="color: #660066;">ngSubmit</span><span class="pln" style="color: black;">) </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"onClickSubmit(formdata.value)"</span><span class="pln" style="color: black;"> </span><span class="tag" style="color: #000088;">&gt;</span><span class="pln" style="color: black;">
+       </span><span class="tag" style="color: #000088;">&lt;input</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">type</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"text"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">class</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"fortextbox"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">name</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"emailid"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">placeholder</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"emailid"</span><span class="pln" style="color: black;"> 
+          </span><span class="atn" style="color: #660066;">formControlName</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"emailid"</span><span class="tag" style="color: #000088;">&gt;</span><span class="pln" style="color: black;">
+       </span><span class="tag" style="color: #000088;">&lt;br/&gt;</span><span class="pln" style="color: black;">
+       </span><span class="tag" style="color: #000088;">&lt;input</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">type</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"password"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">class</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"fortextbox"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">name</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"passwd"</span><span class="pln" style="color: black;"> 
+          </span><span class="atn" style="color: #660066;">placeholder</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"passwd"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">formControlName</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"passwd"</span><span class="tag" style="color: #000088;">&gt;</span><span class="pln" style="color: black;">
+       </span><span class="tag" style="color: #000088;">&lt;br/&gt;</span><span class="pln" style="color: black;">
+       </span><span class="tag" style="color: #000088;">&lt;input</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">type</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"submit"</span><span class="pln" style="color: black;"> [</span><span class="atn" style="color: #660066;">disabled</span><span class="pln" style="color: black;">] </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"!formdata.valid"</span><span class="pln" style="color: black;"> </span><span class="atn" style="color: #660066;">class</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"forsubmit"</span><span class="pln" style="color: black;"> 
+          </span><span class="atn" style="color: #660066;">value</span><span class="pln" style="color: black;"> </span><span class="pun" style="color: #666600;">=</span><span class="pln" style="color: black;"> </span><span class="atv" style="color: #008800;">"Log In"</span><span class="tag" style="color: #000088;">&gt;</span><span class="pln" style="color: black;">
+    </span><span class="tag" style="color: #000088;">&lt;/form&gt;</span><span class="pln" style="color: black;">
+ </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span class="pln" style="color: black;">
+ 
+ </span><span class="tag" style="color: #000088;">&lt;p&gt;</span><span class="pln" style="color: black;">
+    Email entered is : {{emailid}}
+ </span><span class="tag" style="color: #000088;">&lt;/p&gt;</span>
+</pre>
+
+<p>For the submit button, we have added disabled in the square bracket, which is given value - <b class="text-info">!formdata.valid</b>. Thus, if the <b class="text-success">formdata.valid</b> is not valid, the button will remain disabled and the user will not be able to submit it.<br>
+<br>
+Let us see the how this works in the browser −
+
+</p>
+<img alt="model driven form" class="img img-responsive center-block" src="./image/mdf2.jpg">
+<p>In the above case, the email id entered is invalid, hence the login button is disabled. Let us now try entering the valid email id and see the difference.</p>
+<img alt="model driven form" class="img img-responsive center-block"  src="./image/mdf3.jpg">
+
+<p>Now, the email id entered is valid. Thus, we can see the login button is enabled and the user will be able to submit it. With this, the email id entered is displayed at the bottom.
+    <br>
+    <br>
+
+    Let us now try custom validation with the same form. For custom validation, we can define our own custom function and add the required details in it. We will now see an example for the same.</p>
+
+<pre class="code">
+    import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+   title = 'Angular 4 Project!';
+   todaydate;
+   componentproperty;
+   emailid;
+   formdata;
+   ngOnInit() {
+      this.formdata = new FormGroup({
+         emailid: new FormControl("", Validators.compose([
+            Validators.required,
+            Validators.pattern("[^ @]*@[^ @]*")
+         ])),
+         passwd: new FormControl("", this.passwordvalidation)
+      });
+   }
+   passwordvalidation(formcontrol) {
+      if (formcontrol.value.length <'; 5) {
+         return {"passwd" : true};
+      }
+   }
+   onClickSubmit(data) {this.emailid = data.emailid;}
+}
+</pre>
+<p>In the above example, we have created a function password validation and the same is used in a previous section in the formcontrol - passwd: new FormControl("", this.passwordvalidation).
+    <br>
+    <br>
+
+    In the function that we have created, we will check if the length of the characters entered is appropriate. If the characters are less than five, it will return with the passwd true as shown above - <b class="text-success">return {"passwd" : true}</b>;. If the characters are more than five, it will consider it as valid and the login will be enabled.</p>
+<p>Let us now see how this is displayed in the browser −</p>
+<img alt="model driven form" class="img img-responsive center-block" src="./image/mdf4.jpg">
+<p>We have entered only three characters in the password and the login is disabled. To enable login, we need more than five characters. Let us now enter a valid length of characters and check.</p>
+<img alt="model driven form" class="img img-responsive center-block" src="./image/mdf5.jpg">
+<p>The login is enabled as both the email id and the password are valid. The email is displayed at the bottom as we log in.</p>
+</div>
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+     
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

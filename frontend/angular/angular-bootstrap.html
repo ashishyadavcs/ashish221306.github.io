@@ -43,51 +43,33 @@
 <div class="rightdiv">
   <div class="left2">
       <!--main content------------------------------------->
- <h1 class="text-center text-danger font-weight-bold">Angular Environment Setup </h1>
- <p>Environment Setup required for angular</p>
- <ol class="list">
-     <li class="list-item">Node js</li>
-     <li class="list-item">NPM</li>
-     <li class="list-item">Angular CLI</li>
-     <li class="list-item">IDE For writing your code</li>
- </ol>
- <p>Nodejs is javascript runtime environment to run javascript out of browser.
-    <b class="text-success">Node js</b> should be greater than <b class="text-success">version 4</b> and <b class="text-primary">NPM</b> should be greater than <b class="text-primary">version 3 </b>
- </p>
- 
- <h2 class="subheading1">Node js</h2>
- <p>
-     To check if node js is installed or not on your system. type <b class="text-success">node -v</b> in your <command> prompt or your IDE terminal. This will show you the version of node js currently installed on your system / laptop.
-    <b class=" cmd">
-        node -v
-    </b>
-    if it does not show anything it means node js is not installed on your system.You will have to download Node js.aboutmedetails
-    <a class="custom-button" target="_BLANK" href=" https://nodejs.org/en/download/">download Node js</a> <br>
-    or you can download from Node.JS official website <a target="_BLANK" href=" https://nodejs.org/en/download/"> https://nodejs.org/en/download/</a>
- </p>
+ <h1 class="text-center text-danger font-weight-bold">Angular Bootstrap Integration </h1>
+ <p>How to install Bootstrap for Angular project? <br>
+  Run the following command on command prompt: <br><br>
+  <b class="cmd">
+    npm install --save bootstrap@3  => The @3  is important!
+  </b>
+  <img src="./image/angular7-with-bootstrap.png">
+  Further, when you use a project created with Angular CLI 6+ (check via ng v ), you'll have an angular.json file instead of an .angular-cli.json file. In that file, you still need to add Bootstrap to the styles[] array, but the path should be node_modules/bootstrap/dist/css/bootstrap.min.css , NOT ../node_modules/bootstrap/dist/css/bootstrap.min.css . The leading ../ must not be included.
 
- <h2 class="subheading1">NPM</h2>
- <p>
-     NPM is node package manager which is used to download angular packeges in our project. type <b class="text-success">node -v</b> in your <command> prompt or your IDE terminal. This will show you the version of npm currently installed in your node js.
-    <b class=" cmd">
-        npm -v
-    </b>
- it is installed with Node js which means that when you download Node.js , you automatically get npm installed on your computer. to update npm you can run this command.
-<b class="cmd">
-npm install npm@latest -g
-</b>
- </p>
- <h2 class="subheading1">Angular CLI</h2>
- <p>
-     Angular CLI is used to run angular commands. To download angular CLI run following command in node js command line or command prompt <b class="text-danger">but Node js should be already downloaded.</b>
-    <b class="cmd mb-2">
-        > npm install -g @angular/cli
-    </b>
- </p>
- 
- <p>
-    <i class="text-success">now your system is ready to create first angular project.</i>
- </p>
+</p>
+<h2 class="subheading1">How to add bootstrap.css file in the project?</h2>
+<p>Expand Node Module (library root folder)
+<img src="./image/ang-boot-2.png">
+Go to bootstrap folder and expand it.
+<img src="./image/boot3.png">
+Go to dist folder and expand dist.
+<img src="./image/boot4.png">
+Expand css and you will find "bootstrap.css". Expand bootstrap.css and you will see bootstrap.min.css
+<img src="./image/boot5.png">
+Open angular.json file and add the bootstrap.min.css in style section. <br>
+<pre class="code">
+  "styles": [  
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",  
+  "src/styles.css"  
+], 
+</pre>
+Bootstrap is now installed for your Angular 7 project. You can use it now. </p>
  <div class="alllink" ng-include="'./all-link.html'"></div>
 <!--main end-------------------------------------------------------------------->
  

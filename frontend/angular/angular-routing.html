@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Routing in angular</title>
+<meta name="description" content=" Routing in angular , how to use routing in angular">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Routing in angular</h1>
+ <p class="content">Routing basically means navigating between pages. You have seen many sites with links that direct you to a new page. This can be achieved using routing. Here the pages that we are referring to will be in the form of components. We have already seen how to create a component. Let us now create a component and see how to use routing with it.
+
+    During the project setup, we have already included the routing module and the same is available in app.module.ts as shown below −</p>
+ <p class="bg-success">app.module.ts</p>
+ <pre class="code">
+    import { BrowserModule } from '@angular/platform-browser'; 
+    import { NgModule } from '@angular/core';
+    import { AppRoutingModule } from './app-routing.module'; 
+    import { AppComponent } from './app.component'; 
+    import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+    import { ChangeTextDirective } from './change-text.directive'; 
+    import { SqrtPipe } from './app.sqrt';
+    
+    @NgModule({ 
+       declarations: [ 
+          SqrtPipe, 
+          AppComponent, 
+          NewCmpComponent, 
+          ChangeTextDirective
+       ], 
+       imports: [ 
+          BrowserModule, 
+          AppRoutingModule 
+       ], 
+       providers: [], 
+       bootstrap: [AppComponent] 
+    })
+    export class AppModule { }
+ </pre>
+ <p><b class="text-info">AppRoutingModule</b> is added as shown above and included in the imports array.
+
+    File details of <b class="text-info"
+    >app-routing.module</b> are given below −</p>
+ 
+ 
+ <pre class="code">
+    import { NgModule } from '@angular/core'; 
+    import { Routes, RouterModule } from '@angular/router';
+    
+    const routes: Routes = [];
+    @NgModule({ 
+       imports: [
+          RouterModule.forRoot(routes)
+       ],
+       exports: [RouterModule] 
+    }) 
+    export class AppRoutingModule { }
+ </pre>
+ <p>There is a const routes defined which is of type Routes. It is an array which holds all the routes we need in our project.
+     <br>
+     The const routes is given to the RouterModule as shown in @NgModule. To display the routing details to the user, we need to add <b class="text-danger">&lt;router-outlet&gt;</b> directive where we want the view to be displayed.
+ </p>
+ 
+ <pre class="code">
+    &lt;h1&gt;Angular 7 Routing Demo&lt;/h1&gt;Angular 
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+ </pre>
+ <h2 class="subheading2">example </h2>
+ <p>Now let us create 2 components called as Home and Contact Us and navigate between them using routing.</p>
+ 
+ <b class="text-success">Component Home</b><br>
+ <p>First, we shall discuss about Home. Following is the syntax for Component Home −</p>
+ <p class="cmd">ng g component home</p>
+ <pre class="code">
+    C:\projectA7\angular7-app>ng g component home CREATE 
+    src/app/home/home.component.html (23 bytes) CREATE 
+    src/app/home/home.component.spec.ts (614 bytes) CREATE 
+    src/app/home/home.component.ts (261 bytes) CREATE 
+    src/app/home/home.component.css (0 bytes) UPDATE 
+    src/app/app.module.ts (692 bytes)
+ </pre>
+ <hr>
+ <b class="text-success">Component contact-us</b><br>
+ <p>First, we shall discuss about Home. Following is the syntax for Component Home −</p>
+ <p class="cmd">ng g component contactus</p>
+ <pre class="code">
+    C:\projectA7\angular7-app>ng g component contactus 
+    CREATE src/app/contactus/contactus.component.html (28 bytes) 
+    CREATE src/app/contactus/contactus.component.spec.ts (649 bytes) 
+    CREATE src/app/contactus/contactus.component.ts (281 bytes) 
+    CREATE src/app/contactus/contactus.component.css (0 bytes) 
+    UPDATE src/app/app.module.ts (786 bytes)
+ </pre>
+ <p>We are done with creating components home and contact us. Below are the details of the components in app.module.ts −</p>
+ <pre class="code">
+    import { BrowserModule } from '@angular/platform-browser'; 
+    import { NgModule } from '@angular/core';
+    import { AppRoutingModule } from './app-routing.module'; 
+    import { AppComponent } from './app.component'; 
+    import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+    import { ChangeTextDirective } from './change-text.directive'; 
+    import { SqrtPipe } from './app.sqrt'; 
+    import { HomeComponent } from './home/home.component'; 
+    import { ContactusComponent } from './contactus/contactus.component';
+    
+    @NgModule({ 
+       declarations: [ 
+          SqrtPipe, 
+          AppComponent, 
+          NewCmpComponent, 
+          ChangeTextDirective, 
+          HomeComponent, 
+          ContactusComponent 
+       ],
+       imports: [ 
+          BrowserModule, 
+          AppRoutingModule 
+       ],
+       providers: [], 
+       bootstrap: [AppComponent] 
+    }) 
+    export class AppModule { }
+ </pre>
+ <p>Now let us add the routes details in app-routing.module.ts as shown below −</p>
+ <pre class="code">
+    import { NgModule } from '@angular/core'; 
+    import { Routes, RouterModule } from '@angular/router'; 
+    import { HomeComponent } from './home/home.component'; 
+    import { ContactusComponent } from './contactus/contactus.component';
+    
+    const routes: Routes = [ 
+       {path:"home", component:HomeComponent}, 
+       {path:"contactus", component:ContactusComponent} 
+    ];
+    @NgModule({ 
+       imports: [RouterModule.forRoot(routes)], 
+       exports: [RouterModule] 
+    })
+    export class AppRoutingModule { }
+ </pre>
+<p>The routes array has the component details with path and component. The required component is imported as shown above.
+
+    Here, we need to notice that the components we need for routing are imported in app.module.ts and also in app-routing.module.ts. Let us import them in one place, i.e., in app-routing.module.ts.
+    
+    So we will create an array of component to be used for routing and will export the array in app-routing.module.ts and again import it in app.module.ts. So we have all the components to be used for routing in app-routing.module.ts.</p>
+
+
+<p>This is how we have done it <b class="text-primary">app-routing.module.ts </b>−</p>
+<p class="bg-success">app-routing.module.ts</p>
+<pre class="code">
+    import { NgModule } from '@angular/core'; 
+import { Routes, RouterModule } from '@angular/router'; 
+import { HomeComponent } from './home/home.component'; 
+import { ContactusComponent } from './contactus/contactus.component'; 
+
+const routes: Routes = [
+   {path:"home", component:HomeComponent},
+   {path:"contactus", component:ContactusComponent} 
+];
+@NgModule({
+   imports: [RouterModule.forRoot(routes)], 
+   exports: [RouterModule] 
+})
+export class AppRoutingModule { } export const 
+RoutingComponent = [HomeComponent,ContactusComponent];
+</pre>
+<p>The array of components i.e., RoutingComponent is imported in app.module.ts as follows −</p>
+
+<p class="bg-success">app.module.ts</p>
+<pre class="code">
+    import { BrowserModule } from '@angular/platform-browser'; 
+import { NgModule } from '@angular/core';
+import { AppRoutingModule , RoutingComponent} from './app-routing.module'; 
+import { AppComponent } from './app.component'; 
+import { NewCmpComponent } from './new-cmp/new-cmp.component'; 
+import { ChangeTextDirective } from './change-text.directive'; 
+import { SqrtPipe } from './app.sqrt';
+
+@NgModule({ 
+   declarations: [ 
+      SqrtPipe,
+      AppComponent, 
+      NewCmpComponent, 
+      ChangeTextDirective, 
+      RoutingComponent 
+   ], 
+   imports: [ 
+      BrowserModule, 
+      AppRoutingModule 
+   ], 
+   providers: [],
+   bootstrap: [AppComponent] 
+})
+export class AppModule { }
+</pre>
+
+<p>So now we are done with defining the routes. We need to display the same to the user, so let us add two buttons, Home and Contact Us in app.component.html and on click of the respective buttons, it will display the component view inside <router-outlet> directive which we have added in add.component.html.
+
+    Create button inside app.component.html and give the path to the routes created.</p>
+
+<p class="bg-success">app.component.html</p>
+<pre class="code">
+    &lt;h1&gt;Angular 7 Routing Demo&lt;/h1&gt;
+    &lt;nav&gt;
+       &lt;a routerLink = "/home"&gt;Home&lt;/a&gt;
+       &lt;a routerLink = "/contactus"&gt;Contact Us &lt;/a&gt;
+       &lt;/nav&gt;
+       &lt;router-outlet&gt;&lt;/router-outlet&gt;
+</pre>
+<p>In .html, we have added anchor links, Home and Contact us and used routerLink to give the path to the routes we have created in app-routing.module.ts.
+<br>
+    Let us now test the same in the browser −</p>
+<img class="img img-responsive center-block" alt="routing in angular" src="./image/display_links.jpg">
+<img class="img img-responsive center-block" alt="routing in angular" src="./image/home_link.jpg">
+<img class="img img-responsive center-block" alt="routing in angular" src="./image/contact_us.jpg">
+   
+<p class="text-secondary">As you click on the link, you will also see the page url in the address bar changing. It appends the path details at the end of the page as seen in the screenshot shown above.</p>
+
+
+
+
+
+
+<div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

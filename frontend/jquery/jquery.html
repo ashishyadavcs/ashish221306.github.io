@@ -16,43 +16,68 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="../css/home.css">
-<link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="css/rightdiv.css">
+
+
 </head>
 <!--head end-->
-<header ng-include="'.././mainnav.html'"></header>
+<header ng-include="'/./mainnav.html'"></header>
+
 <body data-ng-app>
  
  
  <div class="wrapper">
    <div class="left">
 <!--left----------------------------------------------------------->
-<div class="leftnav">
-  <ul>
-    <li><a href="english.html">Introduction</a></li>
-    <li><a href="translation.html">Translation</a></li>
-    <li><a href="vocabulary.html">Vocabulary</a></li>
-    <li><a href="tense.html">Tense</a></li>
-    <li><a class="active" href="active-passive.html">Active-Passive</a></li>
-    <li><a href="direct-indirect.html">Direct-Indirect</a></li>
-    
-  </ul>
+<div class="leftnav" ng-include="'sidenav.html'">
+  
 </div>
 <!--left end----------------------------------->
    </div>
    <div class="right">
 <div class="rightdiv">
-  <div class="left2" ng-include="'left2.html'">
+  <div class="left2">
+
+<h1 class="text-center">Front End Development</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
-  <div class="right2" ng-include="'right2.html'">
+  <div class="right2" ng-include="'/./english/right2.html'">
   </div>
   <div class="clear"></div>
 </div>
   <footer>
-  <div ng-include="'../footer.html'"></div>
+  <div ng-include="'../../footer.html'"></div>
+  
   </footer>
    </div>
  
@@ -66,7 +91,7 @@
 <a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
 </div>  
 
- 
+
 </body>
 <!--footer-->
 

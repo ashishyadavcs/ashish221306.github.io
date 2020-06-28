@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Component</title>
+<meta name="description" content="whats is component in angular | how to generate compoent in angular ?">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Directive </h1>
+ <p>Directives are instructions in the DOM. They specify how to place your components and business logic in the Angular.
+
+    Directives are js class and declared as @directive. There are 3 directives in Angular.</p>
+     <h2 class="subheading1">Types of directive</h2>
+    <ol>
+        <li><h3 class="subheading2">Component Directives</h3>
+        <p>
+            These form the main class having details of how the component should be processed, 
+            instantiated and used at runtime.
+        </p>
+
+        </li>
+
+
+        <li><h3 class="subheading2">Structural Directives</h3>
+            <p> Structural directives start with a * sign. These directives are used to manipulate and change the structure of 
+            the DOM elements. For example, *ngIf and *ngFor.
+            </p>
+            </li>
+
+        <li>
+            <h2 class="subheading2">Attribute Directives</h2>
+            <p> Attribute directives are used to change the look and behavior 
+                of the DOM elements. For example: ngClass, ngStyle etc.</p>
+        </li>
+    </ol>
+
+<h2>Difference between Attribute Directive and Structural Directive</h2>
+<table class="table table-responsive table-dark table-bordered">
+    <thead>
+        <td>Attribute Directive</td>
+        <td>Structural Directives</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Attribute directives look like a normal HTML Attribute 
+                and mainly used in databinding and event binding.</td>
+            <td>
+                Structural Directives start with a * symbol and look different.
+            </td>
+        </tr>
+        <tr>
+            <td>Attribute Directives affect only the element they are added to.</td>
+            <td>Structural Directives affect the whole area in the DOM.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 class="subheading1">How to create custom Directives?</h2>
+<p>You can create your own custom directives to use in Angular components</p>
+
+<h3 class="subheading2">Create a basic attribute directive</h3>
+<p>First, create a folder. Let's name it "simple-style". 
+    Then, create a file within that folder named as "simple-style.directive.ts"
+<pre class="code">
+import {Directive, ElementRef, OnInit} from '@angular/core';
+
+ @Directive( {
+  selector: '[appSimpleStyle]'
+})
+export class SimpleStyleDirective implements OnInit {
+  constructor(private elementRef: ElementRef) {
+  }
+  ngOnInit() {
+  this.elementRef.nativeElement.style.backgroundColor = 'green';
+  }
+
+</pre>
+Now, you have to inform Angular that you have a new directive. So, 
+you have to add SimpleStyleDirective to app.module.ts and also import it.
+
+<pre class="code">
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import {SimpleStyleDirective} from './simple-style/simple-style.directive';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SimpleStyleDirective
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+</pre>
+Now, your directive is created. Let's check it. Open app.component.html and use your created SimpleStyleDirective
+
+<p appSimpleStyle>Style me with your created SimpleStyleDirective
+
+
+    <pre class="code">
+        <h2>My Servers</h2>
+        <button class="btn btn-primary" (click)="OnAddServer()">Add Server</button>
+      <br><br>
+     
+      <ul class="list-group">
+        <li
+        class="list-group-item "
+        *ngFor="let server of servers; let i = index"
+        (click)="onRemoveServer(i)">{{ server }}
+        </li>
+      </ul>
+      <p appSimpleStyle>Style me with your created SimpleStyleDirective</p>
+    </pre>
+</p>
+</p>
+
+
+
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

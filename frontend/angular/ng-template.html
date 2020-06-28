@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>ng-template in angular</title>
+<meta name="description" content="ng-template in angular -Angular 6 uses the <ng-template> as the tag similar to Angular 4 instead of &lt;template&gt; which is used in Angular2. The reason Angular 4 changed <template> to <ng-template> is because there is a name conflict between the &lt;template&gt; tag and the html &lt;template&gt; standard tag">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">ng-template </h1>
+
+<p>Angular 6 uses the &lt;ng-template&gt; as the tag similar to Angular 4 instead of  &lt;ng-template&gt; which is used in Angular2. The reason Angular 4 changed  &lt;template&gt; to  &lt;ng-template&gt; is because there is a
+     name conflict between the  &lt;template&gt; tag and the html  &lt;template&gt; standard tag <br>
+     It will deprecate completely going ahead.
+    <br>
+<br>
+Let us now use the template along with the if else condition and see the output.</p>
+
+
+<pre class="code">
+    <span class="com" style="color: #880000;">&lt;!--The content below is only a placeholder and can be replaced.--&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;div</span><span        > </span><span class="atn" style="color: #660066;">style</span><span        > </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"</span><span        >text</span><span class="pun" style="color: #666600;">-</span><span        >align</span><span class="pun" style="color: #666600;">:</span><span        >center</span><span class="atv" style="color: #008800;">"</span><span class="tag" style="color: #000088;">&gt;</span><span        >
+       </span><span class="tag" style="color: #000088;">&lt;h1&gt;</span><span        >
+          Welcome to {{title}}.
+       </span><span class="tag" style="color: #000088;">&lt;/h1&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;div&gt;</span><span        > Months :
+       </span><span class="tag" style="color: #000088;">&lt;select</span><span        > (</span><span class="atn" style="color: #660066;">change</span><span        >) </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"changemonths($event)"</span><span        > </span><span class="atn" style="color: #660066;">name</span><span        > </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"month"</span><span class="tag" style="color: #000088;">&gt;</span><span        >
+          </span><span class="tag" style="color: #000088;">&lt;option</span><span        > *</span><span class="atn" style="color: #660066;">ngFor</span><span        > </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"let i of months"</span><span class="tag" style="color: #000088;">&gt;</span><span        >{{i}}</span><span class="tag" style="color: #000088;">&lt;/option&gt;</span><span        >
+       </span><span class="tag" style="color: #000088;">&lt;/select&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;br/&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;div&gt;</span><span        >
+       </span><span class="tag" style="color: #000088;">&lt;span</span><span        > *</span><span class="atn" style="color: #660066;">ngIf</span><span        > </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"isavailable;then condition1 else condition2"</span><span class="tag" style="color: #000088;">&gt;</span><span        >Condition is valid.</span><span class="tag" style="color: #000088;">&lt;/span&gt;</span><span        >
+       </span><span class="tag" style="color: #000088;">&lt;ng-template</span><span        > #</span><span class="atn" style="color: #660066;">condition1</span><span class="tag" style="color: #000088;">&gt;</span><span        >Condition is valid from template</span><span class="tag" style="color: #000088;">&lt;/ng-template&gt;</span><span        >
+       </span><span class="tag" style="color: #000088;">&lt;ng-template</span><span        > #</span><span class="atn" style="color: #660066;">condition2</span><span class="tag" style="color: #000088;">&gt;</span><span        >Condition is invalid from template</span><span class="tag" style="color: #000088;">&lt;/ng-template&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span        >
+    </span><span class="tag" style="color: #000088;">&lt;button</span><span        > (</span><span class="atn" style="color: #660066;">click</span><span        >) </span><span class="pun" style="color: #666600;">=</span><span        > </span><span class="atv" style="color: #008800;">"myClickFunction($event)"</span><span class="tag" style="color: #000088;">&gt;</span><span        >Click Me</span><span class="tag" style="color: #000088;">&lt;/button&gt;</span>
+</pre>
+
+
+<p>For the Span tag, we have added the if statement with
+     the else condition and will call template condition1, else condition2
+    
+    <br>
+<br>
+
+The templates are to be called as follows −</p>
+
+
+<pre class="code">
+    &lt;ng-template #condition1&gt;Condition is valid from template&lt;/ng-template&gt;
+    &lt;ng-template #condition2&gt;Condition is invalid from template&lt;/ng-template&gt;
+</pre>
+<p>If the condition is true, then the condition1 template is called, otherwise condition2.</p>
+<p class="bg-success">app.component.ts</p>
+<pre class="code">
+    import { Component } from '@angular/core';
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+   title = 'Angular 6 Project!';
+   //array of months.
+   months = ["January", "February", "March", "April",
+      "May", "June", "July", "August", "September",
+      "October", "November", "December"];
+   isavailable = false;
+   myClickFunction(event) {
+      this.isavailable = false;
+   }
+   changemonths(event) {
+      alert("Changed month from the Dropdown");
+      console.log(event);
+   }
+}
+</pre>
+<p>The output in the browser is as follows −</p>
+<img alt="ng-template in angular" class="img img-responsive center-block" src="./image/ngt1.jpg">
+
+<p>The variable isavailable is false so the condition2 template is printed. If you click the button, the respective template will be called. If you inspect the browser, you will see that you never get the span tag in the dom.
+     The following example will help you understand the same.</p>
+<img alt="ng-template in angular" class="img img-responsive center-block" src="./image/ngt2.jpg">
+<p>If you inspect the browser, you will see that the dom does not have the span tag. It has the <b class="text-success">Condition is invalid from template</b> in the dom.
+
+<br>
+<br>
+The following line of code in html will help us get the span tag in the dom.</p>
+
+<pre class="code">
+    <span class="com" style="color: #880000;">&lt;!--The content below is only a placeholder and can be replaced.--&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;div</span><span    > </span><span class="atn" style="color: #660066;">style</span><span    > </span><span class="pun" style="color: #666600;">=</span><span    > </span><span class="atv" style="color: #008800;">"</span><span    >text</span><span class="pun" style="color: #666600;">-</span><span    >align</span><span class="pun" style="color: #666600;">:</span><span    >center</span><span class="atv" style="color: #008800;">"</span><span class="tag" style="color: #000088;">&gt;</span><span    >
+       </span><span class="tag" style="color: #000088;">&lt;h1&gt;</span><span    >
+          Welcome to {{title}}.
+       </span><span class="tag" style="color: #000088;">&lt;/h1&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;div&gt;</span><span    > Months :
+       </span><span class="tag" style="color: #000088;">&lt;select</span><span    > (</span><span class="atn" style="color: #660066;">change</span><span    >) </span><span class="pun" style="color: #666600;">=</span><span    > </span><span class="atv" style="color: #008800;">"changemonths($event)"</span><span    > </span><span class="atn" style="color: #660066;">name</span><span    > </span><span class="pun" style="color: #666600;">=</span><span    > </span><span class="atv" style="color: #008800;">"month"</span><span class="tag" style="color: #000088;">&gt;</span><span    >
+          </span><span class="tag" style="color: #000088;">&lt;option</span><span    > *</span><span class="atn" style="color: #660066;">ngFor</span><span    > </span><span class="pun" style="color: #666600;">=</span><span    > </span><span class="atv" style="color: #008800;">"let i of months"</span><span class="tag" style="color: #000088;">&gt;</span><span    >{{i}}</span><span class="tag" style="color: #000088;">&lt;/option&gt;</span><span    >
+       </span><span class="tag" style="color: #000088;">&lt;/select&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;br/&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;div&gt;</span><span    >
+       </span><span class="tag" style="color: #000088;">&lt;span</span><span    > *</span><span class="atn" style="color: #660066;">ngIf</span><span    > </span><span class="pun" style="color: #666600;">=</span><span    > </span><span class="atv" style="color: #008800;">"isavailable; else condition2"</span><span class="tag" style="color: #000088;">&gt;</span><span    >Condition is valid.</span><span class="tag" style="color: #000088;">&lt;/span&gt;</span><span    >
+       </span><span class="tag" style="color: #000088;">&lt;ng-template</span><span    > #</span><span class="atn" style="color: #660066;">condition1</span><span class="tag" style="color: #000088;">&gt;</span><span    >Condition is valid from template</span><span class="tag" style="color: #000088;">&lt;/ng-template&gt;</span><span    >
+       </span><span class="tag" style="color: #000088;">&lt;ng-template</span><span    > #</span><span class="atn" style="color: #660066;">condition2</span><span class="tag" style="color: #000088;">&gt;</span><span    >Condition is invalid from template</span><span class="tag" style="color: #000088;">&lt;/ng-template&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;/div&gt;</span><span    >
+    </span><span class="tag" style="color: #000088;">&lt;button</span><span    > (</span><span class="atn" style="color: #660066;">click</span><span    >)</span><span class="pun" style="color: #666600;">=</span><span class="atv" style="color: #008800;">"myClickFunction($event)"</span><span class="tag" style="color: #000088;">&gt;</span><span    >Click Me</span><span class="tag" style="color: #000088;">&lt;/button&gt;</span>
+</pre>
+
+
+<p>If we remove the then condition, we get the "Condition is valid" message in the browser and the span tag is also available in the dom. For example, in app.component.ts, we have made the isavailable variable as true.</p>
+ <img alt="ng-template in angular" class="img img-responsive center-block" src="./image/ngt3.jpg">
+  <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+     
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

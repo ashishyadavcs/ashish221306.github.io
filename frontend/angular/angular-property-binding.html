@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>angular property binding</title>
+<meta name="description" content="angular property binding , how to use angular property binding">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Property Binding <span><i class="fa fa-hand-o-right"></i></span> [variable]</h1>
+ 
+ <p>
+    
+    
+    In Angular , property binding is used to pass data from the component class (component.ts) and setting the value of the given element in the user-end (component.html).
+    
+    Property binding is an example of one-way databinding where the data is transferred from the component to the class.
+    
+    The main advantage of property binding is that it facilitates you to control elements property.</p>
+
+<h2 class="subheading1">Example</h2>
+<p>We are going to add a button to <b class="text-success">"component.html"</b> page.</p>
+<p class="bg-success">app.component.html</p>   
+<pre class="code">
+    &lt;p&gt;  
+        Server2 is also working fine.  
+        &lt;/p&gt;  
+      &lt;button class="btn btn-primary"&gt;Add Server&lt;/button&gt;
+   </pre>
+<p class="bg-success">app.component.ts</p>
+   <pre class="code">
+    import { Component, OnInit } from '@angular/core';  
+  
+    @Component({  
+      selector: 'app-server2',  
+      templateUrl: './server2.component.html',  
+      styleUrls: ['./server2.component.css']  
+    })  
+    export class Server2Component implements OnInit {  
+      
+      constructor() { }  
+      
+      ngOnInit() {  
+      }  
+      
+    }  
+   </pre>
+   <p class="bg-success">output</p>
+   <img alt="angular property binding" class="img img-responsive center-block" src="./image/angular7-property-binding-output.png">
+ 
+
+    <p class="alert alert-info popupshadow ">
+     <span><i class="fa fa-hand-o-right"></i></span>
+we can change variable value dynamicaly by property binding.
+ </p>
+
+ <h2 class="subheading1">Let's see how property binding works?</h2>
+ <p>First, we are going to disable the button by using disabled attribute.</p>
+ <p class="bg-success">app.component.html</p>
+ <pre class="code">
+    &lt;p&gt;  
+        Server2 is also working fine.  
+        &lt;/p&gt;  
+      &lt;button class="btn btn-primary" disabled&gt;Add Server&lt;/button&gt;
+   </pre>
+   <p>Now, the button is disabled.
+
+    Let's add a new property "allowNewServer" in "component.ts" file which will disable the button automatically but after a specific (settable) time.</p>
+    <p class="bg-success">app.component.ts</p>
+    <pre class="code">
+        import { Component, OnInit } from '@angular/core';  
+  
+        @Component({  
+          selector: 'app-server2',  
+          templateUrl: './server2.component.html',  
+          styleUrls: ['./server2.component.css']  
+        })  
+        export class Server2Component implements OnInit {  
+         allowNewServer = false;  
+          
+          constructor() {  
+            setTimeout(() =>{  
+              this.allowNewServer = true;  
+            }, 5000);  
+          }  
+          
+          ngOnInit() {  
+          }  
+          
+        }  
+        
+    </pre>
+    <p class="bg-success">app.component.html</p>
+    <pre class="code">
+        &lt;p&gt;  
+            Server2 is also working fine.  
+            &lt;/p&gt;  
+          &lt;button class="btn btn-primary"  [disabled]="allowNewServer"&gt;Add Server&lt;/button&gt;
+       </pre>
+       <p>Here, we set a time of 5000 millisecond or 5 second. After 5 seconds, the button will be disabled automatically.
+
+        This is an example of property binding where a property is bound dynamically.</p>
+        <p class="bg-success">output</p>
+
+        <img class="img img-responsive center-block" alt="property binging in angular" src="./image/angular7-property-binding-output2.png">
+   
+        <pre class="code">
+            &lt;p&gt;  
+                Server2 is also working fine.  
+                &lt;/p&gt;  
+              &lt;button class="btn btn-primary" [disabled]="!allowNewServer" &gt;Add Server&lt;/button&gt;
+           </pre>
+           <p>By using the above code, you can allow the disabled button after 5 seconds automatically.</p>
+        <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

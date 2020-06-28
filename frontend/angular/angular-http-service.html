@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Http Service</title>
+<meta name="description" content="">
+<meta name="keywords" content="how to use http in angular | angular http service">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Http Service </h1>
+ <p>Http Service will help us fetch external data, post to it, etc. We need to import the http module to make use of the http service.
+      Let us consider an example to understand how to make use of the http service.</p>
+      <p>To start using the http service, we need to import the module in app.module.ts as shown below −</p>
+
+      <pre class="code">
+        import { BrowserModule } from '@angular/platform-browser';
+        import { NgModule } from '@angular/core';
+        import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+        import { HttpModule } from '@angular/http';
+        import { AppComponent } from './app.component';
+        
+        @NgModule({
+           declarations: [
+              AppComponent
+           ],
+           imports: [
+              BrowserModule,
+              BrowserAnimationsModule,
+              HttpModule
+           ],
+           providers: [],
+           bootstrap: [AppComponent]
+        })
+        export class AppModule { }
+      </pre>
+      <p>If you see the highlighted code, we have imported the HttpModule
+           from @angular/http and the same is also added in the imports array.
+        <br>
+    <br>
+    Let us now use the http service in the app.component.ts</p>
+
+    <pre class="code">
+        import { Component } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Component({
+   selector: 'app-root',
+   templateUrl: './app.component.html',
+   styleUrls: ['./app.component.css']
+})
+
+export class AppComponent {
+   constructor(private http: Http) { }
+   ngOnInit() {
+      this.http.get("http://jsonplaceholder.typicode.com/users").
+      map((response) ⇒ response.json()).
+      subscribe((data) ⇒ console.log(data))
+   }
+}
+    </pre>
+    <p>
+        Let us understand the code highlighted above.
+         We need to import http to make use of the service, which is done as follows −
+         <i class="code">
+            import { Http } from '@angular/http';
+         </i>
+
+         <br>
+         In the class AppComponent, a constructor is created and the private variable http of type Http.
+          To fetch the data, we need to use the get API available with http as follows
+
+          <br>
+          <i class="code">
+            this.http.get();
+          </i>
+          <br>
+          It takes the url to be fetched as the parameter as shown in the code.
+
+We will use the test url - https://jsonplaceholder.typicode.com/users to fetch the json data. Two operations are performed on the fetched url data map and subscribe. The Map method helps to convert the data to json format. 
+To use the map, we need to import the same as shown below −
+
+<br>
+<i class="code">
+    import 'rxjs/add/operator/map';
+</i>
+<br>
+Once the map is done, the subscribe will log the output in the console as shown in the browser −
+    <img class="img img-responsive center-block" src="./image/console_output_of_map.jpg">
+
+<br>
+If you see, the json objects are displayed in the console. The objects can be displayed in the browser too.
+
+For the objects to be displayed in the browser,
+ update the codes in app.component.html and app.component.ts as follows −
+
+
+<pre class="code">
+    import { Component } from '@angular/core';
+    import { Http } from '@angular/http';
+    import 'rxjs/add/operator/map';
+    
+    @Component({
+       selector: 'app-root',
+       templateUrl: './app.component.html',
+       styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+       constructor(private http: Http) { }
+       httpdata;
+       ngOnInit() {
+          this.http.get("http://jsonplaceholder.typicode.com/users").
+          map(
+             (response) ⇒ response.json()
+          ).
+          subscribe(
+             (data) ⇒ {this.displaydata(data);}
+          )
+       }
+       displaydata(data) {this.httpdata = data;}
+    }
+</pre>
+
+<br>
+In app.component.ts, using the subscribe method we will call the display data method and pass the data fetched as the parameter to it.
+
+In the display data method, we will store the data in a variable httpdata. The data is displayed in the browser using
+ for over this httpdata variable, which is done in the app.component.html file.
+
+ <br>
+
+
+ <pre class="code">
+    <div>&lt;ul ngfor="let data of httpdata"&gt;</div><div>&nbsp; &nbsp;&lt;li&gt;Name : {{data.name}} Address: {{data.address.city}}&lt;/li&gt;</div><div>&lt;/ul&gt;</div>
+ </pre>
+
+ <br>
+ The json object is as follows −
+
+ <pre class="code">
+    {
+        "id": 1,
+        "name": "Leanne Graham",
+        "username": "Bret",
+        "email": "Sincere@april.biz",
+        
+        "address": {
+           "street": "Kulas Light",
+           "suite": "Apt. 556",
+           "city": "Gwenborough",
+           "zipcode": "92998-3874",
+           "geo": {
+              "lat": "-37.3159",
+              "lng": "81.1496"
+           }
+        },
+        
+        "phone": "1-770-736-8031 x56442",
+        "website": "hildegard.org",
+        "company": {
+           "name": "Romaguera-Crona",
+           "catchPhrase": "Multi-layered client-server neural-net",
+           "bs": "harness real-time e-markets"
+        }
+     }
+ </pre>
+
+ <br>
+ <br>
+ The object has properties such as id, name, username, email, and address that internally has street, city, etc. and other details related to phone, website, and company. Using the for loop, we will display the name and the city details in the browser as shown in the app.component.html file.
+
+This is how the display is shown in the browser −
+<br>
+<img alt="how to use http service in angular"  class="img img-responsive" src="./image/using_for_loop_name_city_details.jpg">
+
+<br>
+Let us now add the search parameter, which will filter based on specific data. We need to fetch the data based on the search param passed.
+
+Following are the changes done in app.component.html and <b class="text-info">app.component.ts</b> files −
+
+<br>
+<br>
+<b class="text-success">app.component.ts</b>
+<pre class="code">
+    import { Component } from '@angular/core';
+    import { Http } from '@angular/http';
+    import 'rxjs/add/operator/map';
+    
+    @Component({
+       selector: 'app-root',
+       templateUrl: './app.component.html',
+       styleUrls: ['./app.component.css']
+    })
+    export class AppComponent {
+       title = 'app';
+       searchparam = 2;
+       jsondata;
+       name;
+       constructor(private http: Http) { }
+       ngOnInit() {
+          this.http.get("http://jsonplaceholder.typicode.com/users?id="+this.searchparam).
+          map(
+             (response) ⇒ response.json()
+          ).
+          subscribe((data) ⇒ this.converttoarray(data))
+       }
+       converttoarray(data) {
+          console.log(data);
+          this.name = data[0].name;
+       }
+    }
+</pre>
+<br>
+For the get api, we will add the search param id = this.searchparam.
+ The searchparam is equal to 2. We need the details of id=2 from the json file.
+
+ <br>
+ <b class="text-success">app.component.html</b>
+<pre class="code">
+   ;
+</pre>
+<br>
+browser view -
+<img class="img img-responsive center-block" src="./image/ervin_howell.jpg">
+<br>
+We have consoled the data in the browser, which is received from the http. The same is displayed in the browser console. 
+The name from the json with id=2 is displayed in the browser
+</p>
+ 
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+     
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

@@ -53,8 +53,17 @@ color: #fff;}
  ul.pagin .page-item.active{background: #f1f1f1;color: blue;}
  ul.pagin .page-item.active a{background: #f1f1f1;color: blue;}
 
- .sub{border: 2px solid rgb(139, 131, 131);margin-bottom: 6%;
+ .sub{border: 2px solid rgb(247, 41, 168);margin-bottom: 6%;
 border-radius: 20px;}
+
+.sub h1,h2,h3,h4,h5{
+  background: -webkit-linear-gradient(135deg,rgb(71, 182, 216),rgb(230, 204, 230));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
 .sub .rule{padding: 10px 15px;border: 1px dashed;margin: 20px 10px;width: auto;display: inline-block;
 border-radius: 20px ;
 }
@@ -78,3 +87,8 @@ border-radius: 20px ;
 .social a{list-style-type: square;color: aqua;}
 .social span{margin: 0 10px;}
 .social li{padding: 10px;}
+
+.common{border-top: 2px solid aqua;padding-top: 20px;}
+.common h3{color: aqua;}
+.common ol li{color: rgb(241, 44, 232);}
+.common ol li a{color: rgb(88, 240, 182)!important;}

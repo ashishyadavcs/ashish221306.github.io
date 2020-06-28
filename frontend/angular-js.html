@@ -1,0 +1,672 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>angular js</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Angular js complete tutorial in 20 minutes">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    
+<style>
+     ::-webkit-scrollbar {width:7px;}
+        
+        ::-webkit-scrollbar-track{
+            background:#100a1d;
+            border-left: 1px solid #ddd;
+    border-radius: 20px}
+        
+        ::-webkit-scrollbar-thumb{
+            background:linear-gradient(red,#ed5b1a);
+            border-radius:20px;
+        }
+ nav{background: #000;text-align: center;}
+ nav a{font-weight: 600;color: #ddd;display: inline-block;padding: 10px ; border-right: 1px solid #ddd;}
+    #show{overflow:auto}
+    nav a:hover{color: #ddd;background: red;color: #f1f1f1;}
+    .lastbtn{padding: 10px 15px ;border: 3px solid #f1f1f1;border-radius: 10px;}
+    .lastbtn:hover{background:rgb(0, 255, 0);color: #f1f1f1;font-weight: 600;}
+        #progressbar{
+            z-index: 1000;
+            margin: 0;
+            position: fixed;
+            top: 0;
+            height: 4px;
+            width: 0%;
+            background: blue;
+            border-radius: 20px 20px 20px 20px;
+            
+        }
+    
+    
+    footer{
+        height: 100vh;
+        background: #000;
+        color: #f1f1f1;
+        padding: 10px;
+        margin-top: 100px;
+    }
+    
+    thead{
+        color: green;font-weight: 600;background: blue;color:#f1f1f1
+    }
+    header{
+        
+        height: 100vh;
+        background: linear-gradient(red,violet);
+        padding: 10px;overflow: hidden;
+    }
+    header h1{margin-top: 30vh;font-weight: 700}
+    .panel{border: 1px solid #ddd;
+    padding: 10px}
+    
+    
+    section{
+        
+        padding:5px;
+        margin: 5px;
+       border: 1px solid #eadede;
+        border-radius:10px;
+    }
+    section section{padding:2px;margin:3px}
+     pre code{font-weight: 400;
+    font-size: 16pxpx;
+    word-wrap: normal;
+    }
+    body{font-size: 18px;line-height: 1.5}
+    .intro{padding: 10px}
+    .intro p{color: #1a0505}
+    .intro h2{color: forestgreen;
+   }
+     
+    form .btn{color: #f1f1f1}
+    form .btn:hover{color: #f1f1f1}
+    .code{background: #f7e9e9}
+    table img{height: 200px;}
+    header .fa{color:red;animation:zm 1s infinite alternate;transition: all 1s linear;margin: 20px}
+    @keyframes zm{
+        0%{transform: scale(0.3);color: blue}
+        30%{color: mediumvioletred}
+        60%{color: limegreen}
+        100%{transform: scale(1.5);color:#f41313}
+    }
+    .fa{color: blue;font-weight: 600;margin-right: 7px}
+    
+</style>
+
+</head>
+<body  data-ng-app="m1">
+
+    <div id="progressbar"></div>
+    
+<header>
+    <h1 class="text-center"> Angular js </h1>
+    
+</header>
+<nav>
+  <a href="./../index.html">Home</a>
+  <a href="./frontend.html">Frontend</a>
+  <a href="./../backend/backend.html">Backend</a>
+  <a href="./../seo/seo.html">SEO</a>
+</nav>
+
+
+<div class="container">
+ 
+     <h1>What is Angular JS</h1>
+<p>Angular js is an open source JavaScript framework to develop web based applications. Angularjs is usually used to create Single Page Application. It is easy to code in AngularJS. Angular JS was build by google in 2011.</p>
+ <hr>
+ <h2>Angular JS Directives</h2>
+<p>Directives in angularJS extends HTML code to provide new behaviour.</p>
+ <hr>
+ <h2>ng-app Directives</h2>
+<p>ng-app directive is the beginning directive of angular JS. It is used to auto bootstrap angularJS application. We generally use this directive at root level like inside html tag or in body tag.</p>
+ <h2>ng-model Directives</h2>
+<p>ng-model is used to bind input fields, select and textarea with model and we can use this model in page. Ng-model provides the facility of two-way data binding.</p><hr>
+<h2>Controller in Angularjs</h2>
+<p>As we know angularjs support mvc architecture which stands for model view controller. In mvc view represents the user interface and model is the data.</p><hr>
+<h2>ng-repeat in Angularjs</h2>
+<p>As we know angularjs support mvc architecture which stands for model view controller. In mvc view represents the user interface and model is the data.</p>
+<hr>
+
+<h2>ng-init in Angularjs
+</h2>
+<p>Ng-init directive is used to initialize a variable, which will allows evaluating an expression in given scope. According to angular official document, this directive is abused as it adds unnecessary business logic in the application. Still to evaluate an expression we required that directive.</p>
+<hr>
+
+<h2>ng-include in Angularjs</h2>
+<p>ng-include directive is used to add external html files into application. This directive helps us to create common page of website.</p>
+<hr>
+<h2>ng-hide and ng-show in Angularjs
+</h2>
+<p>These both directives ng-show and ng-hide are used to manage the visibility of html controls. Both directives take true and false value to display or hide the html control.</p>
+<hr>
+<h2>ng-if in Angularjs
+</h2>
+<p>Ng-if directive is condition based directive which removes or recreates the DOM portion according to condition.</p>
+<hr>
+<h2>ng-switch in Angularjs</h2>
+<p>Ng-switch is conditional directives which swap (show and hide) DOM elements according to expression. We use ng-switch-when to check conditions and ng-switch-default to put default condition.
+</p>
+<hr>
+<h2>ng-src in Angularjs
+</h2>
+
+<p>Ng-src directive is used to bind dynamic image url. When we use src at img tag it will not work properly as it will fetch image before angularjs replace expression with url and 404 error occurred.</p>
+<hr>
+<h2>ng-click in Angularjs</h2>
+<hr>
+<p>Ng-click directive provides the custom behaviour when an element is clicked. When elements clicked, it will call the event handler function, which bind to ng-click.</p>
+<hr>
+<h2>custom directive in Angularjs</h2>
+<p>angularJS provides us the facility to create our own directives which is called custom directives. We have to register this directive in a module. We create directives in camel case. However, when we apply in the html code we use hyphen (-). Custom directives are the function, which return JSON Objects.</p>
+
+  <section>
+     <pre>
+         <code>
+          
+               //custom directive
+    var x=angular.module('m1',[]);
+    x.directive('ngHello',function(){
+        return{
+            template:"hello world"
+        }
+    });
+      </code>
+     </pre>
+      
+          
+         
+   
+  </section>
+   <!--custom directive-->
+   <section class="lead">
+        <h2>custom directive</h2>
+<ng-Hello></ng-Hello>
+   
+   </section>
+    <!--custom directive end-->
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+          <!--ng-model-->
+          
+          <section id="show">
+               <h2>ng-model</h2>
+            <b>type:</b><input type="text" ng-model="data"><br>
+            <b >show:</b><p>{{data}}</p>
+          </section>
+            
+          
+      </div>
+      <div class="col-sm-6 col-xs-12">
+          
+      </div>
+      
+  </div>
+  <div class="row">
+      <div class="col-sm-6 col-xs-12">
+          <section>
+            <h2>controller</h2>
+            <p>In angularjs controller is javascript function object which works as a mediator between view and model. Controller collects data from Model and pass it to View, i.e html in this case.</p>
+           <section>
+            
+              <pre>
+                  <code>
+               //scope and controler
+       var angmodule=angular.module('m1',[]).controller('course',function($scope){
+           $scope.courseName='angular';
+           $scope.fees='10000';
+       });
+          
+        
+           </code>
+              </pre>
+               
+           </section>
+           
+            <hr>
+            <p>output :</p>
+            <hr>
+            <div data-ng-controller='course'>
+               <p>Course :{{courseName}}</p>
+               <p>Course fees :{{fees}}</p>
+                
+            </div>
+          </section>
+          <section class="lead">
+              <h4>multiple controler</h4>
+              <div class="code">
+                  <pre>
+                  <code>
+                      //custom directive
+    var x=angular.module('m1',[]);
+    x.directive('ngHello',function(){
+        return{
+            template:"hello world"
+        }
+    });
+       //scope and controler
+       var angmodule=angular.module('m1'[]).controller('course',function($scope){
+           $scope.courseName='angular';
+           $scope.fees='10000';
+       });
+       
+       //another controller
+       angmodule.controller('trainer',function($scope){
+            var trainerDetail=[
+                {name:"ashish",age:"23"},
+                {name:"manish",age:"22"},
+                {name:"satish",age:"21"},
+                {name:"archana",age:"18"}
+                
+            ];
+           $scope.trainerdata=trainerDetail;
+            
+                            })
+                  </code>
+              </pre>
+              </div>
+              <p>output :</p>
+              <section>
+                  <div data-ng-controller="trainer">
+                      <table border="1.0" class="table table-striped">
+                          <thead>
+                              <tr>
+                              <td><b>trainer name</b></td>
+                              <td><b>trainer age</b></td>
+                          </tr>
+                          </thead>
+                          <tr ng-repeat='x in trainerdata'>
+                              <td>{{x.name}}</td>
+                              <td>{{x.age}}</td>
+                          </tr>
+                      </table>
+                  </div>
+              </section>
+          </section>
+      </div>
+       <div class="col-sm-6 col-xs-12">
+           <section class="lead">
+              <h2>ng repaet</h2>
+              <p>As you can see that we have used ng-repeat at tr tag as we want to repeat tr tag accruing to data returned by the controller. ng-repeat syntax is almost similar to foreach loop.</p>
+              <section>
+                  <pre>
+                      <code>
+         //ng repeat exception
+       angmodule.controller('arrray',function($scope){
+       $scope.result=[1,2,4,4,5,6,7];
+       });
+                      </code>
+                  </pre>
+              </section>
+               <h2>ng-reapeat exception</h2>
+               <p class="text-danger">duplicates in repeater are not allowed</p>
+               <p class="text-success"> for this we use this for repeation <b class="text-primary">"z in result track by $index"</b></p>
+               <p>z in result track by $index</p>
+               <p>output :</p>
+               <section ng-controller="arrray">
+                   <div ng-repeat="z in result track by $index">
+                       <b>{{z}}</b>
+                   </div>
+                       
+              
+                       
+                   
+               </section>
+           </section>
+       </div>
+  </div>
+  <div class="row">
+      <div class="col-sm-6 col-xs-12">
+          <section class="lead">
+              <h2>ng-init</h2>
+          
+             <section>
+                  <pre>
+                  <code>
+    &lt;body ng-app &gt;
+      &lt;div&gt;
+      &lt;input type="text" ng-model="number">
+      &lt;p>Square is {{number*number}} &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;/body&gt;
+                 </code>
+                  </pre>
+    
+                  
+             </section>
+          </section>
+        <p>output :</p>     
+<div>
+    <input type="number" ng-model="number">
+    <p>Square is {{number*number}} </p>
+    </div>
+
+          
+      </div>
+       <div class="col-sm-6 col-xs-12">
+           <h2>ng-init</h2>
+           <p>Ng-init directive is used to initialize a variable, which will allows evaluating an expression in given scope. According to angular official document, this directive is abused as it adds unnecessary business logic in the application. Still to evaluate an expression we required that directive.</p>
+           
+           <section>
+               <pre>
+                   <code>
+     &lt;div data-ng-init="name='Ashish Kumar'; empid=102 "&gt;
+    &lt;p&gt;{{name}}&lt;/p&gt;
+    &lt;p&gt;{{empid}}&lt;/p&gt;
+     &lt;/div&gt;
+                   </code>
+               </pre>
+           </section>
+           <p>output :</p>
+           <section>
+              
+               <div data-ng-init="name='Ashish Kumar'; empid=102 ">
+    <p>{{name}}</p>
+    <p>{{empid}}</p>
+</div>
+           </section>
+       </div>
+       
+  </div><!--row ends here-->
+ 
+  <div class="row">      <!--another row-->
+           <div class="col-sm-12 col-md-12 col-xs-12">
+              <section>
+                   <h2>ng-include</h2>
+                   <p>ng-include directive is used to add external html files into application. This directive helps us to create common page of website. Internally tis feature is using JavaScript Ajax to load another page in homepage.</p>
+                   <hr>
+                    //nav.html
+                   <section>
+                       <pre>
+                           <code>
+                               <div dir="ltr" style="text-align: left;" trbidi="on">
+&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;
+&lt;head&gt;
+&nbsp; &nbsp; &lt;title&gt;Untitled Document&lt;/title&gt;
+&nbsp; &nbsp; &lt;meta charset="UTF-8"&gt;
+&nbsp; &nbsp; &lt;meta name="description" content=""&gt;
+&nbsp; &nbsp; &lt;meta name="keywords" content=""&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;a href=""&gt;home&lt;/a&gt;
+&lt;a href=""&gt;about&lt;/a&gt;
+&lt;a href=""&gt;services&lt;/a&gt;
+&lt;a href=""&gt;tutorial&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+                           </code>
+                       </pre>
+                   </section>
+                   <section>
+                       <pre>
+                           <code>
+                               <div dir="ltr" style="text-align: left;" trbidi="on">
+&lt;section data-ng-include="'nav.html'"&gt;
+&nbsp; &lt;/section&gt;</div>
+                           </code>
+                       </pre>
+
+                   </section>
+                  
+                   <b>above html will load bellow</b>
+                   
+                   <section data-ng-include="'nav.html'">
+                       
+                   </section>
+                   
+              </section>
+              <section>
+                  <h2>ng-hide and ng-show in angularjs</h2>
+<p>These both directives ng-show and ng-hide are used to manage the visibility of html controls. Both directives take true and false value to display or hide the html control.</p>
+              </section>
+              <section class="code">
+                 
+&nbsp;&lt;label&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="checkbox" data-ng-model="textbox"&gt; Show Div<br />
+&nbsp; &nbsp; &lt;/label&gt;<br />
+&nbsp; &nbsp; &nbsp;&lt;div style="height: 200px;
+  width:200px;background: red;transition: 1s" data-ng-show="textbox"&gt;&lt;/div&gt;
+                 
+                 <hr>
+                  <label>
+        <input type="checkbox" data-ng-model="textbox"> Show Div
+    </label>
+                  <div style="height: 200px;width:200px;background: red;transition: 1s" data-ng-show="textbox"></div>
+              </section>
+           </div>
+           
+       </div>   <!--row ends here-->
+       <section>
+       <h2>ng-if</h2>
+       <p>Ng-if directive is condition based directive which removes or recreates the DOM portion according to condition. It evaluates expression as true or false. If ng-if evaluates to a false it will remove from the DOM element and if it is true, then element is reinserted into the DOM</p>
+               
+              <section class="code">
+                   Enter your number: - <input type="text" data-ng-model="n1" placeholder="9">
+    <div data-ng-if="n1%2=='0'">
+        <p style="color: green">Even Number</p>
+    </div>
+    <div data-ng-if="n1%2!='0'" style="color:green">
+        <p style="color: red">Odd Number</p>
+    </div>
+              </section>
+           </section>
+           <section>
+               <h2>ng-switch</h2>
+               <p>Ng-switch is conditional directives which swap (show and hide) DOM elements according to expression. We use ng-switch-when to check conditions and ng-switch-default to put default condition.</p>
+               <section class="code">
+                   <pre>
+                   <code>
+                       &lt;input type="text" data-ng-model="n1"&gt;<br />
+&nbsp; &nbsp; &lt;div data-ng-switch="n1"&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-when="a"&gt;It is vowel&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-when="i"&gt;It is vowel&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-when="e"&gt;It is vowel&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-when="o"&gt;It is vowel&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-when="u"&gt;It is vowel&lt;/div&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &lt;div data-ng-switch-default&gt;It is constant&lt;/div&gt;<br />
+&nbsp; &nbsp; &lt;/div&gt;
+                   </code>
+               </pre>
+               </section>
+               <section>
+                   <input type="text" ng-model="n2">
+                   <div data-ng-switch="n2">
+        <div data-ng-switch-when="a">It is vowel</div>
+        <div data-ng-switch-when="i">It is vowel</div>
+        <div data-ng-switch-when="e">It is vowel</div>
+        <div data-ng-switch-when="o">It is vowel</div>
+        <div data-ng-switch-when="u">It is vowel</div>
+        <div data-ng-switch-default>It is constant</div>
+    </div>
+               </section>
+           </section>
+           <section>
+              <h2>ng-src</h2>
+<p>Ng-src directive is used to bind dynamic image/audio/video/iframe url. When we use src at img tag it will not work properly as it will fetch image before angularjs replace expression with url and 404 error occurred.</p>
+           </section>
+          <div class="row">
+              
+              <div class="col-sm-6 col-md-6 col-xs-12">
+                  
+           <section class="code">
+              <pre>
+                  <code>
+                     &nbsp;&lt;section ng-controller='srcc'&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;table border="1"&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;&lt;td&gt;sno&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;id&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;name&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;age&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;image&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;tr ng-repeat="m in con1 "&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;{{$index+1}}&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;{{m.id}}&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;{{m.name}}&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;{{m.age}}&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;td&gt;&lt;img src='{{m.image}}' alt="{{m.name}}"&gt;&lt;/td&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/table&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/section&gt;
+                  </code>
+              </pre>
+           </section>
+           <section class="code">
+              <pre>
+                  <code>
+                      angmodule.controller("srcc",function($scope){
+           $scope.con1=[
+               {id:1,name:'Ashish',age:22,image:'img1.jpg'},
+               {id:1,name:'Ashish1',age:23,image:'img2.jpg'},
+               {id:1,name:'Ashish2',age:24,image:'img3.jpg'},
+               {id:1,name:'Ashish3',age:20,image:'img4.jpg'},
+           ]
+       })
+                  </code>
+              </pre>
+           </section>
+              </div>
+              <div class="col-sm-6 col-md-6 col-xs-12">
+                  <section ng-controller='srcc'>
+              <table border="1" class="table table-striped table-responsive">
+                  <thead>
+                      <tr><td>sno</td>
+                      <td>id</td>
+                      <td>name</td>
+                      <td>age</td>
+                      <td>image</td>
+                  </tr>
+                  </thead>
+                  <tr ng-repeat="m in con1 ">
+                     <td>{{$index+1}}</td>
+                     <td>{{m.id}}</td>
+                     <td>{{m.name}}</td>
+                     <td>{{m.age}}</td>
+                     <td><img src='{{m.image}}' alt="{{m.name}}"></td>
+                      
+                  </tr>
+              </table>
+               
+           </section>
+              </div> 
+              
+             
+           
+             
+          </div><!--last row ends here-->
+          <h2>ng-click</h2>
+<p>Ng-click directive provides the custom behaviour when an html element is clicked. When elements clicked, it will call the event handler function, which bind to ng-click.</p>
+          <section>
+             //html
+              <pre>
+                  <code>
+                      &lt;div ng-controller="clickme"&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class="btn-lg btn-primary" ng-click="alertt()"&gt;alert&lt;/button&gt;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;
+                  </code>
+              </pre>
+              //angular
+               <pre>
+                   <code>
+            angmodule.controller('clickme',function($scope){
+           $scope.alertt=function(){
+             alert("nice !! you have almost done the angular js");
+           }
+               
+           
+       })
+                   </code>
+               </pre>
+           </section>
+            <div ng-controller="clickme">
+                <button class="btn-lg btn-primary" ng-click="alertt()">alert</button>
+            </div>
+                   
+  <!--container-fluid ends-->
+</div>
+  
+  <!--javascript starts here-->
+  
+   <script>
+        window.onscroll=function(){
+         var winScroll=document.body.scrollTop || document.documentElement.scrollTop;
+        var height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+    var scrolled=(winScroll/height)*100;
+        document.querySelector("#progressbar").style.width=scrolled+"%";
+    }
+      
+       //custom directive
+    var x=angular.module('m1',[]);
+    x.directive('ngHello',function(){
+        return{
+            template:"hello world"
+        }
+    });
+       //scope and controler
+       var angmodule=angular.module('m1',[])
+       angmodule.controller('course',function($scope){
+           $scope.courseName='angular';
+           $scope.fees='10000';
+       });
+       
+       //another controller
+       angmodule.controller('trainer',function($scope){
+            var trainerDetail=[
+                {name:"ashish",age:"23"},
+                {name:"manish",age:"22"},
+                {name:"satish",age:"21"},
+                {name:"archana",age:"18"}
+                
+            ];
+           $scope.trainerdata=trainerDetail;
+            
+                            })
+       
+       //ng-repeat exception
+      angmodule.controller('arrray',function($scope){
+          $scope.result=[1,2,3,4,4,5,6,7];
+      })
+       //ng-src
+       angmodule.controller("srcc",function($scope){
+           $scope.con1=[
+               {id:1,name:'Ashish',age:22,image:'https://1.bp.blogspot.com/-DZwY6AqTbuE/XhrJJ7ZaxMI/AAAAAAAAhUY/H5VfhR3kpwA1iIwSJL0Y5Hx9xqGFEhJMACNcBGAsYHQ/s320/ashishfg.jpeg'},
+               {id:1,name:'Ashish1',age:23,image:'https://1.bp.blogspot.com/-1UNuiLh_V7Q/XaIfrI2UcuI/AAAAAAAAbwU/v9tzHSlWS5s0aAMUVVEoslvndwW6hHODQCNcBGAsYHQ/s1600/fbbb.jpg'},
+               {id:1,name:'Ashish2',age:24,image:'https://1.bp.blogspot.com/-1WXQdQvsZfc/XaIfxW3sRZI/AAAAAAAAbwc/S5GDBbrDZIguWbHNqLb9BxzgLTGTMSF3ACNcBGAsYHQ/s1600/icon-fb-3.jpg'},
+               {id:1,name:'Ashish3',age:20,image:'https://1.bp.blogspot.com/-n_2iMkI57y0/XhrK-Ihw76I/AAAAAAAAhUk/bPkypLvev8k9Bmp-7T1dWTrsWolr2dS6wCNcBGAsYHQ/s320/asdg.jpeg'},
+           ]
+       })
+       
+       //ng-click
+       angmodule.controller('clickme',function($scope){
+           $scope.alertt=function(){
+               
+                   alert("nice !! you have almost done the angular js");
+               
+           }
+               
+           
+       })
+       $("h2").prepend("<i class='fa fa-hand-o-right'></i>")
+       $("header h1").prepend("<i class='fa fa-podcast'></i>")
+    </script> 
+
+</body>
+<footer class="text-center">
+    <p>angular js </p>
+    <h1 style="padding: 30px;font-size: 110px">Thank you</h1>
+    <a class="text-center lastbtn" href="./frontend.html">return to home</a>
+</footer>
+</html>

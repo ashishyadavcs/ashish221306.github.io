@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Angular Service</title>
+<meta name="description" content="">
+<meta name="keywords" content="how to use service in angular | angular service">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Service </h1>
+ <p>We might come across a situation <b class="text-success">where we need some code to be used everywhere on the page. It can be for data connection that needs to be shared across components</b>, etc. Services help us achieve that. With services,
+      we can access methods and properties across other components in the entire project.
+    <br>
+    <br>
+    command to create service in angular <br>
+    <pre class="cmd">
+    > ng g service myservice
+    </pre>
+    
+    following two files are generated after command <br>
+    <ol>
+        <li>myservice.service.ts</li>
+        <li>myservice.service.specs.ts</li>
+    </ol>
+
+
+    <br>
+    <b class="text-success">myservice.serice.ts</b>
+    <pre class="code">
+        import { Injectable } from '@angular/core';
+
+        @Injectable()
+        export class MyserviceService {
+           constructor() { }
+        }
+    </pre>
+    <br>
+    Here, the Injectable module is imported from the @angular/core. It contains the @Injectable method and a class called MyserviceService. We will create our service function in this class.
+
+Before creating a new service, 
+we need to include the service created in the main parent app.module.ts.
+    </p>
+      
+ <pre class="code">
+    import { Injectable } from '@angular/core';
+    @Injectable()
+    export class MyserviceService {
+       constructor() { }
+       showTodayDate() {
+          let ndate = new Date();
+          return ndate;
+       }
+    
+ </pre>
+
+ <br>
+ In the above service file, we have created a function showTodayDate.
+  Now we will return the new Date () created. Let us see how we can access this function in the component class.
+ 
+ <b class="text-success">app.component.ts</b>
+ <pre class="code">
+    import { Component } from '@angular/core';
+    import { MyserviceService } from './myservice.service';
+    
+    @Component({
+       selector: 'app-root',
+       templateUrl: './app.component.html',
+       styleUrls: ['./app.component.css']
+    })
+    
+    export class AppComponent {
+       title = 'Angular 4 Project!';
+       todaydate;
+       constructor(private myservice: MyserviceService) {}
+       ngOnInit() {
+          this.todaydate = this.myservice.showTodayDate();
+       }
+    }
+ </pre>
+ <br>
+ The ngOnInit function gets called by default in any component created.
+The date is fetched from the service as shown above. To fetch more details of the service,
+we need to first include the service in the component ts file.
+  We will display the date in the .html file as shown below −
+
+  <pre class="code">
+    &lcub;&lcub;todaydate&rcub;&rcub;
+    &lt;app-new-cmp&gt;&lt;/app-new-cmp&gt; 
+    // data to be displayed to user from the new component class.
+  </pre>
+  <br>
+  Let us now see how to use the service in the new component created.
+  <br>
+  <pre class="code">
+    import { Component, OnInit } from '@angular/core';
+    import { MyserviceService } from './../myservice.service';
+    
+    @Component({
+       selector: 'app-new-cmp',
+       templateUrl: './new-cmp.component.html',
+       styleUrls: ['./new-cmp.component.css']
+    })
+    
+    export class NewCmpComponent implements OnInit {
+       todaydate;
+       newcomponent = "Entered in new component created";
+       constructor(private myservice: MyserviceService) {}
+    
+       ngOnInit() {
+          this.todaydate = this.myservice.showTodayDate();
+       }
+    }
+  </pre>
+  <br>
+  In the new component that we have created, we need to first import the service that we want and access the methods and properties of the same. Please see the code 
+  highlighted. The todaydate is displayed in the component html as follows −
+
+  <br>
+  <br>
+  <pre class="code">
+    &lt;p&gt;
+   {{newcomponent}}
+&lt;/p&gt;
+&lt;p&gt;
+   Today's Date : {{todaydate}}
+&lt;/p&gt;
+  </pre>
+
+  <br>
+  <br>
+  The selector of the new component is used in the app.component.html file. 
+  The contents from the above html file will be displayed in the browser as shown below −
+ <img alt="angular service" class="img img-responsive center-block" src="./image/output_new_component_created.jpg">
+  <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+     
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

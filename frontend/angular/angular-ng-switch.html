@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>ngSwitch in angular</title>
+<meta name="description" content=" how to use ngSwitch in angular">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">ngSwitch in angular</h1>
+ <p>The [ngSwitch] directive on a container specifies an expression to match against. The expressions to match are provided
+      by ngSwitchCase directives on views within the container.</p>
+      <ol class="circle">
+          <li>Every view that matches is rendered.
+            
+            </li>
+      <li>If there are no matches, a view with the ngSwitchDefault directive is rendered.</li>
+      <li>Elements within the [NgSwitch] statement but outside of any NgSwitchCase or ngSwitchDefault directive are preserved at the location.</li>
+        </ol>
+    
+        <p class="text-info">there are two things in ngswitch it is just link switch case in javascript </p>
+        <ol>
+            <li>NgSwitchCase</li>
+            <li>NgSwitchDefault</li>
+        </ol>
+        <p class="bg-success">How to use</p>
+        <p>Define a container element for the directive, and specify the switch expression to match against as an attribute:</p>
+      <pre class="code">
+        &lt;container-element [ngSwitch]="switch_expression"&gt;
+      </pre>
+      <p>Within the container, *ngSwitchCase statements specify the match expressions as attributes. Include *ngSwitchDefault as the final case.</p>
+ <pre class="code">
+    &lt;container-element [ngSwitch]="switch_expression"&gt;
+        &lt;some-element *ngSwitchCase="match_expression_1"&gt;...&lt;/some-element&gt;
+     ...
+        &lt;some-element *ngSwitchDefault&gt;...&lt;/some-element&gt;
+     &lt;/container-element&gt;
+ </pre>
+ <p class="text-info">The following example shows how cases can be nested:</p>
+ <pre class="code">
+    <div>&lt;container-element [ngSwitch]="switch_expression"&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchCase="match_expression_1"&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchCase="match_expression_2"&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-other-element *ngSwitchCase="match_expression_3"&gt;...&lt;/some-other-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;ng-container *ngSwitchCase="match_expression_3"&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- use a ng-container to group multiple root nodes --&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;inner-element&gt;&lt;/inner-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;inner-other-element&gt;&lt;/inner-other-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;/ng-container&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchDefault&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &lt;/container-element&gt;</div>
+ </pre>
+ <p>The following example shows how cases can be nested:</p>
+ <pre class="code">
+    <div>&lt;container-element [ngSwitch]="switch_expression"&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchCase="match_expression_1"&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchCase="match_expression_2"&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-other-element *ngSwitchCase="match_expression_3"&gt;...&lt;/some-other-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;ng-container *ngSwitchCase="match_expression_3"&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;!-- use a ng-container to group multiple root nodes --&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;inner-element&gt;&lt;/inner-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;inner-other-element&gt;&lt;/inner-other-element&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;/ng-container&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;some-element *ngSwitchDefault&gt;...&lt;/some-element&gt;</div><div>&nbsp; &nbsp; &lt;/container-element&gt;</div>
+ </pre>
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

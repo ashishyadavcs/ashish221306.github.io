@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>ngFor in angular</title>
+<meta name="description" content=" how to use ngFor in angular">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">*ngFor in angular</h1>
+ <p>*ngFor is an structural directive which is used to iterate any loop .
+
+
+    <br>
+    <br>
+    The *ngFor directive (predefined by Angular) lets you loop through data.
+     The following example uses the directive to show all of the values in an array property.
+ 
+ <br>
+ <br>
+ To display a list of heroes, begin by adding an array of hero names to the component and redefine myHero to be the first name in the array.
+    </p>
+<b class="text-success">src/app/app.component.ts</b>
+    <pre class="code">
+        export class AppComponent {
+            title = 'Tour of Heroes';
+            heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+            myHero = this.heroes[0];
+          }
+    </pre>
+    <br>
+ <i>Now use the Angular ngFor directive in the template to display each item in the heroes list.</i>
+
+
+
+
+<pre class="code">
+    template: `
+    &lt;h1&gt;<span>{{</span>title<span>}}</span>&lt;/h1&gt;
+    &lt;h2&gt;My favorite hero is: {{myHero}}&lt;/h2&gt;
+    &lt;p&gt;Heroes:&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li *ngFor="let hero of heroes"&gt;
+        <span>{{</span> hero <span>}}</span>
+    &lt;/li&gt;
+    &lt;/ul&gt;
+  
+</pre>
+<p>This UI uses the HTML unordered list with <ul> and <li> tags. The *ngFor in the <li> element is the Angular "repeater" directive. It marks that 
+    <li> element (and its children) as the "repeater template":</p>
+
+<img class="img img-responsive center-block" src="./image/hero-names-list.png">
+
+
+
+
+
+ <div class="alllink" ng-include="'./all-link.html'"></div>
+<!--main end-------------------------------------------------------------------->
+ 
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>
