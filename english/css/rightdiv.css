@@ -18,9 +18,9 @@ border-right: 2px solid #ccc;
     }
 
 @media screen and (max-width:700px){
-    
-    .rightdiv .left2{width: 100%;float:none;padding: 6%;}
-    .rightdiv .right2{width: 100%;padding: 3%;}
+
+    .rightdiv .left2{width: 100%;float:none;padding: 6%;border: none;}
+    .rightdiv .right2{width: 100%;padding: 3%; border: none;}
 }
 
 .nav-wrapper{ overflow: auto;

@@ -25,11 +25,12 @@ overflow-x: hidden; /* Disable horizontal scroll */
 padding-top: 20px;
 margin-top:60px ;
 }
-
+@media screen and (max-width: 700px){
+    .wrapper .left{border: none;}
+}
 
 .wrapper .right{width: 80%;float: left;overflow-y: auto;color: #f1f1f1;}
 .wrapper .right h1{color: #f1f1f1;} 
-
 
 .wrapper .clear{clear: both;}
 
