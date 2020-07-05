@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <title>RGB to HEX converter | css color picker</title>
+         <meta name="description" content="FREE RGB to HEX Converter - covert RGB color into HEXADECIMAL color code , Convert RGB color codes to HEX HTML format for use in web design and CSS.  Also converts RGBA to HEX."/>
+        
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+         <meta property="og:title" content="RGB to HEX converter | css color picker" />
+<meta property="og:description" content="FREE RGB to HEX Converter - covert RGB color into HEXADECIMAL color code , Convert RGB color codes to HEX HTML format for use in web design and CSS.  Also converts RGBA to HEX." />
+<meta property="og:image" content="https://1.bp.blogspot.com/-yXLxrMqwm_E/Xv_ZuNKwBMI/AAAAAAAAlkg/_6q8SxS4nRsvBvGnZYick0mj8EAdvDqvgCK4BGAsYHg/s320/Black%2Band%2BCream%2BStrikethrough%2BBand%2BLogo.png" />
+           
+           <meta name="keywords" content="rgb,rgba,hex,color,html,css , rgb to hex converter">
+           
+           <meta charset="UTF-8">
+           <link rel="shortcut icon" href="https://1.bp.blogspot.com/-yXLxrMqwm_E/Xv_ZuNKwBMI/AAAAAAAAlkg/_6q8SxS4nRsvBvGnZYick0mj8EAdvDqvgCK4BGAsYHg/s320/Black%2Band%2BCream%2BStrikethrough%2BBand%2BLogo.png" type="image/x-icon">
+           <link rel="icon" href="https://1.bp.blogspot.com/-yXLxrMqwm_E/Xv_ZuNKwBMI/AAAAAAAAlkg/_6q8SxS4nRsvBvGnZYick0mj8EAdvDqvgCK4BGAsYHg/s320/Black%2Band%2BCream%2BStrikethrough%2BBand%2BLogo.png" type="image/x-icon">
+
+
+
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css">
+       
+     
+     <style>
+       
+         body,table,.bs-example{background: #000;color: #f1f1f1;}
+         td{color: #f1f1f1;}
+         header{background: rgb(240, 62, 216);padding: 15px;margin-bottom: 20px;}
+         .h4{margin: 20px auto;font-size: 17px!important;}
+         .h4 .btn{margin-left: 10px;}
+         .bs-example{border: none;}
+         .bs-example table{margin: 20px auto;}
+
+         #red, #green, #blue {
+         clear: left;
+         width: 100%;
+         margin: 15px;
+        }
+h1{font-weight: 600;}
+    #swatch {
+    width: 120px;
+    height: 100px;
+    margin-top: 18px;
+    margin-left:auto;
+    margin-right: auto;
+    background-image: none;
+  }
+  #red .ui-slider-range { background: red; }
+  #red .ui-slider-handle { border-color:red; }
+  #green .ui-slider-range { background: rgb(55, 238, 55); }
+  #green .ui-slider-handle { border-color: rgb(55, 238, 55); }
+  #blue .ui-slider-range { background: blue; }
+  #blue .ui-slider-handle { border-color: blue; }
+.btn-lg{
+      margin: 2px;
+    width: 128px;
+    color: white;
+    text-shadow: 0px 0px 4px #000;
+}      
+.cardd{padding: 20px;text-align: center;}
+
+
+#css-color-picker{ font-family: Arial, Helvetica, sans-serif;}
+.lead{font-weight: 500;}
+
+#b-navbar {
+    white-space: nowrap;
+    color: #444;
+    height: 29px;
+    border-bottom: 1px solid #888;
+    background: transparent;
+    font-size: 13px;
+    display: none;
+    font-family: Arial,Sans-serif;
+    position: relative;
+}
+
+
+@media screen and (max-width:600px) {
+    h1{font-size: 26px;padding: 10px;}
+    
+}
+  </style>  
+</head>
+<body>
+    <header>
+        <a href="/"><h1 id="css-color-picker" class="text-center">RGB to HEX converter</h1></a>
+        <p class="lead text-center"><strong>( RGB &amp; HEX ) css color picker</strong> to check <strong>RGB</strong> and <strong>hexadecimal colors</strong>.</p>
+       </header>
+<div class="container-fluid">
+
+<div class="row">
+
+    <div class=" col-md-12 col-sm-12">
+      <div class="cardd">
+        <div  id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+      </div>
+        <!--
+            <table style="width: 100%;" class="table table-condensed table-bordered table-responsive">
+            <tr><td><div id="red"></div></td></tr>
+            <tr><td><div id="green"></div></td></tr>
+            <tr><td><div id="blue"></div></td></tr>
+             </table>
+        -->
+    </div>
+    
+    <div class="col-sm-12">
+   
+           
+            <div class="ui-widget-content bs-example">
+                
+                    
+                    
+                    <div id="swatch" class="ui-widget-content ui-corner-all center-block"></div>
+                
+                       <table class="table table-bordered">
+                          <tbody>
+                              <tr>
+                                 <td><h3 class="h4">Hexa Color Code:<span id="hex"> #<span id="colval"></span></span></h3></td>
+                                  <td><button class="btn -btn-lg btn-success " data-clipboard-target="#hex" id="btn1">copy</button></td>
+                              </tr>
+                              <tr>
+                                <td> <h3 class="h4">RGB Color Code:<span id="rgb"><span id="colval1"></span></span> </h3></td>
+                                 <td><button class="btn -btn-lg btn-success " data-clipboard-target="#rgb" id="btn2">copy</button></td>
+                             </tr>
+                          </tbody>
+    
+                       </table>
+                       <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+                       <script>
+                        var clip=new ClipboardJS('#btn1');
+                        clip.on('success', function(e) {
+                            $('#hex').css({'border':'1px dashed green'})
+                            swal("text copied !","" , "success");
+                            
+                        e.clearSelection();
+                    });
+                      
+                    
+                    var clip1=new ClipboardJS('#btn2');
+                        clip1.on('success', function(f) {
+                            $('#rgb').css({'border':'1px dashed green'})
+                           swal("text copied !","" , "success")
+                    
+                        f.clearSelection();
+                    });
+                      
+                      
+                    
+                    </script>
+                    
+
+                    
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+   
+function hexFromRGB(r, g, b) {
+    var hex = [
+      r.toString( 16 ),
+      g.toString( 16 ),
+      b.toString( 16 )
+    ];
+    $.each( hex, function( nr, val ) {
+      if ( val.length === 1 ) {
+        hex[ nr ] = "0" + val;
+      }
+    });
+    return hex.join( "" ).toUpperCase();
+  }
+  function refreshSwatch() {
+    var red = $( "#red" ).slider( "value" ),
+      green = $( "#green" ).slider( "value" ),
+      blue = $( "#blue" ).slider( "value" ),
+      hex = hexFromRGB( red, green, blue );
+    $( "#swatch" ).css( "background-color", "#" + hex );
+	$('#colval').text(hex); 
+	$('#colval1').text("rgb\("+ red+"," + green +"," + blue+"\)");
+
+  }
+  $(function() {
+    $( "#red, #green, #blue" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 255,
+      value: 127,
+      slide: refreshSwatch,
+      change: refreshSwatch
+    });
+    $( "#red" ).slider( "value", 237);
+    $( "#green" ).slider( "value", 140 );
+    $( "#blue" ).slider( "value", 60 );
+    
+  });
+  
+
+  
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

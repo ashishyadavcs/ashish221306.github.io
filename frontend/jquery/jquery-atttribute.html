@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery attribute</title>
+<meta name="description" content="jquery attribute - ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery Attribute</h1>
+<p>he most basic components we can manipulate when it comes to DOM elements are the properties and attributes assigned to those elements.</p>
+<p>Most of these attributes are available through JavaScript as DOM node properties. Some of the more common properties are −</p>
+<ol class="circle">
+    <li>className</li>
+      <li>  tagName</li>
+       <li> id</li>
+       <li> href</li>
+       <li> title</li>
+       <li> rel</li>
+       <li> src</li>
+</ol>
+<p class="code">
+    &lt;img id = "imageid" src = "image.gif" alt = "Image" class = "myclass" 
+    title = "This is an image"/&gt;
+</p>
+
+<p>In the following code, the tag name is img,
+     and the markup for id, src, alt, class, and title represents the element's attributes, 
+     each of which consists of a name and a value.
+
+    jQuery gives us the means to easily manipulate an element's 
+    attributes and we can access the element so that we can also change its properties.</p>
+  
+    <h2 class="subheading1">How to get Attribute Value</h2>
+    <p>The attr() method can be used to either fetch the value of an attribute from the first element in the matched set</p>
+
+<h3 class="subheading2">example</h3>
+<p>Following is a simple example which fetches title attribute of <span class="text-success">&lt;em&gt; </span>tag and set <span class="text-success">&lt;div id = "divid"&gt; </span>value with the same value </p>
+
+<pre class="code">
+    <span    >&lt;html&gt;</span><span      >
+    </span><span    >&lt;head&gt;</span><span      >
+       </span><span    >&lt;title&gt;</span><span      >The jQuery Example</span><span    >&lt;/title&gt;</span><span      >
+       </span><span    >&lt;script</span><span      > </span><span   >type</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span      > 
+          </span><span   >src</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span    >&gt;</span><span      >
+       </span><span    >&lt;/script&gt;</span><span      >
+         
+       </span><span    >&lt;script</span><span      > </span><span   >type</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span      > </span><span   >language</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"javascript"</span><span    >&gt;</span><span      >
+          $</span><span   >(</span><span      >document</span><span   >).</span><span      >ready</span><span   >(</span><span class="kwd" style="color: #000088;">function</span><span   >()</span><span      > </span><span   >{</span><span      >
+             </span><span class="kwd" style="color: #000088;">var</span><span      > title </span><span   >=</span><span      > $</span><span   >(</span><span class="str" style="color: #008800;">"em"</span><span   >).</span><span      >attr</span><span   >(</span><span class="str" style="color: #008800;">"title"</span><span   >);</span><span      >
+             $</span><span   >(</span><span class="str" style="color: #008800;">"#divid"</span><span   >).</span><span      >text</span><span   >(</span><span      >title</span><span   >);</span><span      >
+          </span><span   >});</span><span      >
+       </span><span    >&lt;/script&gt;</span><span      >
+    </span><span    >&lt;/head&gt;</span><span      >
+     
+    </span><span    >&lt;body&gt;</span><span      >
+       </span><span    >&lt;div&gt;</span><span      >
+          </span><span    >&lt;em</span><span      > </span><span   >title</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"Bold and Brave"</span><span    >&gt;</span><span      >This is first paragraph.</span><span    >&lt;/em&gt;</span><span      >
+          </span><span    >&lt;p</span><span      > </span><span   >id</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"myid"</span><span    >&gt;</span><span      >This is second paragraph.</span><span    >&lt;/p&gt;</span><span      >
+          </span><span    >&lt;div</span><span      > </span><span   >id</span><span      > </span><span   >=</span><span      > </span><span class="atv" style="color: #008800;">"divid"</span><span    >&gt;&lt;/div&gt;</span><span      >
+       </span><span    >&lt;/div&gt;</span><span      >
+    </span><span    >&lt;/body&gt;</span><span      >
+ </span><span    >&lt;/html&gt;</span>
+</pre>
+
+<h3 class="text-aqua">output</h3>
+<pre class="code">
+This is first paragraph.
+This is second paragraph.
+
+Bold and Brave
+</pre>
+
+
+<h2 class="subheading2"> How to set Attribute Value</h2>
+<p>The <span class="text-imp">attr(name, value)</span> method can be used to set the named attribute onto all 
+    elements in the wrapped set using the passed value.</p>
+
+<h3 class="text-danger">Example</h3>
+<p>Following is a simple example which set <span class="text-imp">src attribute</span> of an image tag to a correct location −</p>
+
+<pre class="code">
+    <span    >&lt;html&gt;</span><span   >
+    </span><span    >&lt;head&gt;</span><span   >
+       </span><span    >&lt;title&gt;</span><span   >The jQuery Example</span><span    >&lt;/title&gt;</span><span   >
+       </span><span    >&lt;base</span><span   > </span><span   >href</span><span   >=</span><span class="atv" style="color: #008800;">"https://www.tutorialspoint.com"</span><span   > </span><span    >/&gt;</span><span   >
+       </span><span    >type</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > 
+          </span><span   >src</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span    >&gt;</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+         
+       </span><span    >type</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > </span><span   >language</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"javascript"</span><span    >&gt;</span><span   >
+          $</span><span   >(</span><span   >document</span><span   >).</span><span   >ready</span><span   >(</span><span class="kwd" style="color: #000088;">function</span><span   >()</span><span   > </span><span   >{</span><span   >
+             $</span><span   >(</span><span class="str" style="color: #008800;">"#myimg"</span><span   >).</span><span   >attr</span><span   >(</span><span class="str" style="color: #008800;">"src"</span><span   >,</span><span   > </span><span class="str" style="color: #008800;">"/jquery/images/jquery.jpg"</span><span   >);</span><span   >
+          </span><span   >});</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+    </span><span    >&lt;/head&gt;</span><span   >
+     
+    </span><span    >&lt;body&gt;</span><span   >
+       </span><span    >&lt;div&gt;</span><span   >
+          </span><span    >&lt;img</span><span   > </span><span   >id</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"myimg"</span><span   > </span><span   >src</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"/images/jquery.jpg"</span><span   > </span><span   >alt</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"Sample image"</span><span   > </span><span    >/&gt;</span><span   >
+       </span><span    >&lt;/div&gt;</span><span   >
+    </span><span    >&lt;/body&gt;</span><span   >
+ </span><span    >&lt;/html&gt;</span>
+</pre>
+
+<h2>Applying  css Styles</h2>
+<p class="text-imp">The addClass( classes ) method can be used to apply defined style sheets onto all the matched elements. You can specify multiple classes separated by space.</p>
+
+
+<h3>Example</h3>
+<p>Following is a simple example which sets class attribute of a para <p> tag −</p>
+<pre class="code">
+    <span    >&lt;html&gt;</span><span   >
+    </span><span    >&lt;head&gt;</span><span   >
+       </span><span    >&lt;title&gt;</span><span   >The jQuery Example</span><span    >&lt;/title&gt;</span><span   >
+       </span><span    >&lt;script</span><span   > </span><span   >type</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > 
+          </span><span   >src</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span    >&gt;</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+         
+       </span><span    >&lt;script</span><span   > </span><span   >type</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > </span><span   >language</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"javascript"</span><span    >&gt;</span><span   >
+          $</span><span   >(</span><span   >document</span><span   >).</span><span   >ready</span><span   >(</span><span class="kwd" style="color: #000088;">function</span><span   >()</span><span   > </span><span   >{</span><span   >
+             $</span><span   >(</span><span class="str" style="color: #008800;">"em"</span><span   >).</span><span   >addClass</span><span   >(</span><span class="str" style="color: #008800;">"selected"</span><span   >);</span><span   >
+             $</span><span   >(</span><span class="str" style="color: #008800;">"#myid"</span><span   >).</span><span   >addClass</span><span   >(</span><span class="str" style="color: #008800;">"highlight"</span><span   >);</span><span   >
+          </span><span   >});</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+         
+       </span><span    >&lt;style&gt;</span><span   >
+          </span><span   >.</span><span   >selected </span><span   >{</span><span   > color</span><span   >:</span><span   >red</span><span   >;</span><span   > </span><span   >}</span><span   >
+          </span><span   >.</span><span   >highlight </span><span   >{</span><span   > background</span><span   >:</span><span   >yellow</span><span   >;</span><span   > </span><span   >}</span><span   >
+       </span><span    >&lt;/style&gt;</span><span   >	
+    </span><span    >&lt;/head&gt;</span><span   >
+     
+    </span><span    >&lt;body&gt;</span><span   >
+       </span><span    >&lt;em</span><span   > </span><span   >title</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"Bold and Brave"</span><span    >&gt;</span><span   >This is first paragraph.</span><span    >&lt;/em&gt;</span><span   >
+       </span><span    >&lt;p</span><span   > </span><span   >id</span><span   > </span><span   >=</span><span   > </span><span class="atv" style="color: #008800;">"myid"</span><span    >&gt;</span><span   >This is second paragraph.</span><span    >&lt;/p&gt;</span><span   >
+    </span><span    >&lt;/body&gt;</span><span   >
+ </span><span    >&lt;/html&gt;</span>
+</pre>
+
+<h3 class="text-aqua">output</h3>
+<div class="card">
+    <html>
+        <head>
+           <title>The jQuery Example</title>
+           <script type = "text/javascript" 
+              src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+           </script>
+             
+           <script type = "text/javascript" language = "javascript">
+              $(document).ready(function() {
+                 $("em").addClass("selected");
+                 $("#myid").addClass("highlight");
+              });
+           </script>
+             
+           <style>
+              .selected { color:red; }
+              .highlight { background:yellow; }
+           </style>	
+        </head>
+         
+        <body>
+           <em title = "Bold and Brave">This is first paragraph.</em>
+           <p id = "myid">This is second paragraph.</p>
+        </body>
+     </html>
+</div>
+<h2>How to set attribute</h2>
+<p>We can set attribute t by jquery as <span class="text-imp ">attr (attribute name, value)</span></p>
+
+<table class="table table-bordered">
+    <thead class="bg-secondary">
+        <td>sr. no</td>
+        <td>method &amp; description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><b>attr( properties )</b><br>
+                <p>Set a key/value object as properties to all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td><b>attr( key, fn )</b><br>
+                 <p>Set a single property to a computed value, on all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td><b>removeAttr( name )
+                </b><br>
+                <p>Remove an attribute from each of the matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td><b>hasClass( class )
+                </b><br>
+                <p>Returns true if the specified class is present on at least one of the set of matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td><b>removeClass( class )
+                </b><br>
+                <p>Removes all or the specified class(es) from the set of matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td><b>toggleClass( class )
+               </b><br>
+                <p> Adds the specified class if it is not present, removes the specified class if it is present.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><b>	html( )
+                </b><br>
+                <p>Get the html contents (innerHTML) of the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td><b>html( val )
+            </b><br>
+                <p>Set the html contents of every matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td><b>text( )
+             </b><br>
+                <p> Get the combined text contents of all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td><b>text( val )
+                </b><br>
+                <p>Set the text contents of all matched elements.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td><b>val( )
+            </b><br>
+                <p> Get the input value of the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td><b>val( val )</b><br>
+               
+                <p> Set the value attribute of every matched element if it is called on &lt;input&gt; but if it is called on &lt;select&gt; with the passed &lt;option&gt; value then passed option would be selected, if it is called on check box or radio box then all the matching check box and radiobox would be checked.</p>
+            </td>
+        </tr>
+
+       
+
+        
+
+
+    </tbody>
+</table>
+
+
+<h2 class="text-pink">complete list of attribute methods in difffrent situation -</h2>
+<table class="table table-bordered">
+    <thead class="bg-secondary">
+        <td>sr no</td>
+        <td>Selectors &amp; description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>$("#myID").attr("custom")
+                    </b><br>
+                <p>This would return value of attribute custom for the first element matching with ID myID.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                <b>$("img").attr("alt", "Sample Image")
+
+                   </b><br>
+                <p>This sets the alt attribute of all the images to a new value "Sample Image".</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>
+                <b>$("input").attr({ value: "", title: "Please enter a value" });</b><br>
+                <p>Sets the value of all &lt;input&gt; elements to the empty string, as well as sets The jQuery Example to the string Please enter a value.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>
+                <b>$("a[href^=https://]").attr("target","_blank")</b><br>
+                <p>Selects all links with an href attribute starting with https:// and set its target attribute to _blank.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>
+                <b>$("a").removeAttr("target")
+
+                    </b><br>
+                <p>This would remove target attribute of all the links.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>
+                <b>$("form").submit(function() {$(":submit",this).attr("disabled", "disabled");});
+
+                 </b><br>
+                <p>   This would modify the disabled attribute to the value "disabled" while clicking Submit button.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>
+                <b>$("p:last").hasClass("selected")
+
+                 </b><br>
+                <p>   This return true if last &lt;p&gt; tag has associated classselected.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>
+                <b>$("p").text()</b><br>
+                <p>Returns string that contains the combined text contents of all matched &lt;p&gt; elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>
+                <b>	
+                    $("p").text("<i>Hello World</i>")
+                    
+                    </b><br>
+                <p>This would set "&lt;I&gt;Hello World&lt;I&gt;" as text content of the matching &lt;p&gt; elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>
+                <b>$("p").html()
+
+                   </b><br>
+                <p> This returns the HTML content of the all matching paragraphs.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td>
+                <b>$("div").html("Hello World")
+                    </b><br>
+                <p>This would set the HTML content of all matching &lt;div&gt; to Hello World.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td>
+                <b>$("input:checkbox:checked").val()
+
+                   </b><br>
+                <p> Get the first value from a checked checkbox.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>
+                <b>$("input:radio[name=bar]:checked").val()
+
+                    </b><br>
+                <p>Get the first value from a set of radio buttons.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>14</td>
+            <td>
+                <b>$("button").val("Hello")
+
+</b><br>
+                <p>Sets the value attribute of every matched element &lt;button&gt;.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>15</td>
+            <td>
+                <b>$("input").val("on")
+
+                    </b>
+                <p>This would check all the radio or check box button whose value is "on".</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>16</td>
+            <td>
+                <b>$("select").val("Orange")
+
+              </b><br>
+                <p>      This would select Orange option in a dropdown box with options Orange, Mango and Banana.</p>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>17</td>
+            <td>
+                <b>$("select").val("Orange", "Mango")
+
+                    
+                    
+                    </b><br>
+                <p>This would select Orange and Mango options in a dropdown box with options Orange, Mango and Banana.</p>
+            </td>
+        </tr>
+
+        
+
+
+    </tbody>
+
+</table>
+</div>
+ 
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

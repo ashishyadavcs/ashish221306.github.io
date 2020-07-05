@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery Tutorial</title>
+<meta name="description" content="jquery tutorial | ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery Ajax</h1>
+<p>AJAX is an acronym standing for Asynchronous JavaScript and XML and this technology helps us
+     to load data from the server without a browser page refresh.
+    <b><a class="text-primary" target="_BLANK" href="./../javascript/ajax.html">learn ajax here</a></b> </p>
+
+    <p>JQuery is a great tool which provides
+     a rich set of AJAX methods to develop next generation web application.</p>
+
+<h2 class="subheading1"> load any static or dynamic data using JQuery AJAX</h2>
+<p class="text-imp">syntax</p>
+<p class="cmd"> [selector].load( URL, [data], [callback] );</p>
+<hr>
+<ol>
+    <li><b>URL −</b><br>
+        <p>The URL of the server-side resource to which the request is sent. It could be a CGI, ASP, JSP,
+             or PHP script which generates data dynamically or out of a database.</p>
+    </li>
+    <li>
+        <b>Data -</b><br>
+        <p>This optional parameter represents an object whose properties are serialized into properly encoded parameters to be passed to the request. If specified, the 
+            request is made using the POST method. If omitted, the GET method is used.</p>
+    </li>
+
+    <li>
+        <b>Callback -</b><br>
+        <p> A callback function invoked after the response data has been loaded into the elements of the matched set. The first parameter passed to this function is the response text 
+            received from the server and second parameter is the status code.</p>
+    </li>
+</ol>
+
+
+
+<h2>Load an Local html file into a div by jquery</h2>
+
+    <pre class="prettyprint notranslate prettyprinted text-white code" ><span class="tag">&lt;html&gt;</span><span class="pln">
+    </span><span class="tag">&lt;head&gt;</span><span class="pln">
+       </span><span class="tag">&lt;title&gt;</span><span class="pln">The jQuery Example</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+       </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"text/javascript"</span><span class="pln"> 
+          </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span class="tag">&gt;</span><span class="pln">
+       </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+         
+       </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">language</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"javascript"</span><span class="tag">&gt;</span><span class="pln">
+          $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+             $</span><span class="pun">(</span><span class="str">"#driver"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">){</span><span class="pln">
+                $</span><span class="pun">(</span><span class="str">'#stage'</span><span class="pun">).</span><span class="pln">load</span><span class="pun">(</span><span class="str">'/jquery/result.html'</span><span class="pun">);</span><span class="pln">
+             </span><span class="pun">});</span><span class="pln">
+          </span><span class="pun">});</span><span class="pln">
+       </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/head&gt;</span><span class="pln">
+     
+    </span><span class="tag">&lt;body&gt;</span><span class="pln">
+       </span><span class="tag">&lt;p&gt;</span><span class="pln">Click on the button to load /jquery/result.html file −</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+         
+       </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"stage"</span><span class="pln"> </span><span class="atn">style</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"</span><span class="pln">background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span class="pln">cc0</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+          STAGE
+       </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+         
+       </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">id</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"driver"</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Load Data"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/body&gt;</span><span class="pln">
+ </span><span class="tag">&lt;/html&gt;</span></pre><div><span class="tag" style="color: #000088;"><br /></span></div>
+
+
+
+<p>following output load result.php from local and run ....</p>
+
+<div class="output">
+    <html>
+        <head>
+           <title>The jQuery Example</title>
+           <script type = "text/javascript" 
+              src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+           </script>
+             
+           <script type = "text/javascript" language = "javascript">
+              $(document).ready(function() {
+                 $("#driver").click(function(event){
+                    $('#stage').load('./ajax/result.html');
+                 });
+              });
+           </script>
+        </head>
+         
+        <body>
+           <p>Click on the button to load /jquery/result.html file −</p>
+             
+           <div id = "stage" style = "background-color:cc0;">
+            
+           </div>
+             
+           <input type = "button" id = "driver" value = "Load Data" />
+        </body>
+     </html>
+</div>
+
+<h2>Loading JSON data by ajax</h2>
+<p>By using <b class="text-success">getJSON()</b> method you can load json data</p>
+
+<p><b class="text-imp">syntax</b><br>
+<br>
+
+<b class="cmd">[selector].getJSON( URL, [data], [callback] );</b>
+
+</p>
+
+<ol>
+    <li>
+        <b>URL − </b><br>
+        <p>The URL of the server-side resource contacted via the GET method.</p>
+    </li>
+
+    <li>
+        <b>DATA -</b><br>
+        <p>An object whose properties serve as the name/value pairs used to construct a query string to be appended to the URL, or a preformatted and encoded query string.
+
+        </p>
+    </li>
+
+    <li>
+        <b>Callback -</b><br>
+        <p>A function invoked when the request completes. The data value resulting from digesting the response body as a JSON string is passed as the first parameter
+             to this callback, and the status as the second.</p>
+    </li>
+</ol>
+
+<pre class="code prettyprint notranslate prettyprinted" style=" border: 1px solid rgb(136, 136, 136); font-family: monospace, monospace; font-size: 15px; margin-top: -5px !important; overflow-x: auto; padding: 2px;"><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+   </span><span class="tag">&lt;title&gt;</span><span class="pln">The jQuery Example</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+   </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"text/javascript"</span><span class="pln"> 
+      </span><span class="atn">src</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span class="tag">&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+     
+   </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"text/javascript"</span><span class="pln"> </span><span class="atn">language</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"javascript"</span><span class="tag">&gt;</span><span class="pln">
+      $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+         $</span><span class="pun">(</span><span class="str">"#driver"</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="pln">event</span><span class="pun">){</span><span class="pln">
+             
+            $</span><span class="pun">.</span><span class="pln">getJSON</span><span class="pun">(</span><span class="str">'/jquery/result.json'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">jd</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+               $</span><span class="pun">(</span><span class="str">'#stage'</span><span class="pun">).</span><span class="pln">html</span><span class="pun">(</span><span class="str">'&lt;p&gt; Name: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> jd</span><span class="pun">.</span><span class="pln">name </span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;/p&gt;'</span><span class="pun">);</span><span class="pln">
+               $</span><span class="pun">(</span><span class="str">'#stage'</span><span class="pun">).</span><span class="pln">append</span><span class="pun">(</span><span class="str">'&lt;p&gt;Age : '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> jd</span><span class="pun">.</span><span class="pln">age</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;/p&gt;'</span><span class="pun">);</span><span class="pln">
+               $</span><span class="pun">(</span><span class="str">'#stage'</span><span class="pun">).</span><span class="pln">append</span><span class="pun">(</span><span class="str">'&lt;p&gt; Sex: '</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> jd</span><span class="pun">.</span><span class="pln">sex</span><span class="pun">+</span><span class="pln"> </span><span class="str">'&lt;/p&gt;'</span><span class="pun">);</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+                 
+         </span><span class="pun">});</span><span class="pln">
+      </span><span class="pun">});</span><span class="pln">
+   </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+ 
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+   </span><span class="tag">&lt;p&gt;</span><span class="pln">Click on the button to load result.json file −</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+     
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"stage"</span><span class="pln"> </span><span class="atn">style</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"</span><span class="pln">background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:#</span><span class="pln">eee</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+      STAGE
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+     
+   </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">id</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"driver"</span><span class="pln"> </span><span class="atn">value</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="atv">"Load Data"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+
+
+<p>Here JQuery utility method getJSON() initiates an Ajax request to the specified URL result.json file. After loading this file, all the content would be passed to the callback function which finally would be
+     populated inside &lt;div&gt; tagged with ID stage.</p>
+
+<div class="output">
+    <html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            $("#driver1").click(function(event){
+				
+               $.getJSON('./ajax/result.json', function(jd) {
+                  $('#stage1').html('<p> Name: ' + jd.name + '</p>');
+                  $('#stage1').append('<p>Age : ' + jd.age+ '</p>');
+                  $('#stage1').append('<p> Sex: ' + jd.sex+ '</p>');
+               });
+					
+            });
+         });
+      </script>
+   </head>
+	
+   <body>
+      <p>Click on the button to load result.json file −</p>
+		
+      <div id = "stage1" style = "background-color:#eee;">
+         
+      </div>
+		
+      <input type = "button" id = "driver1" value = "Load Data" />
+   </body>
+</html>
+</div>
+<hr>
+<h2 class="subheading1">Passing Data to the Server</h2>
+<p>sometimes you need to collect input from the user and you pass that input to the server for further processing. JQuery AJAX made it easy enough to pass collected 
+    data to the server using data parameter of any available Ajax method</p>
+
+
+<h3 class="text-imp">Example</h3>
+
+<div class='code'>
+    <div>&lt;html&gt;</div><div>&nbsp; &nbsp;&lt;head&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;title&gt;The jQuery Example&lt;/title&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;/script&gt;</div><div><span style="white-space: pre;">		</span></div><div>&nbsp; &nbsp; &nbsp; &lt;script language="javascript" type="text/javascript"&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$(document).ready(function() {</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $("#driver").click(function(event){</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;var name = $("#name").val();</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;$("#stage").load('/jquery/result.php', {"name":name} );</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; });</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;});</div><div>&nbsp; &nbsp; &nbsp; &lt;/script&gt;</div><div>&nbsp; &nbsp;&lt;/head&gt;</div><div><span style="white-space: pre;">	</span></div><div>&nbsp; &nbsp;&lt;body&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;p&gt;Enter your name and click on the button:&lt;/p&gt;</div><div>&nbsp; &nbsp; &nbsp; &lt;input id="name" size="40" type="input" /&gt;&lt;br /&gt;</div><div><span style="white-space: pre;">		</span></div><div>&nbsp; &nbsp; &nbsp; &lt;div id="stage" style="background-color: #cccc00;"&gt;</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;STAGE</div><div>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</div><div><span style="white-space: pre;">		</span></div><div>&nbsp; &nbsp; &nbsp; &lt;input id="driver" type="button" value="Show Result" /&gt;</div><div>&nbsp; &nbsp;&lt;/body&gt;</div><div>&lt;/html&gt;</div>
+</div>
+<p class="text-aqua">result.php</p>
+<pre class="code">
+    &lt;?php
+   if( $_REQUEST["name"] ){
+      $name = $_REQUEST['name'];
+      echo "Welcome ". $name;
+   }
+     ?&gt;
+</pre>
+
+
+
+<div class="output">
+    <html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+		
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+            $("#driver2").click(function(event){
+               var name = $("#name").val();
+               $("#stage2").load('./ajax/result.php', {"name":name} );
+            });
+         });
+      </script>
+   </head>
+	
+   <body>
+      <p>Enter your name and click on the button:</p>
+      <input type = "input" id = "name" size = "40" /><br />
+		
+      <div id = "stage2" style = "background-color:cc0;">
+         
+      </div>
+		
+      <input type = "button" id = "driver2" value = "Show Result" />
+   </body>
+</html>
+</div>
+
+<h2 class="text-imp">JQuery AJAX Methods</h2>
+<p>You have seen basic concept of AJAX using JQuery. Following table lists down all important JQuery AJAX methods which you can use based your programming need −
+
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <td>Sr. No</td>
+        <td>Method &amp; Description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>jQuery.ajax( options )
+                </b><br>
+                <p>Load a remote page using an HTTP request.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                <b>jQuery.ajaxSetup( options )
+                </b><br>
+                <p>Setup global settings for AJAX requests.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>
+                <b>jQuery.get( url, [data], [callback], [type] )
+                    </b><br>
+                <p>Load a remote page using an HTTP GET request.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>
+                <b>jQuery.getJSON( url, [data], [callback] )
+                    
+                    
+                </b><br>
+                <p>Load JSON data using an HTTP GET request.</p>
+            </td>
+        </tr>
+
+        <tr></tr>
+            <td>5</td>
+            <td>
+                <b>	jQuery.getScript( url, [callback] )
+                </b><br>
+                <p>Loads and executes a JavaScript file using an HTTP GET request.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>
+                <b>jQuery.post( url, [data], [callback], [type] )
+                   </b><br>
+                <p> Load a remote page using an HTTP POST request.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>
+                <b>load( url, [data], [callback] )
+                    </b><br>
+                <p>Load HTML from a remote file and inject it into the DOM.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>
+                <b>serialize( )
+                    </b><br>
+                <p>Serializes a set of input elements into a string of data.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>
+                <b>serializeArray( )
+                    </b><br>
+                <p>Serializes all forms and form elements like the .serialize() 
+                    method but returns a JSON data structure for you to work with.</p>
+            </td>
+        </tr>
+
+        
+
+
+    </tbody>
+
+
+</table>
+<h2 class="subheading1">JQuery AJAX Events</h2>
+
+<p>You can call various JQuery methods during the life cycle of AJAX call progress. 
+    Based on different events/stages following methods are available −</p>
+
+<table class="table table-bordered">
+    <thead>
+        <td>Sr.No</td>
+        <td>Method &amp; Description</td>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>ajaxComplete( callback )
+                    </b><br>
+                <p>Attach a function to be executed whenever an AJAX request completes</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                <b>ajaxStart( callback )
+                    </b><br>
+                <p> Attach a function to be executed whenever an AJAX request begins and there is none already active.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <b>ajaxError( callback )
+                   </b><br>
+                <p> Attach a function to be executed whenever an AJAX request fails.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>
+                <b>ajaxSend( callback )
+                   </b><br>
+                <p> Attach a function to be executed before an AJAX request is sent.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>
+                <b>ajaxStop( callback )</b><br>
+                <p>  Attach a function to be executed whenever all AJAX requests have ended.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>
+                <b>ajaxSuccess( callback )</b><br>
+                <p>Attach a function to be executed whenever an AJAX request completes successfully.</p>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery css tutorial</title>
+<meta name="description" content="jquery css  ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery css</h1>
+<p class="text-aqua">Using JQuery library developers can enhance their websites without worrying about browsers and their versions as long as the browsers have JavaScript enabled.
+
+    Most of the JQuery CSS Methods do not modify the content of the jQuery object and they are used to apply CSS properties on DOM elements</p>
+<h2 class="text-pink">How to apply css property in jquery</h2>
+<p>CSS property can be applied using JQuery method <b class="text-imp">css( PropertyName, PropertyValue )</b>.</p>
+<h3 class="text-success">syntax</h3>
+<p class="cmd">selector.css( PropertyName, PropertyValue );</p>
+
+<h3>How to apply  ( color: red ) on h1 tag</h3>
+<div class="codepen">
+    <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="html,result" data-user="ashishfgiet" data-slug-hash="VwerWVK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VwerWVK">
+        <span>See the Pen <a href="https://codepen.io/ashishfgiet/pen/VwerWVK">
+        VwerWVK</a> by Ashish Kumar (<a href="https://codepen.io/ashishfgiet">@ashishfgiet</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+
+<h3>Apply multiple css </h3>
+<pre class="code">selector.css( {
+    key1:val1, 
+     key2:val2,
+     ....,
+     keyN:valN
+})</pre>
+<div class="codepen">
+    <p class="codepen" data-height="287" data-theme-id="light" data-default-tab="html,result" data-user="ashishfgiet" data-slug-hash="vYLWZVg" style="height: 287px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vYLWZVg">
+        <span>See the Pen <a href="https://codepen.io/ashishfgiet/pen/vYLWZVg">
+        vYLWZVg</a> by Ashish Kumar (<a href="https://codepen.io/ashishfgiet">@ashishfgiet</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</div>
+
+<h2 class="subheading1">Jquery CSS methods</h2>
+<p>Folllowing are the css methods you can use to apply the css </p>
+
+<table class="table table-bordered ">
+    <thead>
+        <td>Sr.No</td>
+        <td>Method & Description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>css( name )
+                    </b><br>
+                <p>Return a style property on the first matched element.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <b>css( name, value )
+
+                    
+                    </b><br>
+                <p> Set a single style property to a value on all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>
+                <b>css( properties )
+                    </b><br>
+                <p>Set a key/value object as style properties to all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>
+                <b>height( val )
+                   
+                    
+                    </b><br>
+                <p> Set the CSS height of every matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>
+                <b>height( )
+                   </b><br>
+                <p> Get the current computed, pixel, height of the first matched element.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>
+                <b>innerHeight( ) 
+                    </b><br>
+                <p>Gets the inner height (excludes the border and includes the padding) for the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>
+                <b>innerWidth( )
+                  
+                    
+                    </b><br>
+                <p>  Gets the inner width (excludes the border and includes the padding) for the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>
+                <b>offset( )
+                </b><br>
+                <p>    Get the current offset of the first matched element, in pixels, relative to the document.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>
+                <b>offsetParent( )
+                    
+                    
+                    </b><br>
+                <p>Returns a jQuery collection with the positioned parent of the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>
+                <b>outerHeight( [margin] )
+                    </b><br>
+                <p> Gets the outer height (includes the border and padding by default) for the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td>
+                <b>outerWidth( [margin] )
+</b><br>
+                <p>   Get the outer width (includes the border and padding by default) for the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td>
+                <b>position( )
+                    </b><br>
+                <p>Gets the top and left position of an element relative to its offset parent.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>13</td>
+            <td>
+                <b>scrollLeft( val )
+                   </b><br>
+                <p> When a value is passed in, the scroll left offset is set to that value on all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>14</td>
+            <td>
+                <b>scrollLeft( )
+                   </b><br>
+                <p> Gets the scroll left offset of the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>15</td>
+            <td>
+                <b>scrollTop( val )
+                   </b><br>
+                <p> When a value is passed in, the scroll top offset is set to that value on all matched elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>16</td>
+            <td>
+                <b>scrollTop( )
+                   </b><br>
+                <p> Gets the scroll top offset of the first matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>17</td>
+            <td>
+                <b>width( val )
+                   
+                    
+                    </b><br>
+                <p> Set the CSS width of every matched element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>18</td>
+            <td>
+                <b>width( )
+                    </b><br>
+                <p>Get the current computed, pixel, width of the first matched element.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

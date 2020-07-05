@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery SlideToggle() method | Jquery Slide functions , Jquery Slide functions are used to show and hide an element with slide effect.
+     This will decrease and increase height of element with transition.</title>
+<meta name="description" content="Jquery SlideToggle() method - ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery SlideToggle() | Jquery Slide Functions</h1>
+<p>Jquery Slide functions are used to show and hide an element with slide effect. 
+    This will decrease and increase height of element with transition.
+Fro smooth effect you can use slide Function with time parameter.</p>
+
+<ol class="text-aqua">
+    <li><a href="#jsu">Jquery SlideUp()</a></li>
+    <li><a href="#jsd">Jquery SlideDown()</a></li>
+    <li><a href="#jst">Jquery SlideToggle()</a></li>
+</ol>
+
+<h2 id="jsd">Jquery SlideDown()</h2>
+<p>JQuery slideUp function is used to show or hide an html element with slide effect and transitions. The default duration is 400.
+     But you can change duration according to your wants using "slow", "fast" or n milliseconds.</p>
+
+<p class="text-imp">Syntax</p>
+<p class="cmd">  $(slector).slideDown("slow");</p>
+
+<p class="alert alert-success">
+    for slow effect use <b class="text-danger">slideToggle('slow')</b>
+</p>
+<h3>Example</h3>
+<button id="sld" class="custom-button">
+slide Down
+</button>
+<div id="sldd" class="slide">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n
+        ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?</p>
+</div>
+
+
+<pre class="code">
+    <div><font color="#808080">&lt;button class="custom-button" id="sld"&gt;</font></div><div><font color="#808080">slide Down</font></div><div><font color="#808080">&lt;/button&gt;</font></div><div><font color="#808080">&lt;div class="slide" id="sldd"&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?&lt;/p&gt;</font></div><div><font color="#808080">&lt;/div&gt;</font></div>
+    <div><font color="#808080">&lt;script&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; $('#sld').click(function(){</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; $('#sldd').slideDown();</font></div><div><font color="#808080">&nbsp; &nbsp; })</font></div><div><font color="#808080">&lt;/script&gt;</font></div>
+</pre>
+
+
+
+
+<h2 id="jsu">Jquery slideUp()</h2>
+<p>JQuery slideUp
+    JQuery slideUp function is used to show or hide an html element with slide effect and transitions. The default duration is 400.
+     But you can change duration using "slow", "fast" or n milliseconds.</p>
+
+
+     <h3>Example</h3>
+     <button id="slu" class="custom-button">
+     slide Up
+     </button>
+     <div id="slud" class="slide">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n
+             ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?</p>
+     </div>
+     
+     
+     <pre class="code">
+         <div><font color="#808080">&lt;button class="custom-button" id="slu"&gt;</font></div><div><font color="#808080">slide up</font></div><div><font color="#808080">&lt;/button&gt;</font></div><div><font color="#808080">&lt;div class="slide" id="sldd"&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?&lt;/p&gt;</font></div><div><font color="#808080">&lt;/div&gt;</font></div>
+         <div><font color="#808080">&lt;script&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; $('#sld').click(function(){</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; $('#sldd').slideUp();</font></div><div><font color="#808080">&nbsp; &nbsp; })</font></div><div><font color="#808080">&lt;/script&gt;</font></div>
+     </pre>
+
+<h2 id="jst">Jquery SlideToggle( )</h2>
+<p>JQuery slideToogle function is used to slideup or slidedown and html element with transition. 
+    If element is hidden, it will slide down, and if it is shown, it will slideup.</p>
+
+    <h3>Example</h3>
+    <button id="slt" class="custom-button">
+    slide Toggle
+    </button>
+    <div id="sltd" class="slide">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n
+            ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?</p>
+    </div>
+    
+    
+    <pre class="code">
+        <div><font color="#808080">&lt;button class="custom-button" id="slt"&gt;</font></div><div><font color="#808080">slide Toggle</font></div><div><font color="#808080">&lt;/button&gt;</font></div><div><font color="#808080">&lt;div class="slide" id="sldd"&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae accusamus perspiciatis sequi placeat eius architecto minima. Velit nisi, nobis, est maiores n</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; ulla iure voluptatem dignissimos, dolores error atque temporibus omnis?&lt;/p&gt;</font></div><div><font color="#808080">&lt;/div&gt;</font></div>
+        <div><font color="#808080">&lt;script&gt;</font></div><div><font color="#808080">&nbsp; &nbsp; $('#sld').click(function(){</font></div><div><font color="#808080">&nbsp; &nbsp; &nbsp; &nbsp; $('#sldd').slideToggle();</font></div><div><font color="#808080">&nbsp; &nbsp; })</font></div><div><font color="#808080">&lt;/script&gt;</font></div>
+    </pre>
+
+
+
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+<script>
+    $('#sld').click(function(){
+        $('#sldd').slideDown();
+    })
+
+    $('#slu').click(function(){
+        $('#slud').slideUp();
+    })
+
+    $('#slt').click(function(){
+        $('#sltd').slideToggle();
+    })
+</script>
+</body>
+<!--footer-->
+
+
+
+</html>

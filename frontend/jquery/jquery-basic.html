@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery Basic</title>
+<meta name="description" content="jquery Basics - how to satrt using jquery | what is the use of jquery">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery function</h1>
+<p class="text-pink">With jQuery you select (query) HTML elements and perform "actions" on them.</p>
+
+<h2 class="subheading1">jQuery Syntax</h2>
+<p>The jQuery syntax is tailor-made for selecting HTML
+     elements and performing some action on the element(s).
+    
+    <br>
+<br>
+Basic syntax is: $(selector).action()</p>
+<ol>
+    <li>A $ sign to define/access jQuery</li>
+    <li>A (selector) to "query (or find)" HTML elements</li>
+    <li>A jQuery action() to be performed on the element(s)
+    </li>
+</ol>
+
+<h2 class="subheading2">Examples</h2>
+<ol>
+    <li class="text-aqua">
+        <b >$(this).hide() - hides the current element.</b> 
+    </li>
+
+    <li class="text-aqua">
+        <b >$("p").hide() - hides all &lt;p&gt; elements
+
+        </b> 
+    </li>
+
+    <li class="text-aqua">
+        <b >$(".test").hide() - hides all elements with class="test".
+
+        </b> 
+       </li>
+
+    <li class="text-aqua">
+        <b>$("#test").hide() - hides the element with id="test".
+
+        </b>
+    </li>
+</ol>
+
+<pre>
+    <code class="code">
+        $(document).ready(function(){
+
+            // jQuery methods go here...
+          
+          });
+    </code>
+</pre>
+<ol>
+    <li class="text-info">
+        This is to prevent any jQuery code from running 
+    before the document is finished loading (is ready).
+    </li>
+    <li class="text-imp">
+        It is good practice to wait for the document to be fully loaded and ready before working with it. This also allows you to have your JavaScript code
+         before the body of your document, in the head section.
+    </li>
+</ol>
+
+<ol>
+    <h2 class="text-aqua">Here are some examples of actions that can fail 
+        if methods are run before the document is fully loaded:</h2>
+    <li>Trying to hide an element that is not created yet</li>
+    <li>Trying to get the size of an image that is not loaded yet
+    </li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

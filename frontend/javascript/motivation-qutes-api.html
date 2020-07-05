@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h2{margin: 20px;padding-top: 20px;background: red;color: greenyellow;}
+            h2 span{margin-left: 10px;}
+        </style>
+    </head>
+    <body>
+        <h2>motivational quato</h2>
+        <h2></h2>
+        <div>
+
+        </div>
+        <script>
+            fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+
+  })
+  
+  .then(function(data) {
+    console.log(data)
+   console.log(typeof(data))
+    for(var i in data){
+        console.log(i.text)
+
+        document.querySelector("h2").innerHTML+=i+"<span>"+data[i].text+"-</span>"+data[i].author+"<br>"
+      
+    }
+
+  });
+
+  
+        </script>
+    </body>
+</html>

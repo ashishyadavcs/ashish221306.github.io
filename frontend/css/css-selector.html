@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS Selectors</title>
+<meta name="description" content="CSS selectors - CSS Selectors are used to target an HTML Element or group of elements based on selector we are using. CSS Selectors are divided as Simple Selectors, Combinators Selectors and Pseudo Selectors. Selectors are backbone of css.
+ The latest selectors in css are called css3 selectors introduced with HTML5.">
+<meta name="keywords" content="css selectors" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">CSS Selectors</h1>
+<p>CSS selectors are used to select the content you want to style. Selectors are the part of CSS rule set. CSS selectors select HTML elements according to its id, class, type, attribute etc.</p>
+<p>There are several different type of selector</p>
+<ol>
+    <li>CSS Element Selector
+      
+        </li>
+        <li>  CSS Id Selector
+          </li>
+          <li>  CSS Class Selector
+            </li>
+            <li>CSS Universal Selector</li>
+             <li> CSS Group Selector</li>
+</ol>
+
+<h2 class="subheading1">CSS Element Selector</h2>
+<p>The element selector selects the HTML element by name.</p>
+<pre class="code">
+    p&lcub; 
+        text-align: center;  
+        color: blue;  
+    }   
+    
+</pre>
+<h2>CSS Id Selector</h2>
+<p>The id selector selects the id attribute of an HTML element to select a specific element. An id is always unique within 
+    the page so it is chosen to select a single, unique element</p>
+    <p>It is written with the hash character (#), followed by the id of the element.</p>
+
+<pre class="code">
+    #p&lcub; 
+    text-align: center;  
+    color: blue;  
+    } 
+</pre>
+
+
+<h2 class="subheading1">CSS Class Selector</h2>
+<p>The class selector selects HTML elements with a specific class attribute. It is used with a period character .
+     (full stop symbol) followed by the class name.</p>
+
+<pre class="code">
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+    .center {  
+        text-align: center;  
+        color: blue;  
+    }  
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h1 class="center"&gt;This heading is blue and center-aligned.&lt;/h1&gt;  
+    &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt;   
+    &lt;/body&gt;  
+    &lt;/html&gt;
+</pre>
+
+
+<h2 class="subheading1">CSS Class Selector for specific element</h2>
+<p>If you want to specify that only one specific HTML element should be 
+    affected then you should use the element name with class selector.</p>
+
+<h3>Example</h3>
+<pre class="code">
+&lt;!DOCTYPE html&gt;  
+&lt;html&gt;  
+&lt;head&gt;  
+ &lt;style&gt;  
+  p.center {  
+    text-align: center;  
+    color: blue;  
+   }  
+   &lt;/style&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+   &lt;h1 class="center"&gt;This heading is not affected&lt;/h1&gt;  
+    &lt;p class="center"&gt;This paragraph is blue and center-aligned.&lt;/p&gt;   
+&lt;/body&gt;  
+&lt;/html&gt;   
+</pre>
+
+
+<h2 class="subheading1">CSS Universal Selector</h2>
+<p>The universal selector is used as a wildcard character. It selects all the elements on the pages.</p>
+
+<pre class="code">
+    &lt;!DOCTYPE html&gt;  
+    &lt;html&gt;  
+    &lt;head&gt;  
+    &lt;style&gt;  
+    * {  
+       color: rgb(34, 226, 34);  
+       font-size: 20px;  
+    }   
+    &lt;/style&gt;  
+    &lt;/head&gt;  
+    &lt;body&gt;  
+    &lt;h2&gt;This is heading&lt;/h2&gt;  
+    &lt;p&gt;This style will be applied on every paragraph.&lt;/p&gt;  
+    &lt;p id="para1"&gt;Me too!&lt;/p&gt;  
+    &lt;p&gt;And me!&lt;/p&gt;  
+    &lt;/body&gt;  
+    &lt;/html&gt;    
+</pre>
+<h3>Output</h3>
+<div class="output">
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+.demo h2,.demo p{  
+   color: rgb(34, 226, 34);  
+   font-size: 20px;  
+}   
+</style>  
+</head>  
+<body>  
+<div class="demo">
+<h2>This is heading</h2>  
+<p>This style will be applied on every paragraph.</p>  
+<p id="para1">Me too!</p>  
+<p>And me!</p>  
+</div>
+</body>  
+</html>    
+</div>
+
+<h2>CSS Group Selector</h2>
+<p>The grouping selector is used to select all the elements with the same style definitions.
+
+    Grouping selector is used to minimize the code. Commas are used to separate each selector in grouping.
+    
+    Let's see the CSS code without group selector.</p>
+
+
+<pre class="code">
+ h1 &lcub;
+    text-align: center;  
+    color: blue;  
+&rcub;  
+h2 &lcub;
+    text-align: center;  
+    color: blue;  
+&rcub;  
+p &lcub; 
+    text-align: center;  
+    color: blue;  
+&rcub;  
+
+</pre>
+<p>As you can see, you need to define CSS properties for all 
+    the elements. It can be grouped in following ways:</p>
+
+<pre class="code">
+    h1,h2,p &lcub;  
+    text-align: center;  
+    color: blue;  
+&rcub;  
+</pre>
+
+
+<pre class="code">
+&lt;!DOCTYPE html&gt;  
+&lt;html&gt;  
+&lt;head&gt;  
+&lt;style&gt;  
+h1, h2, p &lcub;  
+    text-align: center;  
+    color: blue;  
+rcub;  
+&lt;/style&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;h1&gt;Hello Javatpoint.com&lt;/h1&gt;  
+&lt;h2&gt;Hello Javatpoint.com (In smaller font)&lt;/h2&gt;  
+&lt;p&gt;This is a paragraph.&lt;/p&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</pre>
+
+<h2 class="text-aqua">Attribute Selector</h2>
+<p>Attribute Selector select an html element based on their attributes name or value.
+     <b class="text-imp">Brackets [] are used to write attribute or attribute with value.</b></p>
+
+<pre class="code">
+    &lt;style&gt;
+    input[ type ]{ border:2px solid blue;}
+    input[ type="text"]{ background-color:lightblue;}
+    input[ type="email"]{ background-color:lightpink;}
+    &lt;/style&gt;
+	
+    &lt;input type="text"&gt;
+    &lt;input type="email"&gt;
+</pre>
+
+
+<h2 id="psudo-selector" class="text-aqua">Pseudo Selectors</h2>
+<p>
+    Pseudo Selectors are selectors used with colon selector, e.g :<br>
+
+Top pseudo selectors and <span class="text-imp">:hover, :focus, :active, :link, :visited etc</span>.
+</p>
+
+<pre class="code">
+    &lt;style&gt;
+        button{ background:red }
+        button:hover{ background:blue }
+    &lt;/style&gt;
+</pre>
+
+
+<h2 class="text-aqua">CSS Child Vs Descendant Selector</h2>
+<pre class="code">
+&lt;style&gt;
+p{ color:red}                 /* all p elements*/
+.header p{ color:red; }       /* Descendant Selector*/
+.header &gt; p{ color:blue; }    /* Child Selector*/
+&lt;/style&gt;
+
+&lt;div class="header"&gt;
+    &lt;p&gt;This para is inside div.&lt;/p&gt;
+&lt;/div&gt;
+	
+&lt;p&gt;This para is outside div.&lt;/p&gt;
+</pre>
+
+<h2 class="subheading1">CSS Selectors List</h2>
+
+<table class="table table-bordered">
+    <thead class="bg-secondary">
+        <td>Selector</td>
+        <td>Use</td>
+        <td>Example</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Tag Selector</td>
+            <td>p{}</td>
+            <td>Used to call all p tags</td>
+        </tr>
+        <tr>
+            <td>ID Selector</td>
+            <td>#para{ }</td>
+            <td>Used to call that unique element with id para.</td>
+        </tr>
+        <tr>
+            <td>Tag with Class Selector</td>
+            <td>p.para{}</td>
+            <td>Used to call only p elements with class para</td>
+        </tr>
+        <tr>
+            <td>Grouping Selector</td>
+            <td>h1, h3, h5{}</td>
+            <td>Used to group &lt;h1&gt;, &lt;h3&gt; &lt;h5&gt; elements</td>
+        </tr>
+        <tr>
+            <td>Descendant Selector</td>
+            <td>div p{}</td>
+            <td>Used to call all p elements of div, i.e, children, grand children and so on.
+            </td>
+        </tr>
+        <tr>
+            <td>Child Selector</td>
+            <td>div &gt; p{}</td>
+            <td>Used to call only child p elements of div, not grand and great grand.</td>
+        </tr>
+        <tr>
+            <td>Attribute Selector	</td>
+            <td>input[type="radio"]	</td>
+            <td>Used to call an element on the basics of attribute and value.
+            </td>
+        </tr>
+
+        <tr>
+            <td>Universal Selector</td>
+            <td>*{ }</td>
+            <td>Used to call all elements in web document.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

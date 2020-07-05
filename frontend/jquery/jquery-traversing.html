@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>How to traverse dom element by jquery</title>
+<meta name="description" content="jquery dom element traversal ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery traversal of element</h1>
+<p>Learn how to <b class="text-success">traverse dom element by jquery</b><br>
+    Traversal Methods do not modify the jQuery object and they are used to filter out elements from 
+    a document based on given conditions.</p>
+
+
+    <h2 class="subheading1" >How to Find Elements by Index</h2>
+<ol>
+    <li>Every list has its own index, and can be located directly by using <b class="text-imp">eq(index)</b> method </li>
+    <li>Every child element starts its index from zero, thus, list item 2 would be accessed by using <b class="text-aqua">$("li").eq(1)</b> and so on.</li>
+  </ol>
+<h3>Example</h3>
+<p>we can select the list element index as follows</p>
+<h3 class="text-alert">Example</h3>
+<pre class="code">
+    &lt;script type = "text/javascript" language = "javascript"&gt;
+        $(document).ready(function() {
+          <span class="text-imp"> $("li").eq(2).addClass("selected");</span>
+        });
+     &lt;/script&gt;
+</pre>
+
+<h2 class="subheading1">How to filter element</h2>
+<p class="text-yellow">The filter( selector ) method can be used to filter out all elements from the set of
+     matched elements that do not match the specified selector(s).</p>
+
+<p class="cmd">
+    $("li").filter(".middle").addClass("selected");
+</p>
+<h2 class="subheading1">Finding Element</h2>
+<p>The find( selector ) method can be used to locate 
+    all the descendant elements of a particular type of elements. </p>
+    <p class="text-imp"></p>
+    <p class="cmd">
+        $("p").find("span").addClass("selected");
+    </p>
+    <p>above example will find all  <span class="text-yellow">span</span> element under <span class="text-pink">&lt;p&gt;</span> tag and will add class <q class="text-imp">selected</q></p>
+
+
+<h2>Jquery Dom Filter method</h2>
+<p>Following are jquery DOM filter methods</p>
+
+
+<table class="table table-bordered">
+<thead>
+    <td>Sr.No.</td>
+    <td>Method & Description</td>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>
+            <b>eq( index )
+                
+                
+                </b><br>
+            <p>Reduce the set of matched elements to a single element.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>
+            <b>filter( selector )
+               </b><br>
+            <p> Removes all elements from the set of matched elements
+                 that do not match the specified selector(s).</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>
+            <b>filter( fn )
+                </b><br>
+            <p>Removes all elements from the set of matched elements that 
+                do not match the specified function.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>
+            <b>is( selector )
+               </b><br>
+            <p> Checks the current selection against an expression and returns true,
+                if at least one element of the selection fits the given selector.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>
+            <b>map( callback )
+                </b><br>
+            <p> Translate a set of elements in the jQuery object into another set of values in a 
+                jQuery array (which may, or may not contain elements).</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>
+            <b>	not( selector )
+                </b><br>
+            <p>Removes elements matching the specified selector from the set of matched elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>
+            <b>slice( start, [end] )
+                </b><br>
+            <p> Selects a subset of the matched elements.</p>
+        </td>
+    </tr>
+
+
+</tbody>
+</table>
+
+
+<h2 class="subheading1">
+    JQuery DOM Traversing Methods
+</h2>
+<p>Following table lists down other useful methods which 
+    you can use to locate various elements in a DOM −</p>
+<table class="table table-bordered">
+<thead>
+    <td>Sr. No</td>
+    <td>Methods & Description</td>
+</thead>
+<tbody>
+    <tr>
+        <td>1</td>
+        <td>
+            <b>add( selector )
+                </b><br>
+            <p>Adds more elements, matched by the given selector, to the set of matched elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>
+            <b>andSelf( )
+               </b><br>
+            <p> Add the previous selection to the current selection.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>
+            <b>	children( [selector])
+               </b><br>
+            <p> Get a set of elements containing all of the unique immediate children of each of the matched set of elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>4</td>
+        <td>
+            <b>closest( selector )
+                </b><br>
+            <p> Get a set of elements containing the closest parent element that matches the specified selector, the starting element included.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>5</td>
+        <td>
+            <b>contents( )
+               </b><br>
+            <p> Find all the child nodes inside the matched elements (including text nodes),
+                or the content document, if the element is an iframe.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>6</td>
+        <td>
+            <b>end( )
+                </b><br>
+            <p>Revert the most recent 'destructive' operation, changing the set of matched elements to its previous state.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>7</td>
+        <td>
+            <b>find( selector )
+                </b><br>
+            <p>Searches for descendant elements that match the specified selectors.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>8</td>
+        <td>
+            <b>next( [selector] )
+            </b><br>
+            <p>  Get a set of elements containing the 
+                unique next siblings of each of the given set of elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>9</td>
+        <td>
+            <b>nextAll( [selector] )
+                </b><br>
+            <p>Find all sibling elements after the current element.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>10</td>
+        <td>
+            <b>offsetParent( )</b><br>
+            <p>  Returns a jQuery collection with the positioned parent of the first matched element.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>11</td>
+        <td>
+            <b>parent( [selector] )
+                </b><br>
+            <p>Get the direct parent of an element. If called on a set of elements,
+                parent returns a set of their unique direct parent elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>12</td>
+        <td>
+            <b>	parents( [selector] )
+               </b><br>
+            <p> Get a set of elements containing the unique ancestors of 
+                the matched set of elements (except for the root element).</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>13</td>
+        <td>
+            <b>prev( [selector] )
+              </b><br>
+            <p>  Get a set of elements containing the
+                unique previous siblings of each of the matched set of elements.</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>14</td>
+        <td>
+            <b>	prevAll( [selector] )
+                </b><br>
+            <p>Find all sibling elements in front of the current element.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>
+            <b>siblings( [selector] )
+               
+                
+                </b><br>
+            <p> Get a set of elements containing all of the unique siblings of each of the matched set of elements.</p>
+        </td>
+    </tr>
+</tbody>
+</table>
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

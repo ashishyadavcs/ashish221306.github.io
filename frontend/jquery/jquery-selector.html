@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Jquery Selectors</title>
+<meta name="description" content="jquery selector ,A jQuery Selector is a function which makes use of expressions to find out matching elements from a DOM based on the given criteria. ">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./jquery.css">
+
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'./sidenav.html'">
+   
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">jquery Selectors</h1>
+<p>A jQuery Selector is a function which makes use of expressions to find out
+     matching elements from a DOM based on the given criteria.
+    <br>
+    <span class="text-imp">selectors are used to select one or more HTML elements using jQuery. Once an element is selected then we can perform various operations on that selected element</span></p>
+
+<h2 class="text-pink"> $( ) factory function</h2>
+<p class="text-aqua">jQuery selectors start with the dollar sign and parentheses − $(). The factory function $() makes use of following three building blocks while selecting elements in a given document −</p>
+<table class="table table-bordered">
+    <thead>
+        <td>sr.no</td>
+        <td>slectors and description</td>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>Tag Name</b><br>
+                <p>Represents a tag name available in the DOM.
+                     For example $('p') selects all paragraphs &lt;p&gt; in the document.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>
+                <b>Tag ID</b><br>
+                <p>Represents a tag available with the given ID in the DOM. For example $('#some-id')
+                     selects the single element in the document that has an ID of some-id.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>
+                <b>Tag Class</b><br>
+                <p>Represents a tag available with the given class in the DOM. For example $('.some-class') selects all 
+                    elements in the document that have a class of some-class.</p>
+            </td>
+        </tr>
+
+
+
+
+    </tbody>
+</table>
+<b class="text-notice">NOTE − </b><br>
+<p class="text-imp">
+    $( ) and jquery ( ) works same <br>
+    you can use any of them .
+</p>
+
+<h2 class="text-alert">Example -</h2>
+<p>Following is a simple example which makes use of Tag Selector.
+     This would select all the elements with a tag name p.
+
+</p>
+
+<pre class="code">
+    <a style="float: right;" class="btn run" href="./live1.html">run</a>
+    <span    >&lt;html&gt;</span><span   >
+    </span><span    >&lt;head&gt;</span><span   >
+       </span><span    >&lt;title&gt;</span><span   >The jQuery Example</span><span    >&lt;/title&gt;</span><span   >
+       </span><span    >&lt;script</span><span   > </span><span    >type</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > 
+          </span><span    >src</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</span><span    >&gt;</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+ 
+       </span><span    >&lt;script</span><span   > </span><span    >type</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"text/javascript"</span><span   > </span><span    >language</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"javascript"</span><span    >&gt;</span><span   >
+          $</span><span  >(</span><span   >document</span><span  >).</span><span   >ready</span><span  >(</span><span class="kwd" style="color: #000088;">function</span><span  >()</span><span   > </span><span  >{</span><span   >
+             $</span><span  >(</span><span   >"p"</span><span  >).</span><span   >css</span><span  >(</span><span   >"background-color"</span><span  >,</span><span   > </span><span   >"yellow"</span><span  >);</span><span   >
+          </span><span  >});</span><span   >
+       </span><span    >&lt;/script&gt;</span><span   >
+    </span><span    >&lt;/head&gt;</span><span   >
+     
+    </span><span    >&lt;body&gt;</span><span   >
+       </span><span    >&lt;div&gt;</span><span   >
+          </span><span    >&lt;p</span><span   > </span><span    >class</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"myclass"</span><span    >&gt;</span><span   >This is a paragraph.</span><span    >&lt;/p&gt;</span><span   >
+          </span><span    >&lt;p</span><span   > </span><span    >id</span><span   > </span><span  >=</span><span   > </span><span class="atv" style="color: #008800;">"myid"</span><span    >&gt;</span><span   >This is second paragraph.</span><span    >&lt;/p&gt;</span><span   >
+          </span><span    >&lt;p&gt;</span><span   >This is third paragraph.</span><span    >&lt;/p&gt;</span><span   >
+       </span><span    >&lt;/div&gt;</span><span   >
+    </span><span    >&lt;/body&gt;</span><span   >
+ </span><span    >&lt;/html&gt;</span>
+</pre>
+
+
+
+
+
+<h2 class="subheading1">How to use jquery Selectors</h2>
+<p>The selectors are very useful and would be required at every step while using jQuery. 
+    They get the exact element that you want from your HTML document.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <td>sr.no</td>
+            <td>slectors and description</td>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                    <b>Name</b><br>
+                    <p>Selects all elements which match with the given element <b>Name</b>.</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>
+                    <b>#ID</b><br>
+                    <p>Selects a single element which matches with the given ID.</p>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>
+                    <b>.Class</b><br>
+                    <p>Selects all elements which match with the given <b>Class</b>.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>
+                    <b>Universal (*)</b><br>
+                    <p>Selects all elements available in a DOM.</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>
+                    <b>	Multiple Elements A,B ,C </b><br>
+                    <p>Selects the combined results of all the specified selectors A, B or C.</p>
+                </td>
+            </tr>
+
+            
+    
+    
+    
+    
+        </tbody>
+    </table>
+
+
+
+
+<h2 class="subheading1 text-imp">Important Selectors &amp; description</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <td>sr.no</td>
+        <td>slectors and description</td>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>
+                <b>$('*')</b><br>
+                <p>This selector selects all elements in the document</p>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <b>$("p > *")</b><br>
+                <p>This selector selects all elements that are children of a paragraph element.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <b>$("#specialID")</b><br>
+                <p>This selector function gets the element with id="specialID".</p>
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>
+                <b>$(".specialClass")</b><br>
+                <p>This selector gets all the elements that have the class of specialClass</p>
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>
+                <b>$("li:not(.myclass)")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; that do not have class = "myclass".</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>
+                <b>$("a#specialID.specialClass")</b><br>
+                <p>This selector matches links with an id of specialID and a class of specialClass</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>
+                <b>$("p a.specialClass")</b><br>
+                <p>This selector matches links with a class of specialClass declared within <p> elements.
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>
+                <b>$("ul li:first")</b><br>
+                <p>This selector gets only the first &lt;li&gt; element of the &lt;ul&gt;.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>
+                <b>$("#container p")</b><br>
+                <p>Selects all elements matched by &lt;p&gt; that are descendants of an element that has an id of container.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>10</td>
+            <td>
+                <b>$("li > ul")</b><br>
+                <p>Selects all elements matched by <ul> that are children of an element matched by <li></li></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>11</td>
+            <td>
+                <b>$("strong + em")</b><br>
+                <p>Selects all elements matched by <em> that immediately follow a sibling element matched by <strong>.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>12</td>
+            <td>
+                <b>$("p ~ ul")</b><br>
+                <p>Selects all elements matched by &lt;ul&gt; that follow a sibling element matched by <p>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>
+                <b>$("code, em, strong")</b><br>
+                <p>Selects all elements matched by &lt;code&gt; or &lt;em&gt; or &lt;strong&gt;.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>14</td>
+            <td>
+                <b>$("p strong, .myclass")</b><br>
+                <p>Selects all elements matched by <strong> that are descendants of an element matched by &lt;p&gt; as well as all elements that have a class of myclass</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>15</td>
+            <td>
+                <b>$(":empty")</b><br>
+                <p>Selects all elements that have no children.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>16</td>
+            <td>
+                <b>$("p:empty")</b><br>
+                <p>Selects all elements matched by &lt;p&gt; that have no children.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>17</td>
+            <td>
+                <b>$("div[p]")</b><br>
+                <p>Selects all elements matched by &lt;div&gt; that contain an element matched by &lt;p&gt;.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>18</td>
+            <td>
+                <b>$("p[.myclass]")</b><br>
+                <p>Selects all elements matched by &lt;p&gt; that contain an element with a class of myclass.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>19</td>
+            <td>
+                <b>$("a[@rel]")</b><br>
+                <p>Selects all elements matched by &lt;a&gt; that have a rel attribute.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>20</td>
+            <td>
+                <b>$("input[@name = myname]")</b><br>
+                <p>Selects all elements matched by &lt;input&gt; that have a name value exactly equal to myname.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>21</td>
+            <td>
+                <b>$("input[@name^=myname]")</b><br>
+                <p>Selects all elements matched by &lt;input&gt; that have a name value beginning with myname.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>
+                <b>$("a[@rel$=self]")</b><br>
+                <p>Selects all elements matched by &lt;a&gt; that have rel attribute value ending with self</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>23</td>
+            <td>
+                <b>	
+                    $("a[@href*=domain.com]")</b><br>
+                <p>Selects all elements matched by &lt;a&gt; that have an href value containing domain.com</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>24</td>
+            <td>
+                <b>$("li:even")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; that have an even index value.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>25</td>
+            <td>
+                <b>$("tr:odd")</b><br>
+                <p>Selects all elements matched by &lt;tr&gt; that have an odd index value.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>26</td>
+            <td>
+                <b>$("li:first")</b><br>
+                <p>Selects the first &lt;li&gt; element.</p>
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td>27</td>
+            <td>
+                <b>$("li:last")</b><br>
+                <p>Selects the last &lt;li&gt; element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>28</td>
+            <td>
+                <b>$("li:visible")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; that are visible.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>29</td>
+            <td>
+                <b>$("li:hidden")</b><br>
+                <p>Selects all elements matched by <li> that are hidden.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>30</td>
+            <td>
+                <b>$(":radio")</b><br>
+                <p>Selects all radio buttons in the form.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>
+                <b>$(":checked")</b><br>
+                <p>Selects all checked box in the form</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>32</td>
+            <td>
+                <b>$(":input")</b><br>
+                <p>Selects only form elements (input, select, textarea, button).
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>
+                <b>$(":text")</b><br>
+                <p>Selects only text elements (input[type = text]).</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>34</td>
+            <td>
+                <b>$("li:eq(2)")</b><br>
+                <p>Selects the third &lt;li&gt; elemen</p>
+            </td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>
+                <b>$("li:eq(4)")</b><br>
+                <p>Selects the fifth &lt;li&gt; element.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>36</td>
+            <td>
+                <b>$("li:lt(2)")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; element before the third one; in other words, the first two &lt;li&gt; elements.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>37</td>
+            <td>
+                <b>$("p:lt(3)")</b><br>
+                <p>selects all elements matched by &lt;p&gt; elements before the fourth one; in other words the first three &lt;p&gt; elements.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>38</td>
+            <td>
+                <b>$("li:gt(1)")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; after the second one.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>39</td>
+            <td>
+                <b>$("p:gt(2)")</b><br>
+                <p>Selects all elements matched by &lt;p&gt; after the third one.
+
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>40</td>
+            <td>
+                <b>$("div/p")</b><br>
+                <p>Selects all elements matched by &lt;p&gt; that are children of an element matched by &lt;div&gt;.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>
+                <b>$("div//code")</b><br>
+                <p>Selects all elements matched by &lt;code&gt; that are descendants of an element matched by div.
+
+                </p>
+            </td>s
+        </tr>
+
+
+        <tr>
+            <td>42</td>
+            <td>
+                <b>$("//p//a")</b><br>
+                <p>Selects all elements matched by &lt;a&gt; that are descendants of an element matched by &lt;p&gt; </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>43</td>
+            <td>
+                <b>	
+                    $("li:first-child")</b><br>
+                <p>Selects all elements matched by &lt;li&gt;  that are the first child of their parent.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>44</td>
+            <td>
+                <b>$("li:last-child")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; that are the last child of their parent.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>45</td>
+            <td>
+                <b>$(":parent")</b><br>
+                <p>Selects all elements that are the parent of another element, including text.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td>46</td>
+            <td>
+                <b>$("li:contains(second)")</b><br>
+                <p>Selects all elements matched by &lt;li&gt; that contain the text second.</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<p class="alert alert-secondary">You can use all the above selectors with any HTML/XML element in generic way. For example if selector $("li:first") works for &lt;li&gt; element then $("p:first") would also work for &lt;p&gt; element.</p>
+
+
+
+
+
+
+
+
+
+  </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

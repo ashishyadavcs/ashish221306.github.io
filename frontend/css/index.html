@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS Tutorial</title>
+<meta name="description" content="CSS Tutorial - Learn complete css and design your first awesome attractive website / ui themes,CSS Tutorial for beginners, cascading style sheet, What is css, Learn CSS online, css for beginners, css media attribute, html and css tutorial, type of css, css code examples  ">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">CSS <br> ( Cascading Style Sheet )</h1>
+
+<p>CSS or Cascading style sheet is the standard stylesheet language of web, 
+    used to style or formatting of an HTML document. With CSS, it is easier to build a website as <strong>css can style whole website using one single css file. CSS is a standard part of HTML5</strong>
+     It is compulsory to use css in HTML5 as it is one of the core web technology.</p>
+
+<p>HTML can only build webpage structure, <b class="text-imp">Css can style HTML.</b> Thus CSS is used to enhance look and feel of HTML.</p>
+  
+
+<h2>How to write css</h2>
+<p>CSS Syntax or CSS Code is started with CSS Selector followed by declaration block, i.e. { }. Inside declartion block, property:value pair is used. Colon : is used to separate property and value. To add next property value pair, use ; semi-colon. Only last semi-colon is option
+     in declaration block. CSS Syntax is not case-sensitive, but prefer lowercase</p>
+
+
+<p class="cmd text-imp">
+    selector             <br>
+    { property1:value1;  <br>
+      property2:value2;  <br>
+      ....               <br>
+    }
+</p>
+
+<b>Example</b><br>
+<p class="cmd">
+p
+{                      <br>
+    color:red;         <br>
+    font-size:20px;     <br>
+    background:red       <br>
+}
+</p>
+
+<h2>CSS Types | in how many way we can write css</h2>
+<p>Based on how css is written in html page, css is divided into
+     three types, Internal CSS, external css and inline css.</p>
+
+
+<table class="table table-bordered">
+    <thead class="bg-secondary">
+        <td>Type</td>
+        <td>Description</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a class="text-primary" href="#inline-css">Inline CSS</a></td>
+            <td>CSS code is written inside html tag directly, in style attribute.</td>
+        </tr>
+
+        <tr>
+            <td><a class="text-primary" href="#internal-css">Internal CSS</a></td>
+            <td>CSS Code is written inside &lt;style&gt; tag in head. Recommended for single page only.</td>
+        </tr>
+
+        <tr>
+            <td><a class="text-primary" href="#external-css">External CSS</a></td>
+            <td>CSS code is written in separate file with .css extension and &lt;link&gt; element is used to attach external css with html document. Used for multipage websites.</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="sub" id="inline-css">
+    <h2>Inline CSS</h2>
+<p>Use inline css when you want to apply a style to a single occurrence of an element.
+    Inline stylesheets are declared within individual tags and affect those tags only. Inline stylesheets are declared with the style attribute and value inside.
+    
+    </p>
+
+    <pre class="code">
+        <p>exapmple</p>
+        <h2 style="color: red;">This text is red</h2>
+        <h2 style="background: yellow;color:#000">This text is highlited</h2>
+    </pre>
+
+<pre>
+    <code class="code">
+              <p>inline css</p>
+        &lt;h2 style="color: red;"&gt;This text is red&lt;/h2&gt;
+        &lt;h2 style="background: yellow;color:#000"&gt;This text is highlited&lt;/h2&gt;
+    </code>
+</pre>
+
+<h2>Internal CSS</h2>
+<p>Use internal stylesheet when you are working on single page website.<b class="text-pink"> An internal stylesheet is defined using the &lt;style&gt; tag and goes in the head section of an HTML document.</b>
+    The &lt;style&gt; tag specifies the content type of a stylesheet with its type attribute which should be set to "text/css". But in HTML5, type is optional.</p>
+
+
+<div class="output">
+    <h1 style="color: red;text-align:center">Internal CSS</h1>
+    <p style="color: greenyellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident velit repellendus, ea libero reiciendis necessitatibus sunt qui consequatur odio exercitationem 
+        deleniti molestiae ex maxime cumque laborum excepturi ipsum laboriosam! Vel? </p>
+
+</div>
+
+<p class="subheading1">Internal css</p>
+<pre>
+    <code class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Internal CSS&lt;/title&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;style&gt;
+    p{color: green}
+    h1{ text-align:center; color:red}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;p&gt;The text in this paragraph will be green.&lt;/p&gt;
+    &lt;p&gt;This paragraph is also green.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </code>
+</pre>
+
+<h2>External CSS</h2>
+<p>Use an external stylesheet when you want to apply same style to whole website /  several webpages. If we make one single change in an external css,
+     the change is reflected on all the pages where the stylesheet is linked.</p>
+
+<p>An external stylesheet is declared in an external file with a .css extension. It is called by pages whose interface it will affect. External stylesheets are linked using the <b class="text-imp">&lt;link&gt;</b> tag which should be placed in the head section of an HTML page. 
+    This tag includes two compulsory attributes.</p>
+
+<h3 class="subheading2">Attributes in the link tag</h3>
+<ol>
+    <li><b class="text-imp">rel - </b>When using an external stylesheet on a webpage, this attribute takes the value "stylesheet"</li>
+    <li><b class="text-imp">href -</b>Denotes the name and location of the external stylesheet to be used.</li>
+
+</ol>
+<h3>EXample</h3>
+<pre>
+    <code class="code">
+        &lt;!DOCTYPE html&gt;	
+        &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;External CSS&lt;/title&gt;
+        &lt;meta charset="UTF-8"&gt;
+        <span id="para2" style="box-sizing: border-box; color: blue;">&lt;link rel="stylesheet" href="style.css"&gt;</span>
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;p&gt;
+        The text in this paragraph will be blue.
+        &lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+
+
+
+
+<h2 class="subheading2">CSS Comments</h2>
+<p class="text-yellow"> CSS Comments starts with /* and ends with */. CSS Syntax inside comments is not functional.
+     We can store notes, or dummy code inside css comments.</p>
+
+
+<h3>Example</h3>
+<pre>
+    <code class="code">
+&lt;style&gt;                      
+/* CSS Comments */
+body{
+font-family:arial;
+font-size:14px;
+}
+&lt;/style&gt;
+    </code>
+</pre>
+
+<h2>Media Attribute in CSS</h2>
+<p><strong>CSS Media Atttribute</strong> specifies the device media where css will run. Default value of <strong>media attribute</strong> is all. Others values for <strong>media attribute</strong>
+     are screen and print. Here are some examples for media attribute</p>
+
+
+ <pre>
+     <code class="code">
+        &lt;style media="screen"&gt;
+        body{ 
+            font-family:sans-serif;
+        }
+    &lt;/style&gt;
+    
+    &lt;style media="screen and (min-width:460px)"&gt;
+        body{ 
+            font-family:cursive;
+        }
+    &lt;/style&gt;
+    
+    &lt;style media="print"&gt;
+        body{ 
+            font-family:monospace;
+        }
+    &lt;/style&gt;
+    
+            or
+            
+    &lt;link href="css/style.css" rel="stylesheet" media="screen"&gt;
+    &lt;link href="css/style-print.css" rel="stylesheet" media="print"&gt;
+     </code>
+ </pre>    
+
+<div class="alert alert-info">
+    <h3>Learn complete SEO</h3>
+    <p>To rank your website on top of Google Search</p>
+    <p>  <a  class="btn btn-lg" href="./../../seo/seo.html">SEO</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

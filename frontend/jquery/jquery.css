@@ -1,0 +1,55 @@
+.subheading1{color: aqua;font-weight: 500;text-shadow: 1px -1px 2px rgb(0, 119, 255);}
+p{color: rgb(189, 188, 187);}
+.active{background: #000!important;}
+ol{list-style-position: inside;list-style-type: square;}
+ol li p{margin: 0!important;padding: 5px 0!important;}
+ol li b{color: rgb(245, 197, 109);letter-spacing: 1px;}
+.text-imp{color: rgb(161, 247, 23) !important;}
+
+.code{
+    overflow-x: auto;
+    background: rgba(0,0,23,1);
+    color: #ddd;
+    border: 1px solid rgb(105, 93, 93);
+    border-radius: 10px;
+    margin: 10px 8px;
+    padding: 10px;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.5;
+    line-height: normal;
+    display: block;
+    min-height: 300px;
+}
+.code pre::-webkit-scrollbar{height: 6px;;width: 3px;background: rgb(124, 121, 121);border-radius:60px ;
+border: 1px solid #ddd;
+box-shadow: inset 2px 2px 3px 3px #333;}
+.code pre::-webkit-scrollbar-track{background: rgb(192, 192, 184);border-radius: 60px;}
+.code pre::-webkit-scrollbar-thumb{height: 4px;background:linear-gradient(rgb(223, 157, 16),red);border-radius: 60px;}
+.code pre::-webkit-scrollbar-corner{border-radius: 20px;}
+
+.text-imp{color: rgb(162, 54, 212);}
+.text-notice{color: rgb(155, 231, 67);}
+.text-alert{color: red;}
+.text-pink{color: rgb(240, 46, 120);}
+.text-aqua{color: rgb(0, 204, 255);}
+
+ol li a.ul li a{color: aqua!important;}
+ol li i,ul li i{margin-right: 7px;}
+
+h1{text-shadow: -2px 2px 2px rgb(241, 8, 97) ;}
+.text-yellow{color:yellow}
+.cmd{border: 2px solid rgb(71, 66, 66);padding: 10px;border-radius: 10px;margin: 15px 0;}
+.codepen{padding: 20px 0;}
+.output{border: 1px dashed #ccc;padding: 25px 10px;}
+#stage1{background: transparent;}
+
+.slide{height: 200px;
+width: 70%;
+background: red;margin-top: 10px;
+
+border: 2px solid rgb(236, 29, 29)}
+
+#sldd,#sltd{display: none;}
+.alert{margin: 20px 0 !important;}
+h1,h2,h3{font-weight: 700; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
