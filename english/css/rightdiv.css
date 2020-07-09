@@ -10,7 +10,7 @@ border-right: 2px solid #ccc;
 
 .rightdiv .left2 a{color: #f1f1f1;}
 .rightdiv .left2 h1{font-size: 27px;margin:0;padding: 10px;}
-.rightdiv .left2 h2,h3{font-size: 25px;margin:0;padding: 10px;}
+.rightdiv .left2 h2,h3{font-size: 25px;margin:0;padding: 10px;line-height: 1.5;}
 .rightdiv .left2 h4,h5{font-size: 23px;margin:0;padding: 10px;}
 .rightdiv .left2 p{margin:0;padding: 10px;}
 .rightdiv .right2{width: 25%;float: left;color: #f1f1f1;padding: 6% 1%;
@@ -92,3 +92,10 @@ border-radius: 20px ;
 .common h3{color: aqua;}
 .common ol li{color: rgb(241, 44, 232);}
 .common ol li a{color: rgb(88, 240, 182)!important;}
+
+.rule{
+    border: 1px dashed #f1f1f1;
+    padding: 10px;
+    margin: 30px auto;
+    border-radius: 20px;
+}

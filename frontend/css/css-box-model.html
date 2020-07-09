@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS Box Model</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">CSS Box Model</h1>
+<p>
+    The CSS box model is essentially a box that wraps around every HTML element. 
+    It consists of layout styles like: margins, borders, padding, and the actual content.
+</p>
+<p>In <b class="text-imp">CSS Box Model</b>, every html element is considered as a rectangular box. That box can have content ( width & height ),
+     margin, padding and border. See image below see CSS Box Model in action.</p>
+<p class="text-pink">
+    Padding is used to give space inside, Border is visible outline of an element, and Margin is used to give space outside an element.
+</p>
+
+
+
+<ol class="list">
+    <li><span><i class="fa fa-hand-o-right"></i></span><a href="#color-name">Margin</a></li>
+    <li><span><i class="fa fa-hand-o-right"></i></span><a href="#rgb-color">Border</a></li>
+    <li><span><i class="fa fa-hand-o-right"></i></span><a href="#hexadecimal-color">Padding</a></li>
+    <li><span><i class="fa fa-hand-o-right"></i></span><a href="#hexadecimal-color">Content</a></li>
+    
+</ol>
+<div class="panel panel-info">
+    <div class="panel-heading">
+  <h3>Content, Width and Height</h3>
+    </div>
+    <div class="panel-body">
+<p>Content means Width and Height of a box. Default width is auto for block and inline level elements. For block level, width auto means 100% of content space,
+     and for inline, width is equal to content of element.
+    
+    <br>
+<br>
+By assigning Width and Height, we are actually setting width and height of content box which is area of content available inside box.
+
+</p>
+
+<h4 class="subheading2 text-pink">Content Box</h4>
+<p>
+    Content Box is total content area within an element. In example above, 838*344 is content box.
+</p>
+<h4 class="subheading2 text-pink">Border Box</h4>
+<p>
+    Border-box is total area of element, including content-box, padding and border. In example above, 868*374 is border box.
+</p>
+    </div>
+</div>
+
+<section>
+    <h2 class="text-imp">CSS padding</h2>
+    <p>
+        Padding is used to give space inside an element. Padding inherit background color of content.
+         As shown in example above, padding occupy space inside. <br>
+<b class="text-success">Padding units are px, em and %.</b>
+<br>
+Apart form padding, we can also set padding-top, padding-right, padding-bottom and padding-left.
+    </p>
+
+    <h3>Example</h3>
+    <pre class="code">
+    &lt;style&gt;
+
+        img{
+            border:2px solid #000; 
+            padding:20px;
+         }
+
+    &lt;/style&gt;
+
+    &lt;img src="1.png" alt=".."&gt;
+    </pre>
+
+    <p class="cmd text-imp">Padding is shorthand of padding-top, padding-right, padding-bottom, padding-left.</p>
+</section>
+
+
+<a class="custom-button" href="./rgb-to-hex.html" target="_BLANK">CSS Color Picker</a>
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+<script src="js/jquery-ui.min.js"></script>
+<script>
+    $("nav .container").load("web-top-menu.html");
+    $('.int-link a').click(function(e){
+       
+        var x=$(this).attr("href");
+        $("html,body").animate({
+            "scrollTop":$(x).offset().top-60,
+        })
+    }); 
+function hexFromRGB(r, g, b) {
+    var hex = [
+      r.toString( 16 ),
+      g.toString( 16 ),
+      b.toString( 16 )
+    ];
+    $.each( hex, function( nr, val ) {
+      if ( val.length === 1 ) {
+        hex[ nr ] = "0" + val;
+      }
+    });
+    return hex.join( "" ).toUpperCase();
+  }
+  function refreshSwatch() {
+    var red = $( "#red" ).slider( "value" ),
+      green = $( "#green" ).slider( "value" ),
+      blue = $( "#blue" ).slider( "value" ),
+      hex = hexFromRGB( red, green, blue );
+    $( "#swatch" ).css( "background-color", "#" + hex );
+	$('#colval').text(hex); 
+	$('#colval1').text("rgb\("+ red+"," + green +"," + blue+"\)");
+
+  }
+  $(function() {
+    $( "#red, #green, #blue" ).slider({
+      orientation: "horizontal",
+      range: "min",
+      max: 255,
+      value: 127,
+      slide: refreshSwatch,
+      change: refreshSwatch
+    });
+    $( "#red" ).slider( "value", 255 );
+    $( "#green" ).slider( "value", 140 );
+    $( "#blue" ).slider( "value", 60 );
+  });
+</script>
+</body>
+<!--footer-->
+
+
+
+</html>

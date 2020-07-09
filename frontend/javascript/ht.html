@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
+<!-- -------------------->
+<!-- HINDI TYPING TOOL -->
+<!-- -------------------->
+<head>
+<title>English to Hindi Conversion Typing Tool</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="English to Hindi Online Typing Tool. Google Transliteration for Hindi IME based this tool is useful for Hindi Unicode typing online."/>
+<link rel="publisher" href="https://plus.google.com/+LalitKumar">
+<link rel="shortcut icon" href="https://techwelkin.com/wp-content/themes/techwelkin/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="https://techwelkin.com/wp-content/themes/techwelkin/images/favicon.png" type="image/x-icon" />
+<link media="all" type="text/css" rel="stylesheet" href="https://techwelkin.com/tools/tools-global-menu.css">
+<link media="all" type="text/css" rel="stylesheet" href="../transliteration-tools.css">
+<script type="text/javascript" src="../transliteration-tools.js"></script>
+<link media="all" type="text/css" rel="stylesheet" href="../tools-style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<meta property="og:title" content="Online Hindi Typing Tool">
+<meta property="og:description" content="English to Hindi Typing Tool. Google Transliteration for Hindi IME based this tool is useful for Hindi Unicode typing online.">
+<meta property="og:site_name" content="TechWelkin">
+<meta property="article:publisher" content="https://www.facebook.com/techwelkin">
+<meta name="twitter:domain" content="TechWelkin">
+<meta name="twitter:creator" content="@techwelkin">
+<script type="text/javascript" src="../techwelkin-transliteration.js"></script>
+<script type="text/javascript">
+// Load the Google Transliterate API
+google.load("elements", "1", {
+packages: "transliteration"
+});
+function onLoad() {
+var options = {
+sourceLanguage: 'en',
+destinationLanguage: ['hi','mr'],
+shortcutKey: 'ctrl+k',
+transliterationEnabled: true
+};
+// Create an instance on TransliterationControl with the required options.
+var control = new google.elements.transliteration.TransliterationControl(options);
+// Enable transliteration in the textfields with the given ids.
+var ids = [ "transl2" ];
+control.makeTransliteratable(ids);
+}
+google.setOnLoadCallback(onLoad);
+</script>
+<script>
+var xbif = true;
+function showhidetranslit(el){
+var e=document.getElementById(el);
+if(e.style.display=="block"){
+e.style.display="none";}
+else{e.style.display="block"
+e.focus();}}
+function corrections(){
+txt = document.getElementById("transl2").value;
+document.getElementById("transl2").value = "";
+txt = txt.replace(/ \|/g, "|");
+txt = txt.replace(/\|/g, "।");
+//txt = txt.replace(/\r?\n/g, \r\n);
+document.getElementById("transl2").value = txt;
+alert("Corrections have been made.");
+}
+function saveText(){
+if(xbif){
+txt = document.getElementById("transl2").value;
+filename = document.getElementById("text-filename").value;
+txtData = 'data:application/plain;charset=utf-8,' + encodeURIComponent(txt);
+if(filename ==''){
+filename = 'hindi-text';}
+if(filename.indexOf(".") != -1){
+filename = filename.split(".")[0];}
+document.getElementById('btnExport1').download=filename+".doc";
+document.getElementById('btnExport1').href=txtData;
+}
+}
+function showhide(el){
+var e=document.getElementById(el);
+if(e.style.display=="block"){
+e.style.display="none";}
+else{
+e.style.display="block"
+e.focus();}
+}
+</script>
+<style>
+#transl2{height: 250px !important;}
+</style>
+</head>
+<body class="translit-body">
+
+<div id="wrapper">
+<div id="header"><h1 id="top-heading">English to Hindi Typing : Online Hindi Typing Tool (Unicode)</h1></div>
+
+<ol class='twBreadCrumbs' itemscope itemtype='https://schema.org/BreadcrumbList'><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemprop='item' href='https://techwelkin.com/'><span itemprop='name'>Home</span></a><meta itemprop='position' content='1' /></li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemprop='item' href='/tools/'><span itemprop='name'>Online Tools</span></a><meta itemprop='position' content='2' /></li><li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem'><a itemprop='item' href='/tools/typing.php'><span itemprop='name'>Typing</span></a><meta itemprop='position' content='4' /></li><li>Hindi</li></ol>
+<div id="help"><p>Type English in the box given below. As soon as you'll press SPACE, the word will convert in Hindi. <b>For example</b>, to write "भारत" you should type <em>"bhaarat"</em> and then press SPACE key. If you want to type something in English in the middle of Hindi text, press <b>Ctrl+g</b> to toggle between English and Hindi.</p></div>
+
+<div class="ta-top-toolbar">
+	<div style="display: inline-block; margin: 0px 10px 0px 0px !important; color: #000;">कृपया शेयर करें: </div>
+	<div style="display: inline-block; margin: 0px 10px 0px 0px !important;">
+		<div class="addthis_sharing_toolbox"></div>
+	</div>
+	<a href="https://techwelkin.com/tools/hindi-proof-reader-editor/" role="button" class="btn btn-success" target="_blank"><span class='glyphicon glyphicon-pencil'></span> प्रूफ़ रीडर</a>
+</div>
+
+<div id="translitcontainer">
+	<div id="adspace1">
+		<div id="ad1">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle gad1" style="display:block; max-width:730px; width: 100%; height:300px" data-ad-client="ca-pub-6554037306726692" data-ad-slot="4458406547" data-ad-format="rectangle"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+		</div>
+	</div>
+	<div id="translitarea"><textarea id="transl2" border=0 placeholder="यहाँ अंग्रेज़ी में टाइप करें। भारत लिखने के लिए bhaarat लिखें। स्पेस दबाते ही शब्द हिन्दी में बदल जाएगा।"></textarea>
+	<div style="background: #ccc; padding: 5px; display: block; clear: both; min-height: 30px; text-align: center; overflow: auto;">
+	ग़लतियाँ हटाने के लिए <a href="https://techwelkin.com/tools/hindi-proof-reader-editor/" target="_blank" style="background: #a00000; border-radius: 3px; color: #fff; padding: 6px 8px 4px; white-space: nowrap;">Proof Reader</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://techwelkin.com/tools/transliteration/" target="_blank" style="background: #a00000; border-radius: 3px; color: #fff; padding: 6px 8px 4px; white-space: nowrap;">लिपि बदलें</a></div></div>
+</div>
+
+<div class="ta-bottom-toolbar">
+<div style="display: inline-block; margin: 0px 10px 0px 0px !important; color: #000;">
+<label style="margin:0"><input type="text" class="filename" id="text-filename" placeholder="enter file name"/></label>
+<a href="#" download="data.txt" id="btnExport1" class="btn btn-success" target="_blank" onclick="saveText();">Save File</a>
+</div>
+<button class="btn btn-success" onclick="convertNumbers('hi');"><span class="glyphicon glyphicon-pencil"></span> Convert Numbers</button>
+<a href="#" onclick="corrections();" role="button" class="btn btn-success">Correct " | "</a>
+<a href="#" role="button" class="btn btn-success" onclick="bookmark('https://techwelkin.com/tools/english-to-hindi-typing-online-tool-unicode-converter/','Hindi Typing Tool')"><span class="glyphicon glyphicon-heart"></span> Add to Favorites</a>
+<a href="#" onclick="showhide('help');" role="button" class="btn btn-success">Help</a>
+</div>
+
+<!--<div id="adspace2"></div> -->
+
+
+<div id="description-of-page">
+<h2>About English to Hindi Typing Tool (English to Hindi Converter)</h2>
+
+<p>TechWelkin English to Hindi Typing Tool is a simple facility that gives you a clean interface to easily type in Hindi on computer and do English to Hindi translation (conversion). This tool automatically converts the Roman text into Hindi Unicode font. For example, if you need to type "भारत" just type <em>"bhaarat"</em> in the above box. As soon as you will hit SPACE key, the English text will convert into <a href="https://en.wikipedia.org/wiki/Devanagari" target="_blank">Devanagari</a> text.</p>
+
+<p>If you want to learn typing we have published a list of <strong><a href="https://techwelkin.com/learn-typing-software" target="_blank">best software to learn touch typing</a></strong>.</p>
+
+<p>Unicode is a standard that defines all the letters in all the languages around the world. Text typed in <a href="https://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> can be read on all the computers without installing any extra piece of software. Therefore, it is always recommended that you type Hindi in Unicode. The TechWelkin Hindi typing tool gives you Unicoded text. So, you copy the Hindi text from above box and paste it anywhere in the computer; for example Gmail, Facebook, Twitter, MS-Word document etc.</p>
+
+<p>This conversion of one script to another (i.e. Roman script to Devanagari) is called <em>transliteration</em>. However, some people mistakenly call it <em>English to Hindi translation</em>. Translation happens when vocabulary is changed. In this Hindi typing tool, only alphabets are changed to a different script.</p>
+
+<p>Hindi is written using Devanagari script. This script is also shared by several other languages including Sanskrit, Marathi and Maithili. Hindi typing on computer picked up pace when Unicode standard was defined for Hindi. Earlier, Hindi was written on computers using legacy, non-Unicode fonts like <a href="https://techwelkin.com/tools/krutidev-unicode-krutidev-font-converter/" target="_blank">Krutidev</a>, <a href="https://techwelkin.com/tools/shusha-unicode-shusha-font-converter/" target="_blank">Shusha</a>, <a href="https://techwelkin.com/tools/shivaji-to-unicode-font-converter/" target="_blank">Shiva</a> and <a href="https://techwelkin.com/tools/chanakya-unicode-chanakya-font-converter/" target="_blank">Chanakya</a>. Scores of such fonts were in use between the year 2000 and 2006.</p>
+
+<p style="text-align:center"><img id="transliteration-img" src="online-english-to-hindi-conversion-typing-techwelkin.jpg" alt="Online English to Hindi Translation Typing in Unicode. Powered by Google Transliteration." title="Online English to Hindi Translation Typing in Unicode. Powered by Google Transliteration." /></p>
+
+<p>The main trouble with these fonts was that the Hindi text typed on one computer was not readable on other computers if the font used was absent on the target computer. To get around this problem, people used to send the font file along with the typed Hindi material. The reader had to first install the font and only then the file used to become legible.</p>
+
+<p>This problem aggravated when <a title="Internet Facts: Mind-boggling Trivia!" href="https://techwelkin.com/internet-trivia-mind-boggling-facts">Internet</a> became popular on India and people began to type Hindi online. Thousands of <a title="Blog vs Website: Difference Between Website and Blog" href="https://techwelkin.com/blog-vs-website-difference-between-website-and-blog">blogs and websites</a> in Hindi language came up. Such websites had no option but to place a notice on their homepage with instructions on how to download the legacy font that was used on the website.</p>
+
+<p>All these problems began to vanish when Unicode came by. It revolutionized the <em>online Hindi typing</em>. Google came up with Transliteration tool that allowed users to do English to Hindi translation (it is actually <em>conversion</em>, but many people still call it translation). In no time, several <strong>font converters</strong> were also developed to allow automatic conversion of Hindi text into Unicode. <a href="https://www.microsoft.com" target="_blank">Microsoft</a> bundled the Mangal font with its Windows operating system. Mangal is a Unicode font and it solved the problem of unavailability of a universal font. Now that Mangal was present on almost all the computers, online typing in Hindi and display of Devanagari script on websites became very easy.</p>
+
+<p>Hindi is a major language in India. It is understood in most parts of the country but states like Delhi, Uttar Pradesh, Bihar and Madhya Pradesh constitute a so-called <em>Hindi Belt</em>. These are the states where Hindi is the <em>lingua franca</em>.</p>
+
+<p>Now, use of Hindi on computer, Internet and mobile devices is fairly popular. Hindi speakers want to type <a title="WhatsApp Status: 100+ Best and Clever Lines" href="https://techwelkin.com/whatsapp-status-100-best-and-clever-lines">status messages on WhatsApp</a>, posts on Facebook and emails in Hindi. It is heartening to see that technological support has given a great boost to the online presence of Hindi language. Online content in Hindi is not yet in excellent shape but things are moving is a better direction. Companies have been showing their confidence in Hindi content. For example, recently Google changed its policy to officially allow the use of <a title="AdSense in Hindi: Google Gives Support for Hindi Blog and Websites" href="https://techwelkin.com/hindi-adsense-support-hindi-blogs-websites">Google AdSense ads on Hindi websites</a>. This could turn out to be a big moment for <a title="Make Money from Blogging, Be a Professional Blogger" href="https://techwelkin.com/make-money-from-blogging-be-a-professional-blogger">professional bloggers</a> who do <a title="Blogging Vs. Professional Blogging" href="https://techwelkin.com/blogging-vs-professional-blogging">blogging</a> in Hindi language.</p>
+
+<p>If you feel surprised to see your friend sending you message written in Hindi, then it is time that you refresh your skills. It is extremely easy to type Hindi on computer. Give a try to the TechWelkin online tool for Hindi typing and you’ll see on your own that it is not so difficult. You don't need to learn professional typing. The above tool uses phonetic layout. Type with the regular English keyboard and this tool will automatically convert English text into Hindi. It’s fun! Give it a try.</p>
+
+<p>The above tool allows you to save file as a <a title="Microsoft Word Tips and Tricks to Increase Productivity" href="https://techwelkin.com/ms-word-tips-and-tricks-guide">MS-Word document</a>. It also gives you the option of easily correcting commonly made mistakes in typing (for example, people use pipe symbol ( | ) instead of <em>poorna-viraam</em>). If you're using Internet Explorer, Save option may not work. In such a case, you can copy the typed text and save it manually in a file. However, we would advise you to begin using Google Chrome or Firefox web browsers (these are much better than Internet Explorer).</p>
+
+<p>This online English to Hindi typing tool is mobile-friendly  and you can use it on your tablet or mobile phone as well. However, you can also learn <a title="How to Write on WhatsApp in Hindi" href="https://techwelkin.com/how-to-write-on-whatsapp-in-hindi">how to directly type Hindi on mobile phones</a>.</p>
+
+<p>We hope that this tool will be useful for you. Please <a href="#share-options">share it</a> with your friends as well.</p>
+
+</div>
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4e7455ca50d0b54c" async="async"></script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-30428739-1', 'auto');
+ga('send', 'pageview');
+</script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+var $ssm = jQuery.noConflict();
+$ssm(document).ready(function(e){
+adjustMenuHeight();
+$ssm("#menu-navicon-container").click(function(e){ adjustMenuHeight(); $ssm('#s-menu').css({'display': 'block'});$ssm('#menu-navicon-container').css({'display': 'table-cell'});e.stopPropagation(); });
+$ssm(window).resize(function(e){ adjustMenuHeight();  e.stopPropagation(); });
+function adjustMenuHeight(){
+var clHeight = window.innerHeight;
+$ssm('#s-menu').css({"height": clHeight});
+$ssm('#menu-items-box').css("height", $ssm('#s-menu').height()-15);
+}
+});
+$ssm(document).click(function() { $ssm('#s-menu').hide(); });
+$ssm("#menu-box-close-btn").click(function(){ $ssm('#s-menu').hide(); });
+</script>
+
+<div id="top-menu-bar">
+<div id="menu-navicon-container"><div id="menu-navicon" ></div></div>
+<div id="top-menu-bar-title"><a href="https://techwelkin.com" style="color:#fff">TechWelkin</a> <a href="https://techwelkin.com/tools/" style="color:#fff">Tools</a></div>
+<div id="top-menu-bar-share" title="Share this page"><div id="share-page">?</div></div>
+<div id="top-menu-bar-report" title="Report error"><div id="report-error">?</div></div>
+</div>
+<nav id="s-menu" class="s-menu">
+	<div id='menu-header' class='menu-header'>
+	<div id="menu-header-title" class="menu-header-title"></div>
+	<div id="menu-box-close-btn" class="menu-box-close-btn">&#10005;</div>
+	</div>
+	<div id="menu-items-box">
+		<ul id="menu-item-list">
+
+
+<li class="section-heading">&#187; Font Converters</li>
+<li><a href='https://techwelkin.com/tools/krutidev-unicode-krutidev-font-converter/' title="Krutidev to Unicode and Unicode to Krutidev Font Converter">Krutidev to Unicode Converter</a></li>
+<li><a href='https://techwelkin.com/tools/chanakya-unicode-chanakya-font-converter/' title="Chanakya to Unicode and Unicode to Chanakya Font Converter">Chanakya to Unicode Converter</a></li>
+<li><a href='https://techwelkin.com/tools/shusha-unicode-shusha-font-converter/' title="Shusha to Unicode and Unicode to Shusha Font Converter">Shusha to Unicode Converter</a></li>
+<li><a href='https://techwelkin.com/tools/4cgandhi-unicode-4cgandhi-font-converter/' title="4CGandhi to Unicode and Unicode to 4CGandhi Font Converter">4CGandhi to Unicode Converter</a></li>
+<li><a href='https://techwelkin.com/tools/devlys-unicode-devlys-font-converter/' title="DevLys to Unicode and Unicode to DevLys Font Converter">DevLys to Unicode Converter</a></li>
+<li><a href='https://techwelkin.com/tools/shivaji-to-unicode-font-converter/' title="Shivaji to Unicode Font Converter">Shivaji to Unicode Converter</a></li>	
+<li><a href='https://techwelkin.com/tools/kundli-unicode-kundli-font-converter/' title="Kundli to Unicode Font Converter">Kundli to Unicode Converter</a>
+<li><a href='https://techwelkin.com/tools/transliteration/' title="Script Converter">Indic Script Converter</a></li>
+
+<li class="section-heading">&#187; Typing in Indian Languages</li>
+<li><a href='https://techwelkin.com/tools/english-to-hindi-typing-online-tool-unicode-converter/' title="English to Hindi Typing Online. Write Hindi using Roman English characters.">Type in Hindi</a></li>
+<li><a href='https://techwelkin.com/tools/hindi-proof-reader-editor/' title="Hindi Proof Reader">Hindi Proof Reader</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-bengali-typing-conversion/' title="Online Type in Bengali. Write Bengali using Roman English characters.">Type in Bengali</a></li>	
+<li><a href='https://techwelkin.com/tools/online-english-to-gujarati-typing-conversion/' title="Online Type in Gujarati. Write Gujarati using Roman English characters.">Type in Gujarati</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-kannada-typing-conversion/' title="Online Type in Kannada. Write Kannada using Roman English characters.">Type in Kannada</a></li>
+<li><a href='https://techwelkin.com/tools/english-to-malayalam-typing-online-tool-unicode-converter/' title="Online Type in Malayalam. Write Malayalam using Roman English characters.">Type in Malayalam</a></li>		
+<li><a href='https://techwelkin.com/tools/online-marathi-typing-english-font-keyboard-converter/' title="Online Marathi Typing. Write Marathi using English keyboard characters.">Type in Marathi</a></li>	
+<li><a href='https://techwelkin.com/tools/english-to-oriya-typing-online-tool-unicode-converter/' title="Online Type in Oriya. Write Oriya using Roman English characters.">Type in Oriya</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-punjabi-typing-conversion/' title="Online Type in Punjabi. Write Punjabi using Roman English characters.">Type in Punjabi</a></li>
+<li><a href='https://techwelkin.com/tools/english-to-sanskrit-typing-online-tool-unicode-converter/' title="Online Type in Sanskrit. Write Sanskrit using Roman English characters.">Type in Sanskrit</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-tamil-typing-conversion/' title="Online Type in Tamil. Write Tamil using Roman English characters.">Type in Tamil</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-telugu-typing-conversion/' title="Online Type in Telugu. Write Telugu using Roman English characters.">Type in Telugu</a></li>
+<li><a href='https://techwelkin.com/tools/online-english-to-urdu-typing-conversion/' title="Online Type in Urdu. Write Urdu using Roman English characters.">Type in Urdu</a></li>	
+
+<li class="section-heading">&#187; Typing in Other Languages</li>
+<li><a href='https://techwelkin.com/tools/arabic-typing-english-keyboard-online-conversion/' title="Online Type in Arabic. Write Arabic using Roman English characters.">Type in Arabic</a></li>	
+<li><a href='https://techwelkin.com/tools/english-to-nepali-typing-online-tool-unicode-converter/' title="English to Nepali Typing Online. Write Nepali using Roman English characters.">Type in Nepali</a></li>
+<li><a href='https://techwelkin.com/tools/english-to-sinhalese-typing-online-tool-unicode-converter/' title="Online Type in Sinhalese. Write Sinhalese using Roman English characters.">Type in Sinhalese</a></li>
+
+<li class="section-heading">&#187; More Tools</li>
+<li><a href='https://techwelkin.com/tools/qr-code-generator/' title="QR Code Generator">QR Code Generator</a></li>
+<li><a href='https://techwelkin.com/tools/hindi-to-english-roman-font-converter/' title="Convert Hindi Text into English Roman Text">Hindi to English Converter</a></li>
+<li><a href='https://techwelkin.com/tools/sharedcount/' title="Find social sharing count for any URL">Shared Count</a></li>
+<li><a href='http://digitalhindi.com/books/best-hindi-books.php' title="List of Hindi books you must read">Best Hindi Books</a></li>
+
+<li><a href='https://techwelkin.com/tools/trace-mobile-number/' title="Trace and Track Mobile Number">Trace India Mobile Number</a></li>
+
+<li><a href='https://techwelkin.com/tools/trace-mobile-number-usa-america/' title="Trace USA Mobile Number">Trace USA Mobile Number</a></li>
+
+<li><a href='https://techwelkin.com/tools/trace-mobile-number-uk-britain/' title="Trace UK Mobile Number">Trace UK Mobile Number</a></li>
+
+<li><a href='https://techwelkin.com/tools/trace-mobile-number-canada/' title="Trace Canada Mobile Number">Trace Canada Mobile Number</a></li>
+
+
+<li><a href='https://techwelkin.com/tools/domain-age-checker-tool/' title="Domain Age Checker">Domain Age Checker</a></li>
+<li><a href='https://techwelkin.com/tools/date-difference/' title="Find Date Difference">Find Date Difference</a></li>
+<li><a href='https://techwelkin.com/tools/letter-count-character-count/' title="Count Characters">Letter Counter</a></li>
+<li><a href='https://techwelkin.com/tools/find-facebook-id/' title="Indexed URLs">Find Facebook ID</a></li>
+<li><a href='https://techwelkin.com/tools/extract-domain-name-from-url/' title="Get Domain from URL">Get Domain from URL</a></li>
+<li><a href='https://techwelkin.com/tools/bootstrap-icons/' title="Get Bootstrap Icons">Bootstrap Icons</a></li>
+<li><a href='https://techwelkin.com/tools/html/arrows.php' title="HTML Symbols">HTML Symbols</a></li>
+<li><a href='https://techwelkin.com/tools/character-map' title="Character Maps for Languages">Character Maps for Languages</a></li>
+<li><a href='https://techwelkin.com/tools/top-blogs/best-tech-blogs-india/' title="Top Tech Blogs in India">Top Tech Blogs in India</a></li>
+<li><a href='https://techwelkin.com/tools/random-words-generator/' title="Random Words Generator">Random Words Generator</a></li>
+<li><a href='https://techwelkin.com/tools/strong-password-generator/' title="Strong Password Generator">Strong Password Generator</a></li>
+		</ul>
+		
+	</div>
+
+</nav>
+<div id="global-footer">
+<a href="https://techwelkin.com" target="_blank">TechWelkin.com</a><br>
+<div id="disclaimer"><strong>Disclaimer:</strong> We strive to provide accurate information. However, we are not liable to any type of damages that may arise due to the results provided by this web tool.</div>
+<div id="privacy-policy"><strong>Privacy Policy:</strong> We do not store any information submitted or tracked using this  TechWelkin tool.</div>
+</body>
+</html>

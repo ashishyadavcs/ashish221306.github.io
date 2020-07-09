@@ -56,17 +56,26 @@ margin-bottom: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
         transition: 0.6s;
         transform: rotate(90deg);
     }
-    
+    .breadcrumb{
+        background: transparent;
+    }
+    .breadcrumb a{color: blue!important;padding: 5px;}
+    .breadcrumb a:last-child{color: #f1f1f1!important;text-decoration: none;}
+    .breadcrumb>a:not(:last-child)::after{content: '/';margin: auto 3px;}
   
-
+.vedio{padding: 20px;}
 
     @media screen and (max-width:700px){
         .wrapper .right{width: 100%;float:none;overflow: hidden;}
         .wrapper .left{display: none;}
     }
     
-
-
+.table-responsive{border: none;}
+table.example{margin-left: 2%;}
+table.example>tr{margin-bottom: 5px;border-bottom: 1px solid rgb(175, 156, 156)!important;}
+table.example td{margin: 0;padding: 0;}
+table.example td:nth-child(2n){color: rgb(55, 222, 228);}
+table.example td:nth-child(2n+1){color: rgb(71, 247, 48);}
     /*---sidenav-----------------------*/
 
-   
+   ol.example{list-style-position: outside;}
