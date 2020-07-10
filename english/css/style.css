@@ -59,10 +59,12 @@ margin-bottom: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
     .breadcrumb{
         background: transparent;
     }
-    .breadcrumb a{color: blue!important;padding: 5px;}
+    .breadcrumb a{color: blue!important;padding: 5px;display: inline;}
     .breadcrumb a:last-child{color: #f1f1f1!important;text-decoration: none;}
     .breadcrumb>a:not(:last-child)::after{content: '/';margin: auto 3px;}
-  
+  @media screen and (max-width:700px){
+    .breadcrumb a{font-size: 15px;}
+  }
 .vedio{padding: 20px;}
 
     @media screen and (max-width:700px){
@@ -71,11 +73,15 @@ margin-bottom: 1px solid #f1f1f1;border-bottom: 1px solid #f1f1f1;}
     }
     
 .table-responsive{border: none;}
-table.example{margin-left: 2%;}
+table.example{margin-left: 2%;padding:30px auto;display: block;}
 table.example>tr{margin-bottom: 5px;border-bottom: 1px solid rgb(175, 156, 156)!important;}
 table.example td{margin: 0;padding: 0;}
 table.example td:nth-child(2n){color: rgb(55, 222, 228);}
 table.example td:nth-child(2n+1){color: rgb(71, 247, 48);}
     /*---sidenav-----------------------*/
 
-   ol.example{list-style-position: outside;}
+   ol.example{list-style-position: outside;list-style: decimal;}
+   hr{background: #463d3d;}
+
+   .rules{list-style-position: outside;}
+   ol.example li{margin-bottom: 7px;border-bottom: 1px solid rgb(70, 64, 64);}
