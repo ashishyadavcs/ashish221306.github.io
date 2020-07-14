@@ -1,17 +1,11 @@
-
-
 &lt;html&gt;
-    &lt;body&gt;&lt;/body&gt;
-&lt;/html&gt;
+&lt;body&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
 &lt;script&gt;
-function sayHi(){ 
-    console.log(this);        
-}
-sayHi()
-
-
-    document.body.onclick=function(){ 
-    console.log(this);        
-}
-// click on body to call function
+document.getElementById("demo").innerHTML = "Hello World!";
 &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;

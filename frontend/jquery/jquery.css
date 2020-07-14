@@ -21,6 +21,7 @@ ol li b{color: rgb(245, 197, 109);letter-spacing: 1px;}
     display: block;
     min-height: 300px;
 }
+pre{line-height: 30px;}
 .code pre::-webkit-scrollbar{height: 6px;;width: 3px;background: rgb(124, 121, 121);border-radius:60px ;
 border: 1px solid #ddd;
 box-shadow: inset 2px 2px 3px 3px #333;}
@@ -53,3 +54,4 @@ border: 2px solid rgb(236, 29, 29)}
 #sldd,#sltd{display: none;}
 .alert{margin: 20px 0 !important;}
 h1,h2,h3{font-weight: 700; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+.table-responsive{border: none;}

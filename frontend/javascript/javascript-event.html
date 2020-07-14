@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript event</title>
+<meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+<meta name="keywords" content="javascript tutorial" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+<h1 class="text-center">Javascript Event</h1>
+
+<p><i style="color: aquamarine;">The change in the state of an object is known as an Event.</i></p>
+
+javscript event is used to add interaction in website to add functionality is website like when user hover on image it gets increased.
+
+<div style="padding: 10px;cursor: pointer;">
+<img height="100px" width="100px" onclick="alert('you clicked on image')" src="./image/pic_htmltree.gif" alt="example js event">
+</div>
+
+
+<p class="text-pink">if you will click on above image it will give an alert "you clicked on image"</p>
+
+<p>For example, when a user clicks over the browser, add js code, which will execute the task to be performed on the event.</p>
+
+
+<table class="table table-responsive table-bordered">
+    <tr>
+        <th class="bg-dark">Event Performed</th>
+        <th class="bg-dark">Event Handler</th>
+        <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+        <td>click</td>
+        <td>onclick</td>
+        <td>When mouse click on an element</td>
+    </tr>
+    <tr>
+        <td>mouseover</td>
+        <td>onmouseover</td>
+        <td>When the cursor of the mouse comes over the element</td>
+    </tr>
+    <tr>
+        <td>mouseout</td>
+        <td>onmouseout</td>
+        <td>When the cursor of the mouse leaves an element</td>
+    </tr>
+    <tr>
+        <td>mousedown</td>
+        <td>onmousedown</td>
+        <td>When the mouse button is pressed over the element</td>
+    </tr>
+    <tr>
+        <td>mouseup</td>
+        <td>onmouseup</td>
+        <td>When the mouse button is released over the element</td>
+    </tr>
+    <tr>
+        <td>mousemove</td>
+        <td>onmousemove</td>
+        <td>When the mouse movement takes place.</td>
+    </tr>
+    </table>
+    <h2 class="subheading1">Keyboard events -</h2>
+    <table class="table table-responsive table-bordered">
+    <tr>
+        <th class="bg-dark">Event Performed</th>
+        <th class="bg-dark">Event Handler</th>
+        <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+        <td>Keydown & Keyup</td>
+        <td>onkeydown & onkeyup</td>
+        <td>When the user press and then release the key</td>
+    </tr>
+    </table>
+    <h2 class="subheading1">Form events:</h2>
+    <table class="table table-responsive table-bordered">
+    <tr>
+        <th class="bg-dark">Event Performed</th>
+        <th class="bg-dark">Event Handler</th>
+        <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+        <td>focus</td>
+        <td>onfocus</td>
+        <td>When the user focuses on an element</td>
+    </tr>
+    <tr>
+        <td>submit</td>
+        <td>onsubmit</td>
+        <td>When the user submits the form</td>
+    </tr>
+    <tr>
+        <td>blur</td>
+        <td>onblur</td>
+        <td>When the focus is away from a form element</td>
+    </tr>
+    <tr>
+        <td>change</td>
+        <td>onchange</td>
+        <td>When the user modifies or changes the value of a form element</td>
+    </tr>
+    </table>
+
+    <h2 class="subheading1">Window / Document events</h2>
+    <table class="table table-responsive table-bordered">
+    <tr>
+        <th class="bg-dark">Event Performed</th>
+        <th class="bg-dark">Event Handler</th>
+        <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+        <td>load</td>
+        <td>onload</td>
+        <td>When the browser finishes the loading of the page</td>
+    </tr>
+    <tr>
+        <td>unload</td>
+        <td>onunload</td>
+        <td>When the visitor leaves the current webpage, the browser unloads it</td>
+    </tr>
+    <tr>
+        <td>resize</td>
+        <td>onresize</td>
+        <td>When the visitor resizes the window of the browser</td>
+    </tr>
+    </table>
+
+
+<h2>Example</h2>
+<h3>Click event</h3>
+
+<pre class="code">
+    &lt;html&gt;  
+&lt;head&gt; Javascript Events &lt;/head&gt;  
+&lt;body&gt;  
+&lt;script language="Javascript" type="text/Javascript"&gt;  
+    &lt;!--  
+    function clickevent()  
+    {  
+        document.write("This is JavaTpoint");  
+    }  
+    //--&gt;  
+&lt;/script&gt;  
+&lt;form&gt;  
+&lt;input type="button" onclick="clickevent()" value="Who's this?"/&gt;  
+&lt;/form&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</pre>
+<h3>output</h3>
+<div class="output">
+    <html>  
+<head> Javascript Events </head>  
+<body>  
+    <br>
+<script language="Javascript" type="text/Javascript">  
+    <!--  
+    function clickevent()  
+    {  
+        document.write("This is javascript event"+"<br><br><br><hr><a href='./javascript-event.html'>back</a>");  
+    }  
+    //-->  
+</script>  
+<form>  
+<input type="button" class="btn" onclick="clickevent()" value="Who's this?"/>  
+</form>  
+</body>  
+</html>  
+</div>
+
+<!--mouse over event-->
+<hr>
+<h3>MouseOver Event
+</h3>
+<pre class="code">
+    &lt;html&gt;  
+&lt;head&gt;   
+&lt;h1&gt; Javascript Events &lt;/h1&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;script language="Javascript" type="text/Javascript"&gt;  
+    &lt;!--  
+    function mouseoverevent()  
+    {  
+        alert("This is JavaTpoint");  
+    }  
+    //--&gt;  
+&lt;/script&gt;  
+&lt;p onmouseover="mouseoverevent()"&gt; Keep cursor over me&lt;/p&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</pre>
+
+<h3>output</h3>
+<div class="output">
+    <html>  
+<head>   
+<h1> Javascript Events </h1>  
+</head>  
+<body>  
+<script language="Javascript" type="text/Javascript">  
+    <!--  
+    function mouseoverevent()  
+    {  
+        alert("This is JavaTpoint");  
+    }  
+    //-->  
+</script>  
+<b onmouseover="mouseoverevent()"> Keep cursor over me</b>  
+</body>  
+</html>  
+</div>
+
+<!--focus event-->
+<h3>Focus event</h3>
+<pre class="code">
+    &lt;html&gt;  
+&lt;head&gt; Javascript Events&lt;/head&gt;  
+&lt;body&gt;  
+&lt;h2&gt; Enter something here&lt;/h2&gt;  
+&lt;input type="text" id="input1" onfocus="focusevent()"/&gt;  
+&lt;script&gt;  
+&lt;!--  
+    function focusevent()  
+    {  
+        document.getElementById("input1").style.background=" aqua";  
+    }  
+//--&gt;  
+&lt;/script&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</pre>
+
+
+<h3>output</h3>
+<div class="output">
+    <html>  
+<head> Javascript Events</head>  
+<body>  
+<h2> Enter something here</h2>  
+<input type="text" id="input1" onfocus="focusevent()"/>  
+<script>  
+
+    function focusevent()  
+    {  
+        document.getElementById("input1").style.background=" aqua";  
+    }  
+
+</script>  
+</body>  
+</html>  
+</div>
+<!--key down event-->
+
+<h3>keydown event</h3>
+
+<pre class="code">
+    &lt;html&gt;  
+&lt;head&gt; Javascript Events&lt;/head&gt;  
+&lt;body&gt;  
+&lt;h2&gt; Enter something here&lt;/h2&gt;  
+&lt;input type="text" id="input1" onkeydown="keydownevent()"/&gt;  
+&lt;script&gt;  
+&lt;!--  
+    function keydownevent()  
+    {  
+        document.getElementById("input1");  
+        alert("Pressed a key");  
+    }  
+//--&gt;  
+&lt;/script&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;  
+</pre>
+
+<h3>output</h3>
+<p>as you will key down it will give an alert .</p>
+<div class="output">
+    <html>  
+<head> Javascript Events</head>  
+<body>  
+<h2> Enter something here</h2>  
+<input type="text" id="input1" onkeydown="keydownevent()"/>  
+<script>  
+ 
+    function keydownevent()  
+    {  
+        document.getElementById("input1");  
+        alert("Pressed a key");  
+    }  
+  
+</script>  
+</body>  
+</html>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+
+<a data-toggle="modal" data-target="#exampleModalLong" class="sbutton mainsbutton" ><i class="fa fa-bars"></i></a> 
+</div>  
+<!--modal-->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="exampleModalLongTitle">content</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div ng-include="'./sidenav.html'"></div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+<!--modal end-->
+</body>
+<!--footer-->
+
+
+
+</html>
