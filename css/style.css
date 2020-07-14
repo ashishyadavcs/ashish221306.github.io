@@ -84,8 +84,13 @@ footer .footer-bottom>a{text-decoration: none;color: #9e9a9a;}
 @media screen and (max-width:600px){
   .sbuttons{right:20px;}
 }
+.sbuttons1{ position: fixed;
+  bottom:20px;
+  z-index: 5;
+ right:40px;
+  float:bottom; }
 .sbutton {
-  display: block;
+  display: none;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -182,6 +187,7 @@ footer .footer-bottom>a{text-decoration: none;color: #9e9a9a;}
 }
 .sbutton.gplus {
   background: #F44336;
+
 }
 .sbutton.pinteres {
   background: #e60023;
