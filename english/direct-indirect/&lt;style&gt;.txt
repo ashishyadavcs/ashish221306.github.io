@@ -1,0 +1,7 @@
+&lt;style&gt;
+    img{
+        border:2px solid #000; 
+        padding:20px;
+     }
+&lt;/style&gt;
+&lt;img src="1.png" alt=".."&gt;

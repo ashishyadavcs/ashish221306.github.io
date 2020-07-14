@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript operator</title>
+<meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+<meta name="keywords" content="javascript tutorial" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">Datatype in javascript</h1>
+
+<h2>JavaScript Arithmetic Operators</h2>
+
+<p>Arithmetic operators are used to perform arithmetic on numbers:</p>
+
+
+<table class="table table-bordered">
+    <tr>
+    <th style="width:25%">Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>+</td>
+    <td>Addition</td>
+    </tr>
+    <tr>
+    <td>-</td>
+    <td>Subtraction</td>
+    </tr>
+    <tr>
+    <td>*</td>
+    <td>Multiplication</td>
+    </tr>
+    <tr>
+    <td>**</td>
+    <td>Exponentiation (<a href="js_es6.asp">ES2016</a>)</td>
+    </tr>
+    <tr>
+    <td>/</td>
+    <td>Division</td>
+    </tr>
+    <tr>
+    <td>%</td>
+    <td>Modulus (Division Remainder)</td>
+    </tr>
+    <tr>
+    <td>++</td>
+    <td>Increment</td>
+    </tr>
+    <tr>
+    <td>--</td>
+    <td>Decrement</td>
+    </tr>
+    </table>
+
+
+
+<h2>JavaScript Assignment Operators</h2>
+<p>Assignment operators assign values to JavaScript variables.</p>
+
+
+<table class="table table-bordered">
+    <tr>
+    <th class="bg-dark" style="width:25%">Operator</th>
+    <th class="bg-dark">Example</th>
+    <th class="bg-dark">Same As</th>
+    </tr>
+    <tr>
+    <td>=</td>
+    <td>x = y</td>
+    <td>x = y</td>
+    </tr>
+    <tr>
+    <td>+=</td>
+    <td>x += y</td>
+    <td>x = x + y</td>
+    </tr>
+    <tr>
+    <td>-=</td>
+    <td>x -= y</td>
+    <td>x = x - y</td>
+    </tr>
+    <tr>
+    <td>*=</td>
+    <td>x *= y</td>
+    <td>x = x * y</td>
+    </tr>
+    <tr>
+    <td>/=</td>
+    <td>x /= y</td>
+    <td>x = x / y</td>
+    </tr>
+      <tr>
+    <td>%=</td>
+    <td>x %= y</td>
+    <td>x = x % y</td>
+      </tr>
+    <tr>
+    <td>**=</td>
+    <td>x **= y</td>
+    <td>x = x ** y</td>
+    </tr>
+    </table>
+    
+
+
+<h2>JavaScript Comparison Operators</h2>
+
+<table class="table table-bordered">
+    <tr>
+    <th class="bg-dark" style="width:12%">Operator</th>
+    <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+    <td>==</td>
+    <td>equal to</td>
+    </tr>
+    <tr>
+    <td>===</td>
+    <td>equal value and equal type</td>
+    </tr>
+    <tr>
+    <td>!=</td>
+    <td>not equal</td>
+    </tr>
+    <tr>
+    <td>!==</td>
+    <td>not equal value or not equal type</td>
+    </tr>
+    <tr>
+    <td>&gt;</td>
+    <td>greater than</td>
+    </tr>
+    <tr>
+    <td>&lt;</td>
+    <td>less than</td>
+    </tr>
+    <tr>
+    <td>&gt;=</td>
+    <td>greater than or equal to</td>
+    </tr>
+    <tr>
+    <td>&lt;=</td>
+    <td>less than or equal to</td>
+    </tr>
+    <tr>
+    <td>?</td>
+    <td>ternary operator</td>
+    </tr>
+    </table>
+
+<h2>JavaScript Logical Operators</h2>
+<table class="table table-bordered">
+    <tr>
+    <th class="bg-dark" style="width:12%">Operator</th>
+    <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+    <td>&amp;&amp;</td>
+    <td>logical and</td>
+    </tr>
+    <tr>
+    <td>||</td>
+    <td>logical or</td>
+    </tr>
+    <tr>
+    <td>!</td>
+    <td>logical not</td>
+    </tr>
+    </table>
+
+
+
+<h2>JavaScript Type Operators</h2>
+<table class="table table-bordered">
+    <tr>
+    <th class="bg-dark" style="width:30%">Operator</th>
+    <th class="bg-dark">Description</th>
+    </tr>
+    <tr>
+    <td>typeof</td>
+    <td>Returns the type of a variable</td>
+    </tr>
+    <tr>
+    <td>instanceof</td>
+    <td>Returns true if an object is an instance of an object type</td>
+    </tr>
+    </table>
+
+<h2>JavaScript Bitwise Operators</h2>
+
+<p>Bit operators work on 32 bits numbers.
+<br>
+    Any numeric operand in the operation is converted into a 32 bit number. The result is converted back to a JavaScript number.
+    </p>
+    <table class="table table-bordered table-responsive">
+        <tr>
+        <th class="bg-dark" style="width:12%">Operator</th>
+        <th class="bg-dark" style="width:25%">Description</th>
+        <th class="bg-dark">Example</th>
+        <th class="bg-dark">Same as</th>
+        <th class="bg-dark">Result</th>
+        <th class="bg-dark" style="width:15%">Decimal</th>
+        </tr>
+        <tr>
+        <td>&amp;</td>
+        <td>AND</td>
+        <td>5 &amp; 1</td>
+        <td>0101 &amp; 0001</td>
+        <td>0001</td>
+        <td>&nbsp;1</td>
+        </tr>
+        <tr>
+        <td>|</td>
+        <td>OR</td>
+        <td>5 | 1</td>
+        <td>0101 | 0001</td>
+        <td>0101</td>
+        <td>&nbsp;5</td>
+        </tr>
+        <tr>
+        <td>~</td>
+        <td>NOT</td>
+        <td>~ 5</td>
+        <td>&nbsp;~0101</td>
+        <td>1010</td>
+        <td>&nbsp;10</td>
+        </tr>
+        <tr>
+        <td>^</td>
+        <td>XOR</td>
+        <td>5 ^ 1</td>
+        <td>0101 ^ 0001</td>
+        <td>0100</td>
+        <td>&nbsp;4</td>
+        </tr>
+        <tr>
+        <td>&lt;&lt;</td>
+        <td>Zero fill left shift</td>
+        <td>5 &lt;&lt; 1</td>
+        <td>0101 &lt;&lt; 1</td>
+        <td>1010</td>
+        <td>&nbsp;10</td>
+        </tr>
+        <tr>
+        <td>&gt;&gt;</td>
+        <td>Signed right shift</td>
+        <td>5 &gt;&gt; 1</td>
+        <td>0101 &gt;&gt; 1</td>
+        <td>0010</td>
+        <td>&nbsp; 2</td>
+        </tr>
+        <tr>
+        <td>&gt;&gt;&gt;</td>
+        <td>Zero fill right shift</td>
+        <td>5 &gt;&gt;&gt; 1</td>
+        <td>0101 &gt;&gt;&gt; 1</td>
+        <td>0010</td>
+        <td>&nbsp; 2</td>
+        </tr>
+        </table>
+
+<div class="alert alert-primary">
+    <p class="text-primary">The examples above uses 4 bits unsigned examples. But JavaScript uses 32-bit signed numbers.
+        Because of this, in JavaScript, ~ 5 will not return 10. It will return -6.<br>
+        ~00000000000000000000000000000101 will return 11111111111111111111111111111010</p>
+</div>
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

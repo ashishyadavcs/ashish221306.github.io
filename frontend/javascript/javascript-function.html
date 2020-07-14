@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript function</title>
+<meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+<meta name="keywords" content="javascript tutorial" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">javascript Function</h1>
+<p class="text-imp">Function is a set of code, that is defined once and can be called n number of times. A function can be reused, thus they are also used to avoid repetition of code. Function comes under reference type. Variables declared inside functions are local variables.
+     Thus they can be used only within same function, not outside function.</p>
+
+<p class="text-pink">
+    typeof operator can check datatype of function.<br>
+
+Function can be both Use Defined and Pre-defined.
+</p>
+
+
+<p>JavaScript functions are first-class objects. Means they are very powerful in javascript as compared to other programming languages. 
+    They are even more powerful than objects.</p>
+
+
+<h2>Why JavaScript Functions are first class objects?</h2>
+<ol>
+    <li>Functions can be assigned to variables.</li>
+       <li>Functions can have properties and methods.</li> 
+       <li> Functions can return functions.</li>
+       <li> Functions can have callbacks.</li>
+</ol>
+
+<p class="text-aqua">Functions can be easily reused. To invoke a function, we can use events like click, hover, submit, focus, mousemove etc, or just call by function name followed by parentheses. For exp, if function name is myFunction, use myFunction() to call or invoke function.
+
+</p>
+
+<pre class="code">
+    <h3>Function Declaration</h3>
+    &lt;script&gt;
+
+    function add(){ 
+          // code inside 
+    } 
+
+    &lt;/script&gt;
+</pre>
+
+<pre class="code">
+    <h3>Function Expression</h3>
+    &lt;script&gt;
+  var myfunction=function(){ 
+   // code inside 
+   };
+&lt;/script&gt;
+</pre>
+
+
+
+
+
+<h2>Function declaration</h2>
+<p>
+    Function declaration is the most commonly used method to declare functions in Javascript. A function keyword is started and followed by function name, then parentheses () and then code written inside curly brackets {}. Here is an example.</p>
+
+
+
+<pre class="code">
+    function function_name(){
+        
+    }
+</pre>
+<h2>Call a function</h2>
+<p>Call a function
+    To call or invoke a function, use function name followed by Parenthesis, i.e. ( ). For example, if function name is sayHi, use sayHi(). We can call a declared function after or before declaration. They are also known as named function.</p>
+
+
+<h3>Function declaration example</h3>
+<pre class="code">
+&lt;script&gt;  
+
+sayHello()      // will work
+    
+function sayhello(){
+ alert("Hello there")
+}
+
+sayHello()      // will work
+
+&lt;/script&gt;       
+
+&lt;button onclick="sayHello()"&gt;Click&lt;/button&gt;   
+        
+</pre>
+
+<h2>Function Expression</h2>
+<p>Another way to create function is function expression. In function expression, a variable is declared and then assigned a anonymous function, as it does not have a name. They are not named functions, as they are stored inside a variable.</p>
+<p>Function Expression are only invoked after function. If we call a function expression before, an error will occur (function_name is not defined).</p>
+<pre class="code">
+   &lt;script&gt;         
+    good_bye()     // will not work
+    var good_bye=function(){
+        alert("Good Bye")
+        };
+    good_bye()     // will work
+   &lt;/script&gt;  
+&lt;button onclick="good_bye()"&gt;Click&lt;/button&gt;
+</pre>
+
+<h2>Arrow Function</h2>
+<p>
+    Arrow functions are actually short form of expression functions. To call arrow functions, we have to declare function first and then call.
+<br><br>
+Arrow functions were introduced in ES6. Its recommended to use function declaration or expression for IE browsers.
+</p>
+
+
+
+<pre class="code">
+    var myFunc1=(x,y)=>{ };    // 2 parameters
+    
+    var myFunc2=(x)=>{ };        // 1 parameter
+    
+    var myFunc3=x=>{ };        // 1 parameter
+</pre>
+
+<p class="text-imp">One main difference between arrow function and expression is use of this keyword.</p>
+
+
+<h2>' This ' in javascript function</h2>
+<p class="text-pink">
+    this keyword in Javascript refers to current object. In a function, this keyword value depends upon how the function is called. For any function, this keyword is window object, 
+    but in strict mode, this keyword is undefined. See example below
+</p>
+
+
+
+<pre class="code">
+    
+
+&lt;html&gt;
+
+&lt;body&gt;&lt;/body&gt;
+
+&lt;/html&gt;
+
+&lt;script&gt;
+
+function sayHi(){ 
+console.log(this);        
+}
+sayHi()
+
+
+document.body.onclick=function(){ 
+console.log(this);        
+}
+
+// click on body to call function
+
+&lt;/script&gt;
+</pre>
+
+<pre class="code">
+    <h3>Undefined</h3>
+    "use strict";
+    function sayHi(){ 
+        console.log(this);        
+    }
+    sayHi()
+</pre>
+
+
+<p>In expression function, this keyword refers to current object. But in arrow function, it is window object. For such cases, avoid using arrow functions for events.
+
+</p>
+<h2>Return Value</h2>
+<p>Every function returns a value. The default return value is undefined. return operator is used to get a custom value in return when function is called or invoked. This could be a string, number, function, array or object.</p>
+<br><b>Function returns undefined</b>
+
+<pre class="code">
+    function sayHi(){
+        var x="Hello";
+    }
+    sayHi();         // return undefined
+</pre>
+<br>
+<b>Function returns string</b>
+
+<pre class="code">
+    function sayHi(){
+        return "hello";
+    }
+    sayHi();         // return "hello"
+    
+</pre>
+<br>
+<b>Function returns function</b>
+<p>Function can also returns a function. See example</p>
+
+
+<pre class="code">
+    function sayHi(){
+        return function(){ return "hi"};
+    }
+    sayHi();           // return function
+    sayHi()();         // return "hi"
+</pre>
+
+
+
+
+<h2>typeof function and return value</h2>
+<p>typeof function is "function" , but typeof function() is datatype of return value.
+
+</p>
+
+
+<pre class="code">
+typeof mean;                     // datatype of function
+typeof mean();                   // datatype of return value
+</pre>
+<h2>Parameters and Arguments</h2>
+<p>A Function can have parameters. Default parameter of a function is undefined. While declaration, they are called parameters, but when function is invoked, they are arguments.
+<br><br>
+    Parameters are used to provide changeable values to function for reuse.</p>
+
+
+
+
+<pre class="code">
+    <h3>Difference between parameters and arguments</h3>
+
+    function mean(x,y,z){
+        var sum =x+y+z;             // x, y and z are parameters
+        var a=sum/3;
+        return a;
+    }
+            
+    var i=mean(1,2,9);           // 1,2,9 are arguments, and i is 4          
+    var j=mean(2,3,4);           // 2,3,4 are arguments, and i is 3
+</pre>
+
+<h2>Function Properties</h2>
+
+<p>
+    Functions are first class objects in javascript, means they have both properties and methods. These properties are same for function declaration and expression functions.
+
+<ol>
+    <li>function.name</li>
+    <li>Return name of function. The name of function is always string.</li>
+</ol>
+
+
+</p>
+
+<pre class="code">
+    <h3>Function Name Property</h3>
+    function area1(){}
+    var area2=function(){}; 
+    var area3=function area4(){}; 
+                                
+    area1.name             // returns "area1"
+    area2.name             // returns "area2"
+    area3.name             // returns "area4"
+
+</pre>
+
+<h3>function.length
+    </h3>
+    <p>Return total no of parameters used in function.</p>
+
+
+
+<pre class="code">
+    <h3>Function length Property</h3>
+
+    function area1(x,y){ }
+    function area2(x,y,z){ }
+    
+    area1.length         // return 2
+    area2.length         // return 3
+</pre>
+
+
+<h2>custom property</h2>
+<p>Apart from length and name, functions can have custom properties and methods.</p>
+
+<pre class="code">
+    function user(){ }
+    
+    user.brandname="Tech Altum";
+    user.location="Noida";
+    user.year=2012;
+    user.getAge=function(){ return 2019-user.year };
+    
+    user.name                 // return "user"
+    
+    user.brandname            // return "Tech Altum"
+    user.location             // return "Noida"
+    user.year                 // return 2012
+    
+    user.getAge()             // return 7
+</pre>
+<div class="alert alert-danger">
+    <p class="text-danger"><i style="margin-right: 10px; color: rgb(37, 61, 201);font-weight: 700;" class="fa fa-hand-o-right"></i>Its better to use JavaScript Objects to declare properties and methods instead of functions. <br>See example</p>
+
+<pre class="code">
+    var user={
+        "name":"user",
+        "year":2012,
+        "location":"Noida"
+    }
+</pre>
+
+
+
+</div>
+
+
+<h2>How to Immediate Invoke Function</h2>
+
+<p>Immediate Invoke Function or self invoking function are anonymous function who call themself. They are not assigned and named. That's why they are anonymous. But they call themself on pageload or event.</p>
+<br>
+
+<b class="text-success">Immediate Invoke Function Example</b>
+<br>
+
+<pre class="code">
+    (function(){
+        // statement Statement
+    }());
+</pre>
+<b style="color: green;">Immediate Invoke Function with parameters</b><br>
+<p>Tow involke a function automaticaly without calling you should use <i style="color: blueviolet;">automatic invoke</i> function.</p>
+<pre class="code">
+    (function(x){
+        console.log("Hello", x )
+    }("user"));
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>
