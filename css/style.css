@@ -98,7 +98,7 @@ background: rgb(24, 21, 21);
   padding: 10px;
   border-bottom: 1px solid #ddd;
 }
-.modal-content ul li a{font-size: 20px;text-decoration: none;color: aqua;}
+.modal-content ul li a{font-size: 20px;text-decoration: none;color: aqua;display: block;}
 
 
 ul#mobile-demo{background:#000;z-index: 7674;
