@@ -344,10 +344,44 @@ javscript event is used to add interaction in website to add functionality is we
 </div>
 
 
+<div class="sub">
+    <h2 class="subheading1">How to add event n any html element</h2>
+<p>to add event listener on eny element follow the following steps-</p>
+<ol>
+    <li><h3>select the element listener </h3>
+    <p>Event listener is the html element or its state on which you want to apply event</p>
+    <br>choose the event listener by -<br>
+    <ol>
+        <li>getElementById ( ) , getElementByClassName ( ).......</li>
+        <li>querySelector ( )</li>
+    </ol>
+    </li>
+    <li><h3>add event listener function</h3>
+    <p><b class="text-imp">syntax</b><br><br><br>
+    <i class="cmd" style="letter-spacing: 1px;color: rgb(61, 243, 243);">Document.querySelector().addEventListener('listener',function(){})</i>
+    </p>
+    <h3>Example</h3>
+    <p>I want to add event listener on click on button</p>
+    <pre class="code" style="height: auto !important;">
+        
+&lt;button id="click" class="btn" &gt;click me&lt;/button&gt;
+
+&lt;script&gt;
+    document.querySelector("#click").addEventListener('click',function(){
+        alert('you clicked on this button')
+    })
+&lt;/script&gt;
+</pre>
 
 
 
 
+
+
+    </li>
+</ol>
+
+</div>
 
 
 
