@@ -77,18 +77,61 @@
 <div class="sub">
     <h2>Changing html style by javascript</h2>
 <p>use the following syntax to apply css by javascript</p>
-<p class="code text-white" style="letter-spacing: 1px;">document.getElementById(id).style.property = new style</p>
+<p class="code text-white" style="letter-spacing: 1px;">document.getElementById(id).style.property = new style<br>
+<br>
+    ------example-----------                <br>
+    document.body.style.color="red";              <br>  
+    document.body.style.fontSize="14px"; 
+
+</p>
+
+
+<p class="text-aqua">After running this code in Javascript, JS will replace current stylesheet with new properties in DOM. We can check new properties in Browser's Inspect.</p>
 </div>
 
 
+<p class="alert alert-danger text-danger">If !important is used in CSS code, than style property cannot overwrite current css.</p>
 
 
 
+<section class="sub">
+    <h2>getComputedStyle</h2>
+<p>JavaScript getComputedStyle method is used to get style of html elements in JavaScript String. getComputedStyle is a window method with parameter HTMLElement. See how to get css in javascript.</p>
+ 
+<pre class="code" style="line-height: 1.5;">
+    getComputedStyle(document.body).fontSize;    // return "14px"
+    getComputedStyle(document.body).display;    // return "block"
+    
+    getComputedStyle(document.head).display;    // return "none"
+</pre>
 
 
+<div class="alert alert-info">
+    <p class="text-success">If an HTML Element is having both class and id, and both class and id are used in css code, getComputedStyle will return value of id as id is more specific than class.</p>
+</div>
+</section>
 
+<section >
+    <h2>example</h2>
+    <pre class="code" style="line-height: 1.5;">
+&lt;button class="toggle"&gt;Hide Text&lt;/button&gt; 
+&lt;span class="exp"&gt;This is example text&lt;/span&gt; 
 
-
+&lt;script&gt;            
+document.querySelector(".toggle").onclick=function(){
+    var x=document.querySelector(".exp");
+    var y=getComputedStyle(x).display;
+    
+    if(y=="none"){
+        x.style.display="inline";
+    }
+    else{
+        x.style.display="none";
+    }   
+};
+&lt;/script&gt;
+    </pre>
+</section>
 
 
 
