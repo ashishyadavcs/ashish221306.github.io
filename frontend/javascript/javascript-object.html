@@ -3,18 +3,9 @@
 <head>
   <!--head start-->
 <meta charset="utf-8">
-<title>Javascript DOM</title>
-<meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+<title>Javascript Objects | new Object | Object properties | instanceof object</title>
+<meta name="description" content="Javascript Objects, how to declare objects in javascript. Object literals, objects properties and methods, instanceof objects. for in loop for object">
 <meta name="keywords" content="javascript tutorial" >
-
-
-
-
-
-
-
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -109,6 +100,123 @@ x instanceof(Object);    // return true
 <p style="color: blueviolet;">To check element inside Object, we can call object.property or object followed by property in brackets. To find first element, call array[0]. This index notation starts from 0 to array.length-1.
 
 </p>
+
+
+<pre class="code">
+    var user={
+        "full-name":"Mr John",
+        profile:"full stack Developer",
+        location:"Mirzapur, Utter Pradesh", 
+        pincode:221306,    
+    };
+       
+        user["full-name"];  // return Mr John
+        user.profile;         // return "full stack Developer"
+        user.location;        // return "Mirzapur , Utter Pradesh"
+        user.pincode;         // return 221306 
+          
+          or
+          
+        user["full-name"];     // return "Mr John"  
+        user["profile"];  // return "full stack Developer"  
+        
+</pre>
+
+<h2>hasOwnProperty</h2>
+<p>The <i style="color: rgb(255, 72, 0);">'hasOwnProperty'</i> property check whether the property is his 
+    own property or global property of all JS Objects. It returns boolean value,
+     true or false.
+     in operator returns true for all properties,
+      including global. See example</p>
+<pre class="code">
+    var user={
+        "full-name":"avinash malhotra",
+        profile:"UI Developer",
+        location:"Noida, Delhi NCR", 
+        pincode:201301,    
+        };
+        
+user.hasOwnProperty("pincode");   // returns true  
+user.hasOwnProperty("profile");   // returns true  
+user.hasOwnProperty("toString");   // returns false 
+</pre>
+
+
+
+<h2>How to add and remove property in objects</h2>
+<p>An JS Object can add and remove properties in object. Even if object is already declared,
+still we can add and properties in object</p>
+<hr>
+<h3>Adding Property in Object</h3>
+<p>You can add propertes to object by <b class="cmd">object.property=value</b></p>
+<p><b style="color: aquamarine;">Example</b></p>
+<pre class="code">
+    var user={
+        "full-name":"avinash malhotra",
+        profile:"UI Developer",
+        location:"Noida, Delhi NCR", 
+        pincode:201301,    
+        };
+        
+user.country="India"; 
+</pre>
+
+<h3>Removing Property From Object</h3>
+<p>You can remove any propery of object by following method -<br>
+<b style="margin: 10px;display: inline-block;" class="cmd">delete object['property']</b></p>
+<pre class="code">
+    var user={
+        "full-name":"Mr John",
+        profile:"Full stack Developer",
+        location:"Mirzapur , Utter pradesh", 
+        pincode:221306,    
+        };
+
+delete user["full-name"]; 
+</pre>
+
+<h2>How to Change Property value in Object</h2>
+<pre class="code">
+    var user={
+        "full-name":"Mr John",
+        profile:"full stack developer Developer",
+        location:"Mirzapur, Utter Pradesh", 
+        pincode:221306,    
+        };
+
+user.pincode=110022;
+</pre>
+<hr>
+<h2>How Get All properties of Object</h2>
+<pre class="code">
+full-name - avinash malhotra
+profile - UI Developer
+location - Noida, Delhi NCR
+pincode - 201301
+</pre>
+
+
+<pre class="code">
+    var user={
+        "full-name":"Mr John",
+        profile:"full stack Developer",
+        location:"Mirzapur ,Utter Pradesh", 
+        pincode:221306,    
+        };
+for( var i in user){
+console.log(i + " - " + user[i]);
+}     
+</pre>
+
+
+
+
+
+
+
+
+
+
 
     </section>
 

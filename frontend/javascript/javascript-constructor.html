@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript contructor</title>
+<meta name="description" content="Javascript constructor">
+<meta name="keywords" content="javascript tutorial" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">Javascript contructor</h1>
+<p>Sometimes we need a "blueprint" for creating many objects of the same "type". To create other same type object, we use contructor. <br>
+    Objects of the same type are created by calling the constructor function with the new keyword:</p>
+
+<p>we want to make same object as we created in last article -</p>
+<pre class="code">
+    var user={
+        "fullName":"Mr John",
+        profile:"full stack Developer",
+        location:"Mirzapur , Utter Pradesh", 
+        pincode:221306,    
+        };
+</pre>
+
+
+<p>if we need to create same object as above we can simply  use <b class="text-aqua">contructor</b>....</p>
+
+<pre class="code">
+    var user1=new user("Ashish", "Web Designer", "Lucknow Utter Pradesh" ,"231312")
+</pre>
+
+<p style="color: aquamarine;">we can now access property  as the above object -</p>
+<pre class="code">
+    user1["fullName"];    // return "Ashish"
+    user1.profile;         // return "Web Designer"
+    user1.location;        // return "Lucknow Utter Pradesh"
+    user1.pincode;         // return 231312
+</pre>
+
+
+
+<h2 style="color: rgb(250, 116, 26);">Adding a Method to an Object</h2>
+
+
+<pre class="code">
+    user1.name = function () {
+        return this.fullName ;
+      };
+</pre>
+
+<h2 style="color: aquamarine;">Adding a Property to a Constructor</h2>
+<p class="alert alert-danger text-danger">You cannot add a new property to an object constructor the same way you add a new property to an existing object:</p>
+<pre class="code">
+    user1.nationality = "English"; 
+    <h2 class="text-center">&cross;</h2>
+</pre>
+
+
+<p class="alert alert-success text-success">To add a new property to a constructor, you must add it to the constructor function:</p>
+<pre class="code">
+    function user1(first, last, age, eyecolor) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyecolor;
+        this.nationality = "English";
+      }
+      <h2 class="text-center">&#10004;</h2>
+</pre>
+<br>
+<hr>
+
+<h2>Adding a Method to a Constructor</h2>
+<p>Your constructor function can also define methods:</p>
+<pre class="code">
+    function user1(first, last, age, eyecolor) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eyecolor;
+        this.name = function() {return this.firstName + " " + this.lastName;};
+      }
+      
+</pre>
+
+<p class="text-danger">You cannot add a new method to an object constructor the same way you add a new method to an existing object.
+<br>
+    Adding methods to an object constructor must be done inside the constructor function:
+    
+    </p>
+
+<pre class="code">
+    function user1(firstName, lastName, age, eyeColor) {
+        this.firstName = firstName; 
+        this.lastName = lastName;
+        this.age = age;
+        this.eyeColor = eyeColor;
+        this.changeName = function (name) {
+          this.lastName = name;
+        };
+      }
+      
+</pre>
+
+<br>
+<hr>
+<h2 style="color: aquamarine;">Built-in JavaScript Constructors
+</h2>
+
+<p>JavaScript has built-in constructors for native objects:</p>
+<pre class="code">
+var x1 = new Object();    // A new Object object
+var x2 = new String();    // A new String object
+var x3 = new Number();    // A new Number object
+var x4 = new Boolean();   // A new Boolean object
+var x5 = new Array();     // A new Array object
+var x6 = new RegExp();    // A new RegExp object
+var x7 = new Function();  // A new Function object
+var x8 = new Date();      // A new Date object
+</pre>
+
+<p class="alert alert-danger text-danger">The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.</p>
+
+
+<section class="alert alert-danger ">
+    <h2>String Objects</h2>
+    <p class="text-info">
+        Normally, strings are created as primitives: <br>
+        <b class="text-danger">var firstName = "John"</b><br><br>
+
+But strings can also be created as objects using the new keyword:<br>
+<b class="text-danger"> var firstName = new String("John")</b>
+    </p>
+</section>
+
+
+<section class="alert alert-danger ">
+    <h2>Number Objects</h2>
+    <p class="text-info">
+        Normally, numbers are created as primitives: <br>
+        <b class="text-danger">var x = 123</b><br><br>
+
+But numbers can also be created as objects using the new keyword: <br>
+<b class="text-danger">var x = new Number(123)</b>
+    </p>
+</section>
+
+<section class="alert alert-danger ">
+    <h2>Boolean Objects</h2>
+    <p class="text-info">
+        Normally, booleans are created as primitives: <br>
+        <b class="text-danger">var x = false</b><br><br>
+
+But boolean can also be created as objects using the new keyword: <br>
+<b class="text-danger">var x = new Boolean(false)
+
+</b>
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>
