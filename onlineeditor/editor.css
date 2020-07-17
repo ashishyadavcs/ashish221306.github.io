@@ -43,7 +43,7 @@ html,body{margin: 0;}
     white-space: pre;
     box-shadow: 0 1px 1px rgb(22, 22, 22);
     outline: none;
-    padding: 0.4rem;
+    padding: 3px;
     height: 90vh;
     overflow:auto;
     line-break: normal;
