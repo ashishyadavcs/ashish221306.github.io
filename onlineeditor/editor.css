@@ -27,6 +27,7 @@ margin: 0;
     justify-content: center;
      align-items: center;
    border: 7px solid #36383f;
+   overflow-y: auto;
  }
  
  .first {
