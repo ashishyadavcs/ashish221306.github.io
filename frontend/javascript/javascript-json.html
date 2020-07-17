@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript json</title>
+<meta name="description" content="Javascript json - ">
+<meta name="keywords" content="javascript tutorial" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">Javascript JSON</h1>
+<p><b>JSON or JavaScript Object Notation </b> is popular text format. <b>JSON</b> is lightweight data and can be used to exchange, interchange and storage data. JSON syntax is both human and machine readable. JSON was build in 2001 but JavaScript starts supporting JSON in ECMA5. File extension for JSON file is .json. As compare to XML, JSON is easy to parse.</p>
+
+
+<pre class="code">
+    [
+
+    {"name":"abc","age":21,"isAlive":true},
+    {"name":"pqr","age":22,"isAlive":true},
+    {"name":"xyz","age":20,"isAlive":true}
+
+   ]
+</pre>
+
+
+<h2>JSON in javascript</h2>
+<p style="color: green;">JSON Object was introduced in JavaScript in ECMA5 (2009). In Javascript, JSON is string representation of JavaScript Object. The key must be quoted in JSON and value can be a string, number,boolean, nullobject or array. But functions can't be used in JSON to create methods.</p>
+
+
+<h2>datatypes used in JSON</h2>
+
+<ol><li>String</li>
+  <li>  Numbers</li>
+  <li>  Boolean</li>
+    <li>Null</li>
+   <li> Array</li>
+   <li> Objects</li>
+
+</ol>
+
+<div class="alert alert-danger">
+    <h3 class="text-danger">Not Used in JSON string</h3>
+    <ol style="list-style-type: decimal;">
+        <li>Undefined</li>
+        <li>Function</li>
+    </ol>
+</div>
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON object with strings</h2>
+
+<pre class="code">
+    &lt;script&gt;
+    var user='{"name":"john","age":"22"}';                                                       
+    &lt;/script&gt;
+</pre>
+</section>
+
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON Object with numbers</h2>
+    <pre class="code">
+        &lt;script&gt;
+        var user='{"name":"john","age":22}';                                                     
+        &lt;/script&gt;
+    </pre>
+</section>
+
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON object with boolean</h2>
+    <pre class="code">
+        &lt;script&gt;
+        var user='{"name":"john","age":22, "isAlive":true}';                                                   
+        &lt;/script&gt;
+    </pre>
+</section>
+
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON Object with null</h2>
+    <pre class="code">
+        &lt;script&gt;
+        var user='{"name":"shyam","age":62, "id":null}';                                                     
+        &lt;/script&gt;
+    </pre>
+</section>
+
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON Object with Object</h2>
+    <pre class="code">
+        &lt;script&gt;
+        var user='{"name":"john","dad":{"name":"Mac","age":55}}';                                                      
+        &lt;/script&gt;
+    </pre>
+</section>
+
+<section class="alert alert-success">
+    <h2 class="text-success">JSON Object with Array</h2>
+    <pre class="code">
+        &lt;script&gt;
+        var user='{"name":"john","hobbies":["cricket","football"]}';                                                      
+        &lt;/script&gt;
+    </pre>
+</section>
+
+
+<hr>
+<h2>JSON Object</h2>
+<p>ECMA5 introduced the global JSON Object in javascript. The JSON Object can have two methods, parse and stringify to convert JSON String to object and object to string.</p>
+
+<pre class="code">
+    var j=JSON;
+    console.log(j);        // return object
+</pre>
+
+
+<h2>JSON Methods</h2>
+<ol>
+    <li >JSON Parse</li>
+    <li id="json_Stringify">JSON Stringify</li>
+</ol>
+
+<h2 id="json_parse">JSON Parse</h2>
+<p>JSON Parse method is used to convert JSON String to JavaScript Object. 
+    The JSON Object is used to convert string to object, followed by parse method.</p>
+<pre class="code">
+    &lt;script&gt;
+    var user1='{"name":"john","age":"22"}'; 
+    var user2=JSON.parse(user1);
+    
+    typeof user1                 // returns string            
+    user2 instanceOf(Object)     // returns object         
+&lt;/script&gt;  
+</pre>
+
+
+<h2>JSON Parse</h2>
+<p><b>JSON Parse</b> method is used to convert <b>JSON String to JavaScript Object</b>. 
+    The JSON Object is used to convert string to object, followed by parse method.</p>
+
+
+<pre class="code">
+    &lt;script&gt;
+    var user1='{"name":"john","age":"22"}'; 
+    var user2=JSON.parse(user1);
+    
+    typeof user1                 // returns string            
+    user2 instanceOf(Object)     // returns object         
+   &lt;/script&gt;    
+</pre>
+
+
+<h2>JSON Stringify</h2>
+<p><b>JSON Stringify</b> method is used to <b class="text-imp">convert JS Object to JSON String</b>. The JSON Object is followed by stringify method.</p>
+
+
+<pre class="code">
+    &lt;script&gt;
+    var user1={"name":"john","age":"22"};     // object
+    var user2=JSON.stringify(user1);          // string
+                               
+    &lt;/script&gt; 
+</pre>
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+</body>
+<!--footer-->
+
+
+
+</html>

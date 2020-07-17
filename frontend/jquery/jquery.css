@@ -22,12 +22,12 @@ ol li b{color: rgb(245, 197, 109);letter-spacing: 1px;}
     min-height: 100px;
 }
 pre{line-height: 30px;}
-.code pre::-webkit-scrollbar{height: 6px;;width: 3px;background: rgb(124, 121, 121);border-radius:60px ;
+.code::-webkit-scrollbar{height: 2px;width: 3px;background: rgb(124, 121, 121);border-radius:60px ;
 border: 1px solid #ddd;
 box-shadow: inset 2px 2px 3px 3px #333;}
-.code pre::-webkit-scrollbar-track{background: rgb(192, 192, 184);border-radius: 60px;}
-.code pre::-webkit-scrollbar-thumb{height: 4px;background:linear-gradient(rgb(223, 157, 16),red);border-radius: 60px;}
-.code pre::-webkit-scrollbar-corner{border-radius: 20px;}
+.code::-webkit-scrollbar-track{background: rgb(192, 192, 184);border-radius: 60px;}
+.code::-webkit-scrollbar-thumb{height: 4px;background:linear-gradient(rgb(223, 157, 16),red);border-radius: 60px;}
+.code::-webkit-scrollbar-corner{border-radius: 20px;}
 
 .text-imp{color: rgb(162, 54, 212);}
 .text-notice{color: rgb(155, 231, 67);}

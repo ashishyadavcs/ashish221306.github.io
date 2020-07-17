@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--head start-->
+    <meta charset="utf-8">
+    <title>Javascript window object</title>
+    <meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+    <meta name="keywords" content="javascript tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="/./css/style.css">
+    <link rel="stylesheet" href="./../css/rightdiv.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../jquery/jquery.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+
+
+    <div class="wrapper">
+        <div class="left">
+            <!--left----------------------------------------------------------->
+            <div class="leftnav">
+                <div ng-include="'./sidenav.html'"></div>
+            </div>
+            <!--left end----------------------------------->
+        </div>
+        <div class="right">
+            <div class="rightdiv">
+                <div class="left2">
+
+                   <h1 class="text-center">JS Window Object</h1>
+<p style="color: bisque;"><b>JS Window Object</b> is the global object in JavaScript. For a web browser, window object tell information about current browser window. Window Object is also the global object of browser environment.</p>
+<p>window object is available in browser environment only. In other environment's, there is no window object. For exp, in Node JS, global is used instead of window object.</p>
+<p class="alert alert-danger">All global variables and functions are windows properties and methods</p>
+
+<pre class="code">
+    var x="hello javascript";
+    var y=function(){ return "hi how are you"};
+    
+    window.x;          // return "hello javascript"
+    window.y();        // return "hi how are you"
+</pre>
+<p class="alert alert-danger text-danger">Global const and let are not windows properties and methods.</p>
+
+<pre class="code">
+    let x="hello js";
+    let y=function(){ return "hi"};
+    const pi=Math.PI;
+    
+    
+    window.x;            // return undefined
+    window.y;            // return window.y is not a function 
+    window.pi            // return undefined 
+</pre>
+
+
+<h2 class="text-center">Window Properties</h2>
+<div class="text-center">
+    <table class="table table-bordered table-responsive" style="width: 80%;">
+        <thead>
+            <td>Method</td>
+            <td>Details</td>
+            <td>Use</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>innerWidth</td>
+                <td>width of window</td>
+                <td id="iw"><script>document.querySelector("#iw").innerHTML=window.innerWidth</script></td>
+            </tr>
+            <tr>
+                <td>innerHeight</td>
+                <td>height of window</td>
+                <td id="iw1"><script>document.querySelector("#iw1").innerHTML=window.innerHeight</script></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+<h2>Window Methods</h2>
+<p>JS Window Methods are build in functions.</p>
+
+
+<table class="table table-bordered table-responsive bg-success">
+    <thead class="bg-dark">
+        <td>Method </td>
+        <td>use</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>window.open()</td>
+            <td>Opens a new browser window.<br><pre class="code">window.open("print.html","_blank","width=400,height=500,top=100,left=300,resizable=yes")</pre></td>
+        </tr>
+        <tr>
+            <td>window.close()</td>
+            <td>Close browser window opened by window.open method.<br>
+            <pre class="code">
+                window.close()
+            </pre>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>window.print()</td>
+            <td>Prints the current browser window.<br>
+            <pre class="code">
+                window.print()
+            </pre>
+            
+            </td>
+        </tr>
+
+        <tr>
+            <td>window.resizeTo()</td>
+            <td>resize browser to parameter inside.  <pre class="code">window.resizeTo(600,400)</pre> will resize window to 600 by 400.</td>
+        </tr>
+
+        <tr>
+            <td>window.moveTo</td>
+            <td>move window to left top corner of screen</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="right2" ng-include="'/./english/right2.html'">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <footer>
+                <div ng-include="'../../footer.html'"></div>
+
+            </footer>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript ajax tutorial</title>
+<meta name="description" content="Javascript ajax">
+<meta name="keywords" content="javascript tutorial" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+<!--main -->
+<h1 class="text-center">AJAX</h1>
+<p><b>Ajax is Asynchronous JavaScript and XML</b>. In JavaScript AJAX is used to 
+    <b> fetch data asynchronous from web server without refreshing webpage</b>.</p>
+<ol style="list-style-type: circle;">
+    following are benefits of using ajax
+<li>  Read data from a web server - after the page has loaded</li>
+<li>Update a web page without reloading the page</li>
+<li>Send data to a web server - in the background</li>
+</ol>
+<p><b>For example</b>- 
+<ol>
+    <li>You can display a html into another html.</li>
+    <li>Load api data into your web page without refresh</li>
+    
+</ol>
+
+<b>I am going to display my another html file (<i style="color: aqua;">sidenav.html</i>) in following div......</b>
+<div class="output" id="output">
+    <script>
+         function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("output").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "./sidenav.html", true);
+          xhttp.send();
+        }
+        loadDoc();
+        </script>
+</div>
+</p>
+<h3>code of above example</h3>
+<pre class="code">
+    &lt;div class="output" id="output"&gt;
+    &lt;script&gt;
+         function loadDoc() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("output").innerHTML =
+              this.responseText;
+            }
+          };
+          xhttp.open("GET", "./sidenav.html", true);
+          xhttp.send();
+        }
+        loadDoc();
+        &lt;/script&gt;
+&lt;/div&gt;
+</pre>
+
+<p><i style="color:aquamarine">sidenav.html</i></p>
+
+<pre class="code">
+    &lt;ul&gt;
+    &lt;li&gt;&lt;a href="./index.html"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-variable.html"&gt;javascript variable&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-datatype.html"&gt;javascriptdata type &lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-operator.html"&gt;javascript Oprerator&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-function.html"&gt;javascript function&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./callback-function-in-javascript.html"&gt;javascript Callback function&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-dom.html"&gt;javascript DOM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./innerHTML.html"&gt;innerHTML in javascript&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-event.html"&gt;javascript event&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./dom-css-in-javascript.html"&gt;javascript DOM css&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-object.html"&gt;javascript object&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-constructor.html"&gt;javascript contructor&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-json.html"&gt;json&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="./javascript-ajax.html"&gt;javascript ajax&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt;
+</pre>
+<h3>Example explanation</h3>
+<p>we are simply loading another html file through ajax on page load you can load that page on any <b>event too</b> using <b>addeventListener()</b>
+<br> You can load text/html/php/....  files also. 
+
+
+</p>
+<div class="alert alert-danger">
+    <p class="text-danger">AJAX is not a programming language.</p>
+</div>
+
+
+<div class="alert alert-danger">
+    <p class="text-danger">AJAX just uses combination of -</p>
+    <ol style="list-style-type: circle;" class="text-success">
+        <li>A browser built-in XMLHttpRequest object (to request data from a web server)
+            </li>
+            <li>JavaScript and HTML DOM (to display or use the data)</li>
+    </ol>
+</div>
+
+<div class="alert alert-success">
+    <p class="text-success">AJAX is a misleading name. AJAX applications might use XML to transport data,
+         but it is equally common to transport data as plain text or JSON text.</p>
+</div>
+<div class="alert alert-success">
+<p style="color: red">Asynchronous loading techniques were first seen in Gmail and Google Maps websites in 2004-2005. Both of these web applications by google can change a portion of webpage without reloading entire page, thus enhance user experience.</p>
+</div>
+<div class="alert alert-info">
+    <ol class="text-info">
+        <b>working - </b><br>
+       <li> An event occurs in a web page (the page is loaded, a button is clicked)</li>
+<li> An XMLHttpRequest object is created by JavaScript</li>
+<li> The XMLHttpRequest object sends a request to a web server</li>
+<li>The server processes the request</li>
+<li>The server sends a response back to the web page</li>
+<li>The response is read by JavaScript</li>
+ <li>Proper action (like page update) is performed by JavaScript</li>
+    </ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--main ends here-->
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>Javascript Date object</title>
+<meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+<meta name="keywords" content="javascript tutorial" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+<h1 class="text-center">Javascript Date Object</h1>
+<p style="color: rgb(20, 235, 31);"><b>JavaScript Date Object</b> is used to <b>get date and time of user device</b>. Using JS date object, we can detect date, time, timezone, day and also change date time data using js date function. JS Date Object is a build in constructor object is javascript.</p>
+
+
+<p class="alert alert-danger text-danger"><i class="fa fa-hand-grab-o"></i><br>JS will pick date and time from user machine. The accuracy of date and time totally depends upon user device.</p>
+
+
+
+
+<h2>new Date( )</h2>
+<p>new Date( ) functon is used to get date and time in javascript. <b>Date</b> is a constructor function using new operator.</p>
+
+
+
+<pre class="code">
+    var date=new Date();            // new Date Object
+</pre>
+
+<h2>new Date from EPOCH</h2>
+
+<pre class="code">
+    var date=new Date(0);            
+    // new Date Object from EPOCH Date and Time
+</pre>
+
+<div class="alert alert-success">
+    <p id="tm" class="text-success"></p>
+    <script>
+        var date=new Date(0); 
+        document.querySelector('#tm').innerHTML=date;
+    </script>
+</div>
+
+<h2>new Date function with date and time</h2>
+
+<pre class="code">
+    var date=new Date('2020-01-30T14:00');            
+    // new Date Object with custom date and time
+</pre>
+<div class="alert alert-success">
+    <p id="tm1" class="text-success"></p>
+    <script>
+           var date1=new Date('2020-01-30T14:00');   
+        document.querySelector('#tm1').innerHTML=date1;
+    </script>
+</div>
+
+
+<h2 style="color: aquamarine;">new Date function with date, time and timezone</h2>
+<pre class="code">
+    var date=new Date('2020-01-30T12:00:00Z');            
+    // new Date Object with custom date, time & timezone
+       // Z stands for Greenwich Mean Time  
+</pre>
+
+<div class="alert alert-success">
+    <p id="tm2" class="text-success"></p>
+    <script>
+           var date2=new Date('2020-01-30T12:00:00Z');    
+        document.querySelector('#tm2').innerHTML=date2;
+    </script>
+</div>
+
+<p class="alert alert-danger text-danger">If system date is incorrect, date function will respond incorrect date and time.</p>
+
+
+<h2 class="subheading1">getDate( ) Method</h2>
+<p style="color: rgb(210, 161, 219);">The getDate() and getUTCDate() method of date object returns current date.</p>
+
+<pre class="code">
+    var t=new Date();
+    var date=t.getDate();
+    document.write(date);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="ppp">
+  <script>
+        var t=new Date();
+     var date11=t.getDate();
+     document.querySelector('#ppp').innerHTML=date11
+  </script>
+</p>
+
+
+<h2>getYear()</h2>
+<p>The getYear() method of date object returns <i style="color: blanchedalmond;">(year - 1900)</i>.</p>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p2">
+  <script>
+        var t=new Date();
+     var date12=t.getYear();
+     document.querySelector('#p2').innerHTML=date12
+  </script>
+</p>
+
+
+
+<h2 style="color: red;">getFullYear( )</h2>
+<p style="color: greenyellow;"> The getFullYear() method of date object returns actual current year.</p>
+
+<pre class="code" style="color: aqua;">
+     var t=new Date();
+     var year=t.getFullYear();
+     document.write(year);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p3">
+  <script>
+        var t=new Date();
+     var date13=t.getFullYear();
+     document.querySelector('#p3').innerHTML=date13
+  </script>
+</p>
+
+
+<h2 style="color: aquamarine;">getMonth()</h2>
+<p style="color: blanchedalmond;">The getMonth() method of date object returns month in array. For January, getMonth() will return 0, and for December getMonth() will return 11.</p>
+
+<pre class="code">
+    var t=new Date();
+     var month=t.getMonth();
+     document.write(month);
+</pre>
+
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p4">
+  <script>
+        var tt=new Date();
+     var date14=tt.getMonth();
+     document.querySelector('#p4').innerHTML=date14
+  </script>
+</p>
+
+
+<h2 class="subheading1">getDay( )</h2>
+<p style="color: rgb(238, 45, 212);">  The <b>getDay() method</b> of date object returns day in array. For Sunday, getDay() will return 0, and for Saturday getDay() will return 6.</p>
+
+<pre class="code">
+    var t=new Date();
+    var day=t.getDay();
+    document.write(day);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p5">
+  <script>
+        var tt=new Date();
+     var date14=tt.getDay();
+     document.querySelector('#p5').innerHTML=date14
+  </script>
+</p>
+
+
+<h2>getHours()</h2>
+<p>The getHours() method of date object returns hour in <i style="color: blue;">24 hour format.</i> For 12:00 AM,
+     hour will return 0 and for 02:00 PM, hour will return 14.</p>
+<pre class="code">
+    var t=new Date();
+    var hour=t.getHours();
+    document.write(hour);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p6">
+  <script>
+        var tt=new Date();
+     var date112=tt.getHours();
+     document.querySelector('#p6').innerHTML=date112
+  </script>
+</p>
+
+
+
+<h2 class="subheading1">getMinutes()</h2>
+<p>The <i>getMinutes( )</i> method of date object returns minute form 0 to 59.</p>
+<pre class="code">
+    var t=new Date();
+     var min=t.getMinutes();
+     document.write(min);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p7">
+  <script>
+        var ttt=new Date();
+     var date9=ttt.getMinutes();
+     document.querySelector('#p7').innerHTML=date9
+  </script>
+</p>
+
+
+<h2 class="subheading1">getSeconds()</h2>
+<p>The getSeconds() method of date object returns seconds form 0 to 59.</p>
+<pre class="code">
+    var t=new Date();
+     var second=t.getSeconds();
+     document.write(second);
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p8">
+  <script>
+        var t99=new Date();
+     var date91=t99.getSeconds();
+     document.querySelector('#p8').innerHTML=date91
+  </script>
+</p>
+
+
+
+<h2>Refresh Seconds value after every second</h2>
+<pre class="code">
+   
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p90">
+  <script>
+        function changeSec(){
+        var t=new Date();
+        var sec=t.getSeconds();
+        document.querySelector("#p90").innerHTML=sec;
+        }
+        setInterval(changeSec,1000)
+  </script>
+</p>
+
+<h2 class="subheading1">getMilliseconds()</h2>
+<p>The getMilliseconds() method of date object returns millisecond form 0 to 999.</p>
+<pre class="code">
+    function changeMilliSec(){
+        var t=new Date();
+        var msec=t.getMilliSeconds();
+        document.querySelector("p").innerHTML=msec;
+        }
+        setInterval(changeMilliSec,1)
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p45"></p>
+<script>
+    function changeMilliSec(){
+       
+       document.querySelector("#p45").innerHTML=(new Date().getMilliseconds())
+       }
+       setInterval(changeMilliSec,1)   
+</script>
+
+
+<h2 class="subheading1">getTime()</h2>
+<p> The getTime() method of date object returns total milliseconds from 1-Jan-1970 12:00 AM (Epoch Time) till now.</p>
+
+<pre class="code">
+  function getTime(){
+    var t=new Date();
+    var gt=t.getTime();
+    document.querySelector("p").innerHTML=gt;
+    }
+    setInterval(getTime,1)    
+</pre>
+
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="py">
+  <script>
+    function getTime(){
+    document.querySelector("#py").innerHTML=(new Date().getTime());
+    }
+    setInterval(getTime,1)  
+</script>
+</p>
+
+<h2>toDateString()</h2>
+<p>The toDateString() method of date object returns Day, Month, Date and Year in String.</p>
+<pre class="code">
+     var t=new Date();
+     var dstr=t.toDateString();
+     document.querySelector("p").innerHTML=dstr;
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="py1">
+  <script>
+    var t=new Date();
+     var dstr=t.toDateString();
+     document.querySelector("#py1").innerHTML=dstr;
+</script>
+</p>
+
+
+<h2>toLocaleDateString()</h2>
+<p style="color: bisque;">The <b>toLocaleDateString()</b> method of date object returns locale date in String form, i.e. dd/mm/yyyy.</p>
+<pre class="code">
+     var dt=new Date();
+     var ldstr=dt.toLocaleDateString();
+     document.querySelector("p").innerHTML=ldstr;
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="py11">
+  <script>
+    var dt=new Date();
+     var ldstr=dt.toLocaleDateString();
+     document.querySelector("#py11").innerHTML=ldstr;
+</script>
+</p>
+
+
+
+<h2>toTimeString()</h2>
+<p>The toTimeString() method of date object returns time in String form, i.e. hh:mm:ss GMT ±nnnn(Time ZOne).</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var tstr=t.toTimeString();
+    document.querySelector("p").innerHTML=tstr;
+      }
+   setInterval(timeStr,1) 
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="pb">
+  <script>
+   var tt=new Date();
+    var tstrr=tt.toTimeString();
+    document.querySelector("#pb").innerHTML=tstrr;
+</script>
+</p>
+
+
+<h2>toLocaleTimeString()</h2>
+<p>The toLocaleTimeString() method of date object returns locale time in String form, i.e. hh:mm:ss.</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var ltstr=t.toLocaleTimeString();
+    document.querySelector("p").innerHTML=ltstr;
+      }
+   setInterval(timeStr,1)
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="pb1">
+  <script>
+    function timeStr(){    
+    var t=new Date();
+    var ltstr=t.toLocaleTimeString();
+    document.querySelector("#pb1").innerHTML=ltstr;
+      }
+   setInterval(timeStr,1)
+</script>
+</p>
+
+
+<h2>toLocaleString()</h2>
+<p>The toLocaleString() method of date object returns locale date and time in String form, i.e. DD/MM/YYYY, hh:mm:ss.</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var lstr=t.toLocaleString();
+    document.querySelector("p").innerHTML=lstr;
+      }
+   setInterval(timeStr,1) 
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="pb11">
+  <script>
+  function timeStr(){    
+    var t=new Date();
+    var lstr=t.toLocaleString();
+    document.querySelector("#pb11").innerHTML=lstr;
+      }
+   setInterval(timeStr,1) 
+</script>
+</p>
+
+
+
+<h2>toGMTString()</h2>
+<p style="color: aquamarine;">The toGMTString() method of date object returns date and time of GMT in String form, i.e. Day, dd Month YYYY HH:MM:SS GMT.</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var gmtstr=t.toGMTString();
+    document.querySelector("p").innerHTML=gmtstr;
+      }
+   setInterval(timeStr,1) 
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="ph">
+  <script>
+ function timeStr(){    
+    var t=new Date();
+    var gmtstr=t.toGMTString();
+    document.querySelector("#ph").innerHTML=gmtstr;
+      }
+   setInterval(timeStr,1) 
+</script>
+</p>
+
+
+<h2> toUTCString()</h2>
+<p>The toUTCString() method of date object returns date and time of UTC, same as GMT in String form, i.e. Day, dd Month YYYY HH:MM:SS GMT.</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var utcstr=t.toUTCString();
+    document.querySelector("p").innerHTML=utcstr;
+      }
+   setInterval(timeStr,1) 
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p27">
+  <script>
+  function timeStr(){    
+    var t=new Date();
+    var utcstr=t.toUTCString();
+    document.querySelector("#p27").innerHTML=utcstr;
+      }
+   setInterval(timeStr,1) 
+</script>
+</p>
+
+
+
+<h2>toISOString()</h2>
+<p> The toISOString() method of date object returns date and time of ISO in ISO format, i.e. YYYY-MM-DDTHH:MM:SS.ms Z, where Z means GMT.</p>
+<pre class="code">
+  function timeStr(){    
+    var t=new Date();
+    var isostr=t.toISOString();
+    document.querySelector("p").innerHTML=isostr;
+      }
+   setInterval(timeStr,1) 
+</pre>
+<p><b>output -</b></p>
+<p class="alert alert-success text-success" id="p0">
+  <script>
+   function timeStr(){    
+    var t=new Date();
+    var isostr=t.toISOString();
+    document.querySelector("#p0").innerHTML=isostr;
+      }
+   setInterval(timeStr,1)
+</script>
+</p>
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+
+<a data-toggle="modal" data-target="#exampleModalLong" class="sbutton mainsbutton" ><i class="fa fa-bars"></i></a> 
+</div>  
+<!--modal-->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-success" id="exampleModalLongTitle">content</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div ng-include="'./sidenav.html'"></div>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+<!--modal end-->
+</body>
+<!--footer-->
+
+
+
+</html>
