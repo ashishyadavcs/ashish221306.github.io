@@ -2,7 +2,7 @@
 padding: 0;
 margin: 0;
 }
-
+html,body{margin: 0;}
 
 .btn {
     display: block;
@@ -19,6 +19,7 @@ margin: 0;
    background: rgba(0, 0, 0, 0.91);
    display: flex;
    width: 100%;
+   margin: 0;
    padding: 1rem;
    box-shadow:0 2px 3px black;
    position:fixed;
@@ -26,14 +27,17 @@ margin: 0;
    height:100vh;
     justify-content: center;
      align-items: center;
-   border: 7px solid #36383f;
+   border: 7px solid #07080e;
    overflow-y: auto;
  }
  
  .first {
-    background-color: #ffffff;
+    background-color: #010216;
+    color: beige;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
     width: 50%;
-
     overflow-x: hidden;
     overflow-y: auto;
     white-space: pre;
@@ -41,6 +45,8 @@ margin: 0;
     outline: none;
     padding: 0.4rem;
     height: 90vh;
+    overflow:auto;
+    line-break: normal;
   }
  
 
@@ -48,6 +54,7 @@ margin: 0;
   .second {
     background-color: rgb(255, 255, 255);
     width: 50%;
+    font-size: 18px;
     overflow-y: auto;
     white-space: pre;
     right: 0;

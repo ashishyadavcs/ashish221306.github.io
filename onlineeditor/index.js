@@ -10,7 +10,6 @@ btn.addEventListener("click", () => {
 
 first.addEventListener('keyup',()=>{
   var html = first.textContent;
-  
   iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
 })
 
