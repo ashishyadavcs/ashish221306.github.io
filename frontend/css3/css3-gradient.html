@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--head start-->
+    <meta charset="utf-8">
+    <title>CSS3 tutorial</title>
+    <meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+    <meta name="keywords"
+        content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="/./css/style.css">
+    <link rel="stylesheet" href="./../css/rightdiv.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../jquery/jquery.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+
+
+    <div class="wrapper">
+        <div class="left">
+            <!--left----------------------------------------------------------->
+            <div class="leftnav">
+                <div ng-include="'./sidenav.html'"></div>
+            </div>
+            <!--left end----------------------------------->
+        </div>
+        <div class="right">
+            <div class="rightdiv">
+                <div class="left2">
+                    <h1 class="text-center">CSS3 Gradient</h1>
+                   <p>CSS2 use backgrounds images to add gradients.<br>
+                    These gradients are very much popular, but slow down webpage performance. But CSS3 includes both linear gradient and radial gradients. These gradients are used as background images and works on all latest browsers.</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2>Types of gradient</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-bordered lead">
+          <thead class="bg-dark">
+              <td>Type of gradient</td>
+              <td>Explanation</td>
+          </thead>
+          <tr>
+          <td><strong>Linear Gradient</strong></td>
+          <td> Gradient starting from one corner to another in straight line. Can have n number of colors and color stop.<a class="links" href="#linear-gradients">Linear Gradients</a></td>
+          </tr>
+          <tr>
+          <td><strong>Radial Gradient</strong></td>
+          <td> Gradients starting from any corner or even center to outside in circular or elliptical direction. <a class="links" href="#radial-gradients">Radial Gradients</a></td>
+          </tr>      
+          <tr>
+          <td><strong>Repeating Linear Gradient</strong></td>
+          <td>Same like <strong>linear gradients</strong> but with repeating pattern. <a class="links" href="#repeating-linear-gradients">Repeating Linear Gradients</a></td>
+          
+          </tr>
+          <tr>
+              <td><strong>repeating radial gradient</strong></td>
+          <td>Same like <strong>radial gradients</strong> but with repeating pattern.<a class="links" href="#repeating-radial-gradients">Repeating Radial Gradients</a></td>
+          </tr>
+          <tr>
+              <td><strong>Multiple Gradients</strong></td>
+          <td><strong>Multiple gradients</strong> are combinations of both linear and radial gradients with RGBA Colors.<a class="links" href="#multiple-gradients">Multiple Gradients</a></td>
+          </tr>      
+                </table>
+    </div>
+</div>
+
+
+
+
+<h2 style="color: blue;">Linear Gradients</h2>
+<p>Linear Gradients are gradients with combinations of two or more colors in linear direction. These directions are top to bottom, left to right, top left corner to bottom right corner etc. Even direction can be controlled using angle( in degrees). These gradients are used in background only, not as font color.</p>
+
+<pre class="code">
+    &lt;style&gt;        
+    .gradient-1{
+    background:linear-gradient( #404040, #dddddd);
+    }
+    &lt;/style&gt; 
+
+    &lt;div class="gradient-1"&gt; Linear Gradient 1, starting from left&lt;/div&gt;
+</pre>
+
+<div class="output">
+    <style>        
+        .gradient{
+        background:linear-gradient( #404040, #dddddd);
+        }
+    </style> 
+    
+     <div class="gradient"> Linear Gradient 1, starting from left</div>
+</div>
+
+
+
+<hr>
+<h2 style="color: rgba(250, 71, 211, 0.4);text-shadow: 2px -2px 2px #ddd;">multi color Linear Gradient </h2>
+<pre class="code">
+    &lt;style&gt;        
+    .gradient-2{
+    height:300px;
+    background:linear-gradient(135deg, #ff0000, #ffffff, #0f0);text-shadow:1px 1px white";
+    }
+&lt;/style&gt; 
+
+ &lt;div class="gradient-2"&gt; Linear Gradient 2, starting from left top corner &lt;/div&gt;
+</pre>
+<div class="output">
+    <style>        
+        .gradient-2{
+        height:300px;
+        background:linear-gradient(135deg, #ff0000, #ffffff, #0f0);text-shadow:1px 1px white";
+        }
+    </style> 
+    
+     <div class="gradient-2"> Linear Gradient 2, starting from left top corner </div>
+</div>
+
+
+<h2>Linear Gradients with Six Colors</h2>
+<pre class="code">
+    &lt;style&gt;        
+    
+  .gradient-3{
+  height:50px;
+  background:linear-gradient(0deg, hsl(0,100%,50%), hsl(60,100%,50%), hsl(120,100%,50%), hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%));
+  }
+&lt;/style&gt; 
+
+&lt;div class="gradient-3"&gt;Linear Gradient 3, starting from bottom with multiple colors &lt;/div&gt;
+</pre>
+
+<div class="output">
+    <style>        
+    
+        .gradient-3{
+        height:300px;
+        background:linear-gradient(0deg, hsl(0,100%,50%), hsl(60,100%,50%), hsl(120,100%,50%), hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%));
+        }
+    </style> 
+    
+    <div class="gradient-3">Linear Gradient 3, starting from bottom with multiple colors </div>
+</div>
+
+
+<h2>Linear Gradient with strips</h2>
+<pre class="code">
+    &lt;style&gt;        
+  .gradient-4{
+  height:300px; 
+  background:linear-gradient(45deg, #000000 30%, #e76969 30%, #e76969 60%, #CCCCCC 60%, #CCCCCC 90%);
+  }
+&lt;/style&gt; 
+  
+  &lt;div class="gradient-4"&gt;Linear Gradient 4, starting from bottom left, black with 30% color stop, darkgray with 30% color stop, another darkgray with 60% color stop, lightgray with 60% color stop and another lightgray with 90% color stop.&lt;/div&gt;
+</pre>
+<div class="output">
+    <style>        
+        .gradient-4{
+        height:300px; 
+        background:linear-gradient(45deg, #000000 30%, #e76969 30%, #e76969 60%, #CCCCCC 60%, #CCCCCC 90%);
+        }
+    </style> 
+        
+        <div class="gradient-4">Linear Gradient 4, starting from bottom left, black with 30% color stop, darkgray with 30% color stop, another darkgray with 60% color stop, lightgray with 60% color stop and another lightgray with 90% color stop.</div>
+</div>
+
+
+
+
+
+<h2>for IE8</h2>
+<pre class="code">
+    &lt;style&gt;    
+  filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#COLOR', endColorstr='#COLOR);             /* IE6 and IE7 */ 
+  
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(GradientType= 0,startColorstr='#COLOR', endColorstr='#COLOR')";          /* IE8 */
+&lt;/style&gt;    
+</pre>
+
+
+
+
+
+
+
+                </div>
+                <div class="right2" ng-include="'/./english/right2.html'">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <footer>
+                <div ng-include="'../../footer.html'"></div>
+
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+<!--footer-->
+
+</html>
