@@ -50,9 +50,103 @@
                 <div class="left2">
 
                     <h1 class="text-center">Javascript Fullscreen API</h1>
-                   
+                   <p style="color: bisque;">The Fullscreen API has no interfaces of its own. Instead, it augments several other interfaces to add the methods, properties, and event handlers needed to provide full-screen functionality.</p>
+<p class="alert alert-danger">you can not invoke full screen api without user interaction</p>
+              
+<h2 style="color: aqua;border-bottom: 2px solid;">Methods</h2>
+<p>The Fullscreen API adds methods to the Document and Element interfaces to allow turning off and on full-screen mode</p>
 
-                </div>
+<h2>methods on document</h2>
+<pre class="code">
+    Document.exitFullscreen()
+</pre>
+<p style="color: aquamarine;">switch from full-screen mode back to windowed mode</p>
+<h2>methods on element</h2>
+<pre class="code">
+    Element.requestFullscreen()
+</pre>
+<p style="color: rgb(236, 140, 84);">Asks the user agent to place the specified element (and, by extension, its descendants) into full-screen mode, removing all of the browser's UI elements as well as all other applications from the screen. Returns a Promise which is resolved once full-screen mode has been activated.
+</p>
+
+
+
+
+
+
+<hr>
+
+<h2 style="color: blueviolet;">Example -</h2>
+<h2>full screen on enter key press</h2>
+
+<pre class="code">
+    document.addEventListener("keypress", function(e) {
+        if (e.keyCode === 13) {
+          toggleFullScreen();
+        }
+      }, false);
+    
+
+
+      function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen(); 
+          }
+        }
+      }
+</pre>
+<i style="color: antiquewhite;font-size: 30px;margin-top: 10px;display: block;" class="alert alert-success text-success">press Enter key to toggle fullscreen </i>
+<script>
+    
+     document.addEventListener("keypress", function(e) {
+        if (e.keyCode === 13) {
+          toggleFullScreen();
+        }
+      }, false);
+    
+
+
+      function toggleFullScreen() {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen(); 
+          }
+        }
+      }
+</script>
+<hr>
+<h2 style="color: antiquewhite;border-bottom: 2px solid;">Event handlers on elements</h2>
+<h3>Element.onfullscreenchange</h3>
+<p>An event handler which is called when the fullscreenchange event is sent to the element, indicating that the element has been placed into, or removed from, full-screen mode.</p>
+
+<h3>Element.onfullscreenerror</h3>
+<p> An event handler for the fullscreenerror event when sent to an element which has encountered an error while transitioning into or out of full-screen mode.</p>
+
+<hr>
+
+<h2 style="color: red;border-bottom: 2px solid;">Events</h2>
+<p>The Fullscreen API defines two events which can be used to detect when full-screen mode is turned on and off, as well as when errors occur during the process of changing between full-screen and windowed modes.</p>
+
+<h3>fullscreenchange</h3>
+<p> Sent to a Document or Element when it transitions into or out of full-screen mode.</p>
+
+<h3>fullscreenerror</h3>
+<p>Sent to a Document or Element if an error occurs while attempting to switch it into or out of full-screen mode.</p>
+
+
+
+
+
+
+
+
+
+
+</div>
                 <div class="right2" ng-include="'/./english/right2.html'">
                 </div>
                 <div class="clear"></div>

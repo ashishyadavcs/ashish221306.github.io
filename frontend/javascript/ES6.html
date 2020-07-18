@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--head start-->
+    <meta charset="utf-8">
+    <title>Javascript window object</title>
+    <meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+    <meta name="keywords" content="javascript tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="/./css/style.css">
+    <link rel="stylesheet" href="./../css/rightdiv.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../jquery/jquery.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+
+
+    <div class="wrapper">
+        <div class="left">
+            <!--left----------------------------------------------------------->
+            <div class="leftnav">
+                <div ng-include="'./sidenav.html'"></div>
+            </div>
+            <!--left end----------------------------------->
+        </div>
+        <div class="right">
+            <div class="rightdiv">
+                <div class="left2">
+
+
+
+<h1 class="text-center">ES6</h1>
+<p><b style="color: aquamarine;">ECMAScript 6</b> is also known as ES6 and ECMAScript 2015.</p>
+
+<ol>
+    <li>JavaScript let</li>
+    <li>JavaScript const</li>
+   <li> JavaScript Arrow Functions</li>
+    <li>JavaScript Classes</li>
+    <li>Default parameter values</li>
+   <li> Array.find()</li>
+   <li> Array.findIndex()</li>
+    <li>Exponentiation (**) (EcmaScript 2016)</li>
+</ol>
+
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">JavaScript let</h2>
+<p>The let statement allows you to declare a variable with block scope.</p>
+<pre class="code">
+    var x = 10;
+// Here x is 10
+{
+  let x = 2;
+  // Here x is 2
+}
+// Here x is 10
+</pre>
+
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">JavaScript const</h2>
+<p>The const statement allows you to declare a constant (a JavaScript variable with a constant value).
+<br>
+    Constants are similar to let variables, except that the value cannot be changed.</p>
+
+
+
+<pre class="code">
+    var x = 10;
+// Here x is 10
+{
+  const x = 2;
+  // Here x is 2
+}
+// Here x is 10
+
+</pre>
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">Arrow Functions</h2>
+
+<p>Arrow functions allows a short syntax for writing function expressions.
+
+    You don't need the function keyword, the return keyword, and the curly brackets.</p>
+
+<pre class="code">
+    var x = function(x, y) {
+        return x * y;
+     }
+     
+<span style="color: aqua;border: 1px solid #777;padding: 10px;">function(x,y) --->  (x,y)=></span>
+
+     // ES6
+     const x = (x, y) => {
+         x*y
+     }
+</pre>
+
+
+
+
+<p class="alert alert-danger text-danger">Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+    Arrow functions are not hoisted. They must be defined before they are used.
+    
+    Using const is safer than using var, because a function expression is always constant value.
+    
+    You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
+<pre class="code">
+    const x = (x, y) => { return x * y };
+</pre>
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">Classes</h2>
+
+<p>ES6 introduced classes.
+<br>
+    A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method.
+    <br>
+    Use the keyword class to create a class, and always add a constructor method.
+    <br>
+    The constructor method is called each time the class object is initialized.</p>
+
+
+<p>A simple class definition for a class named "Car":</p>
+<pre class="code">
+    class Car {
+        constructor(brand) {
+          this.carname = brand;
+        }
+      }
+</pre>
+<p>Now you can create objects using the Car class:</p>
+
+<div class="output">
+    <p>Create an object called "mycar" based on the Car class:</p>
+    <pre class="code">
+        class Car {
+            constructor(brand) {
+              this.carname = brand;
+            }
+          }
+          mycar = new Car("Ford");
+    </pre>
+</div>
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">Default Parameter Values</h2>
+
+
+<p>ES6 allows function parameters to have default values.</p>
+<pre class="code">
+    function myFunction(x, y = 10) {
+        // y is 10 if not passed or undefined
+        return x + y;
+      }
+      myFunction(5); // will return 15
+</pre>
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">Array.find()</h2>
+<p>The find() method returns the value of the first array element that passes a test function.
+<br>
+    This example finds (returns the value of ) the first element that is larger than 18:</p>
+
+<pre class="code">
+var numbers = [4, 9, 16, 25, 29];
+var first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</pre>
+<ol>
+    Note that the function takes 3 arguments:
+
+<li>The item value</li>
+<li>The item index</li>
+<li>The array itself</li>
+</ol>
+
+
+
+<h2  style="color: rgb(66, 235, 60);border-bottom: 2px solid;">Array.findIndex()</h2>
+<p>The findIndex() method returns the index of the first array element that passes a test function.
+<br>
+    This example finds the index of the first element that is larger than 18:</p>
+
+
+<pre class="code">
+var numbers = [4, 9, 16, 25, 29];
+var first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+</pre>
+
+
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">
+    New Number Methods
+</h2>
+<ol>
+    ES6 added 2 new methods to the Number object:
+
+<li>Number.isInteger()</li>
+<li>Number.isSafeInteger()</li>
+</ol>
+
+
+<h2 style="color: rgb(66, 235, 60);border-bottom: 2px solid;">The Number.isInteger() Method</h2>
+<p><i style="color: rgb(248, 124, 52);">The Number.isInteger()</i> method returns true if the argument is an integer.</p>
+
+<pre class="code">
+    Number.isInteger(10);        // returns true
+    Number.isInteger(10.5);      // returns false
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                <div class="right2" ng-include="'/./english/right2.html'">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <footer>
+                <div ng-include="'../../footer.html'"></div>
+
+            </footer>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

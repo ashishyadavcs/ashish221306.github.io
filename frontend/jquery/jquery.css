@@ -58,3 +58,7 @@ h1,h2,h3{font-weight: 700; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'L
 .sub{border:2px solid rgb(243, 38, 181);padding: 10px;border-radius: 20px;
 margin-top: 20px;
 }
+
+@media screen and (min-width:700px){
+    .sub{padding:20px}
+}

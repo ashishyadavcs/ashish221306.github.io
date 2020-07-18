@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>box shadow css3</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+<style>
+    .divmbs{
+        border: none;
+	outline:none;
+	margin-right: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #666666;
+  box-shadow: 0 5px 5px #313131, 0 9px 0 #393939, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 9px rgba(255,255,255,0.2), inset 0 -2px 9px rgba(0,0,0,0.2);
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  display: inline-block;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+  height: 100px;
+  width: 300px;
+  cursor: pointer;
+    }
+    .divmbs:active{
+   top: 7px;
+  box-shadow: 0 2px 0 #393939, 0px 4px 4px rgba(0,0,0,0.4), inset 0px 2px 5px rgba(0,0,0,0.2);}
+   
+    .shield{
+        border-radius: 5px 5px 35px 35px;	
+	padding-left: 25px;
+	padding-right: 25px;
+    }
+    .divmbs:hover{
+        box-shadow: 0 5px 5px #313131, 0 9px 0 #393939, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 15px rgba(255,255,255,0.4), inset 0 -2px 9px rgba(0,0,0,0.2);
+    }
+    .red {	
+	background-color: #c34747;	
+	box-shadow: 0 5px 5px #853232, 0 9px 0 #5e2525, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 9px rgba(255,255,255,0.2), inset 0 -2px 9px rgba(0,0,0,0.2);
+}
+
+.red:hover {
+	box-shadow: 0 5px 5px #853232, 0 9px 0 #5e2525, 0px 9px 10px rgba(0,0,0,0.4), inset 0px 2px 15px rgba(255,255,255,0.4), inset 0 -2px 9px rgba(0,0,0,0.2);
+}
+
+.red:active {
+	box-shadow: 0 2px 0 #5e2525, 0px 4px 4px rgba(0,0,0,0.4), inset 0px 2px 5px rgba(0,0,0,0.2);
+}
+</style>
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+<h1 class="text-center">Box shadow</h1>
+<p style="color: beige;">CSS3 Box Shadow is a new property to give shadow effects to any div, image, or block level Elements.</p>
+
+<p style="color: azure;">You can choose your own color, width, height, blur, spread, offset and repetition. Unlike border, it not a part of CSS Box Model, thus doesn't effect the layout even if it is larger.Also we can add multiple shadows with different colors, width and offsets.</p>
+
+
+<h2>box shadow </h2>
+<pre class="code">
+    
+border-shadow:0px 0px 10px red ;            // all latest browsers
+
+-webkit-border-shadow:0px 0px 10px red;     // for Chrome and Safari
+
+-moz-border-shadow:0px 0px 10px red;        // for Mozilla based browser
+
+-ms-border-shadow:0px 0px 10px red;         // for IE 9 and above
+	
+-o-border-shadow:0px 0px 10px red;          // Opera browsers
+</pre>
+
+
+
+<hr>
+<h2 class="subheading1">Outer Box Shadow</h2>
+<p style="color: aquamarine;">Default box shadow is outer. x-offset, y-offset and blur are compulsory, rest are optional. Default spread value is 0 and default shadow color is font-color. </p>
+
+
+<div style="box-shadow: 0px 0px 5px 2px red;height: 160px;text-align: center;padding: 10px;">
+    box-shadow: 0px 0px 5px 2px red;<br>
+shadow is equal from all four sides as x-offset and y-offset are zero. Blur is 5px, spread is 2px, and color is red.
+</div>
+<hr>
+<h2 class="subheading1">Inner Box Shadow</h2>
+<p style="color: aqua;"> To use inner box shadow, use <b style="color: red;">inset</b>. Inset is only required if shadow is inside. Bydefault shadow is outside. </p>
+
+
+<div style="box-shadow: 2px 2px 5px 1px red inset;height: 160px;text-align: center;padding:16px 10px;">
+    box-shadow: 2px 2px 5px 1px red inset;<br>
+shadow is 2px from left and 2px from top as both values are positive. Blur is 5px, spread is 1px, color is aqua, and inset is for inside shadow.
+</div>
+
+
+<h2>Multiple Box Shadows</h2>
+<p>To use <b>Multiple box shadows</b>, use comma (,). Comma works as a separator for multiple box shadows. 
+    We can use n numbers of box shadows by using comma separator. </p>
+
+<pre class="code">
+    <strong>box-shadow: <span style="color: red;">-2px -2px 5px 1px #f00</span>, <span style="color: aquamarine;">2px 2px 5px 0px #f0f</span>, <span style="color: blue;">0px 0px 50px 0px #000 inset;</span></strong>
+</pre>
+
+<h3>Example of multiple box shadow</h3>
+<div class="divmbs">
+
+</div>
+
+<div class="divmbs red shield">
+
+</div>
+
+
+<h2>Browsers Compatibility of box shadow</h2>
+<p class="alert alert-danger">
+    Chrome, Safari, Firefox 4, Opera, and IE9 support Box Shadow without any vendor prefix (exp. box-shadow). But we need to add another property like -moz-box-shadow for Firefox 3.6 and earlier
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+<footer>
+    <div ng-include="'../../footer.html'"></div>
+    
+    </footer>
+   </div>
+   <div class="clear"></div>
+ </div>
+</body>
+<!--footer-->
+
+</html>

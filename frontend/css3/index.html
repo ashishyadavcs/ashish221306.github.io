@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS3 tutorial</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">CSS3</h1>
+<p style="color: aqua;">CSS3 is the latest version of CSS, the stylesheet language used to control the presentational layer of web. CSS3 is the latest version of css. CSS3 includes CSS 1, CSS 2, CSS 2.1 ( previous version of css) and CSS3 specifications . CSS3 is the third level of CSS specifications.</p>
+<br>
+<ol style="color: rgb(19, 236, 19);">
+    CSS3 includes some new features - 
+    <li><a href="">css3 selectors</a></li>
+    <li><a href="">Rounded Corners</a></li>
+    <li><a href="">Box-shadow</a></li>
+    <li><a href="">Text shadow</a></li>
+    <li><a href="">RGBA</a></li>
+    <li><a href="">HSL</a></li>
+    <li><a href="">HSLA color</a></li>
+    <li><a href="">Opacity</a></li>
+    <li><a href="">css3 gradient</a></li>
+    <li><a href="">Transition</a></li>
+    <li><a href="">Transformation</a></li>
+    <li><a href="">Multi coloum layout</a></li>
+    <li><a href="">Flexbox</a></li>
+    <li><a href="">Embeded Fonts</a></li>
+    <li><a href="">Responsive Web Design</a></li>
+    
+</ol>
+
+
+<h2 style="color: greenyellow;">CSS3 Features</h2>
+<p>CSS3 includes all specifications of CSS1, CSS2, CSS2.1 and CSS3. Here are some new features in CSS3. Here is a list of css3 features.</p>
+
+<h2 style="color: red;">CSS3 Viewport width and viewport height</h2>
+<p style="color: azure;">CSS3 introduced some new units for height and font size. These units are vw, vh and vmin. Viewport width or Viewport height are related to device viewport, i.e visible screen of device to user.</p>
+
+
+
+<ol>
+  <li> 1vw = 1% of viewport width.</li>
+
+       <li> 100vw = 100% of viewport width.</li>
+        
+       <li> 1vh = 1% of viewport height.</li>
+        
+        <li>1vmin = 1% vw or vh, whichever is smaller.</li>
+        
+       <li> 1vmax = 1% vw or vh, whichever is larger.</li>
+</ol>
+
+<div class="alert alert-info">
+    <h3>Note !</h3>
+<ol>
+    <li>1vw= 13.66px if screen resolution is 1366*768</li>
+
+        <li>1vw= 14.4px if screen resolution is 1440*900</li>
+        
+        <li>1vw= 3.6px if screen resolution is 360*640</li>
+        
+        <li>1vh= 6.4px if screen resolution is 360*640</li>
+</ol>
+</div>
+
+
+
+<section class="alert alert-info">
+<h2>CSS3 Vendor Specific prefixes</h2>
+<p style="color: rebeccapurple;">To Avoid cross browser compatibility of css3 based properties in latest and old browsers, use following vendor specific prefix for css3 properties.</p>
+<ol style="list-style-type: decimal;">
+   <li> -webkit-</li>
+<li>-moz-</li>
+<li>-ms-</li>
+<li>-o-</li>
+</ol>
+
+
+</section>
+
+<h3 style="color: bisque;">Example</h3>
+<pre class="code">
+    &lt;style&gt;
+  .logo{
+  border-radius:10px;            /*For all Latest Browsers*/
+  -webkit-border-radius:10px;    /*For Chrome, Safari Android & IOS  */
+  -moz-border-radius:10px;       /*For Mozilla Based Browsers*/
+  -ms-border-radius:10px;        /*For IE 9 and above*/
+  -o-border-radius:10px;         /*For Opera 11 and above browsers*/
+  }  
+  &lt;/style&gt;
+        
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+<footer>
+    <div ng-include="'../../footer.html'"></div>
+    
+    </footer>
+   </div>
+   <div class="clear"></div>
+ </div>
+</body>
+<!--footer-->
+
+</html>

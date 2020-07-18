@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS3 tutorial</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+<h1 class="text-center">Border Radius</h1>
+<p style="color: azure;">Border Radius was introduced in CSS3. Border radius property is used to round the corners of an element in rectangular or elliptical shape, like images and boxes without using third party markups/scripts or CSS Tricks. Border Radius is supported by all HTML5 based Browsers, including IE 9.</p>
+
+
+<h3 class="subheading1">Border Radius code</h3>
+<p style="color: azure;">Border Radius is used with either single value or multiple values ( upto four max ).</p>
+
+<pre class="code" style="padding: 20px auto;">
+ border-radius:10px;            // all latest browsers
+	
+ -webkit-border-radius:10px;    // for Chrome and Safari
+	
+ -moz-border-radius:10px;       // for Mozilla based browser
+	
+ -ms-border-radius:10px;        // for IE 9 and above
+ 
+ -O-border-radius:10px;         // for Opera and opera mini browsers
+</pre>
+
+
+
+<div class="alert alert-info">
+    <p class="text-success">Border Radius property can have two units, px or %. px is used tu set rectangular border radius, and % is used to set elliptical border radius.</p>
+</div>
+
+<table class="table table-bordered table-responsive">
+    <thead class="bg-dark">
+        <td>Property</td>
+        <td>Use</td>
+        <td>Example</td>
+    </thead>
+    <tr>
+        <td><strong>border-radius:none</strong> </td>
+        <td> Remove border radius from all four corners.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;"></div></td>
+    </tr>
+    <tr>
+        <td><strong>border-radius:10px</strong></td>
+        <td>Set Border radius = 10px for all four corners. <strong>border radius in px</strong> is used to set <strong>circular corners</strong>.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 10px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:20px</td>
+        <td>Set border radius =20 px for all four corners.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 20px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:50%</td>
+        <td>Set border radius = 50% <strong>border radius in percentage</strong> is used to set <strong>elliptical borders</strong>.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 50%;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:100% 0</td>
+        <td>Set border radius = 100% for top-left and bottom-right and 0 for top-bottom and bottom-left. % is used to set <strong>elliptical borders</strong>.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius:100% 0px ;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:0 100% </td>
+        <td>Set border radius = 0% for top-left and bottom-right and 100% for top-bottom and bottom-left. % is used to set <strong>elliptical borders</strong>.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius:0 100% ;"></div></td>
+    </tr>
+    <tr>
+        <td>border-top-left-radius:50px</td>
+        <td>set border radius =50px for top-left corner only.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-top-left-radius: 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-top-right-radius:50px</td>
+        <td>set border radius =50px for top-right corner only.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-top-right-radius: 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-bottom-right-radius:50px</td>
+        <td>set border radius =50px for bottom-right corner only.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-bottom-right-radius: 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-bottom-left-radius:50px</td>
+        <td>set border radius =50px for bottom-left corner only.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-bottom-left-radius: 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:50px 0px</td>
+        <td>set border radius =50px for top-left corner, 0 for top-right corner, 50px for bottom-right corner and 0px for bottom-left.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 50px 0px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:0px 50px</td>
+        <td>set border radius 0px for top-left corner, 50px for top-right corner, 0px for bottom-right corner and 50px for bottom-left.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius:0 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:100px 0px 100px 0px</td>
+        <td>set border radius 100px for top-left corner, 0px for top-right corner, 100px for bottom-right corner and 0px for bottom-left.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 100px 0 100px 0;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:0px 100px 0px 100px</td>
+        <td>set border radius 0px for top-left corner, 100px for top-right corner, 0px for bottom-right corner and 100px for bottom-left.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 0 100px 0 100px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:50px 50px 0px 0px</td>
+        <td>set border radius 50px for both top-left  and top-right corner, and 0px for bottom-left and bottom-right corner.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 50px 50px 0 0;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:0px 0px 50px 50px</td>
+        <td>set border radius 0px for both top-left  and top-right corner, and 50px for bottom-left and bottom-right corner.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 0 0 50px 50px;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:0px 50px 50px 0px</td>
+        <td>set border radius 50px for both top-right and bottom-right corner, and 0px for top-left and bottom-left corner.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 0  50px 50px 0;"></div></td>
+    </tr>
+    <tr>
+        <td>border-radius:50px 0px 0px 50px</td>
+        <td>set border radius 50px for both top-left and bottom-left corner, and 0px for top-right and bottom-right corner.</td>
+        <td><div style="height: 150px;background: limegreen;width: 220px;border-radius: 50px 0 0 50px;"></div></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+<footer>
+    <div ng-include="'../../footer.html'"></div>
+    
+    </footer>
+   </div>
+   <div class="clear"></div>
+ </div>
+</body>
+<!--footer-->
+
+</html>

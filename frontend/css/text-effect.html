@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS Box Model</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+
+
+
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+<style>
+    p.clip{
+      
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: clip;
+  border: 1px solid;
+}
+  p.elipsis{
+    white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 1px solid;
+  }  
+  .test:hover{
+      overflow: visible;
+  }
+</style>
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+<h1 class="text-center">Text Effect</h1>
+<p>CSS Text Overflow, Word Wrap, Line Breaking Rules, and Writing Modes</p>
+
+<section class="sub">
+    
+<h2>CSS Text Overflow</h2>
+<p>The CSS text-overflow property specifies how overflowed content that is not displayed should be signaled to the user.</p>
+
+<h3>text-overflow : clip</h3>
+<p class="clip test">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, ab quis! Doloremque unde suscipit dolorem nobis voluptatem necessitatibus molestiae, nesciunt soluta nemo, illum beatae eaque iure nihil distinctio reprehenderit repudiandae.</p>
+
+<h3>text-overflow : ellipsis</h3>
+<p class="elipsis test">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis sed corrupti soluta mollitia laboriosam quaerat sequi repudiandae officia facilis ex! Corporis, deleniti hic odio illum natus beatae consectetur amet delectus.</p>
+
+
+</section>
+
+
+
+<section class="sub">
+    <h2>CSS Word Wrapping</h2>
+    <p>The CSS word-wrap property allows long words to be able to be broken and wrap onto the next line</p>
+
+<p style="color: rgb(241, 135, 14);">If a word is too long to fit within an area, it expands outside:</p>
+<div style="height: 150px ;width: 200px;border: 1px solid;" >
+    <p>This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.</p>
+</div>
+
+<p style="color: lime;">The word-wrap property allows you to force the text to wrap - even if it means splitting it in the middle of a word</p>
+<p class="cmd mb-2">word-wrap: break-word</p>
+<div style="height: 150px ;width: 200px;border: 1px solid;word-wrap: break-word;" >
+    <p>This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.</p>
+</div>
+
+</section>
+
+
+<section class="sub">
+    <h2>CSS Word Breaking</h2>
+    <p>The CSS <b style="color: antiquewhite;">word-break </b>property specifies line breaking rules.</p>
+<p class="alert alert-info" style="margin: 10px auto;">word-break: keep-all</p>
+    <div style="height: 150px ;width: 200px;border: 1px solid;word-wrap:break-word;word-break: keep-all;" >
+        <p>This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.</p>
+    </div>
+
+
+    <p class="alert alert-info" style="margin: 10px auto;"> word-break: break-all;</p>
+    <div style="height: 150px ;width: 200px;border: 1px solid;word-wrap:break-word;word-break:break-all;" >
+        <p>This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.</p>
+    </div>
+
+</section>
+
+
+
+<section class="sub">
+    <h2>CSS Writing Mode </h2>
+    <p class="text-info">The CSS writing-mode property specifies whether lines of text are laid out horizontally or vertically.</p>
+</section>
+
+<pre class="code">
+    p.test1 {
+        writing-mode: horizontal-tb;
+      }
+      
+      span.test2 {
+        writing-mode: vertical-rl;
+      }
+      
+      p.test2 {
+        writing-mode: vertical-rl;
+      }
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+  <div ng-include="'../../footer.html'"></div>
+  
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+
+</body>
+<!--footer-->
+
+
+
+</html>

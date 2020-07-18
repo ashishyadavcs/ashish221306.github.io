@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>CSS3 tutorial</title>
+<meta name="description" content="css box model - The CSS box model is essentially a box that wraps around every HTML element. 
+It consists of layout styles like: margins, borders, padding, and the actual content.">
+<meta name="keywords" content="css tutorial,css examples, learn css, html css tutorial, css stylesheet, html tutorial for beginners with examples" >
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+<link rel="stylesheet" href="/./css/style.css">
+<link rel="stylesheet" href="./../css/rightdiv.css">
+<link rel="stylesheet" href="./../css/style.css">
+<link rel="stylesheet" href="./../jquery/jquery.css">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+    
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav">
+    <div ng-include="'./sidenav.html'"></div>
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1 class="text-center">CSS3 Selectors</h1>
+    <p>Earlier CSS version use tag, class and id selectors.
+        However CSS 2 added pseudo-elements, pseudo-classes, and combinators selectors.
+        And now With CSS3, we can target almost any element on the page with wide range of selectors options.
+        
+        </p>
+    
+    
+    <h2>Rational Selectors</h2>
+    
+    <p>Rational Selectors targets elements based on their relationship with another elements. These selectors were first introduced in CSS1 and then again in css2 and css3.</p>
+    
+    <table class="table table-bordered table-responsive">
+        <tr>
+            <th>Selector</th>
+            <th class="mw120">CSS Code</th>
+            <th>Use</th>
+            <th class="mw123">CSS Level</th>
+         </tr>
+        <tr>
+            <td><h3 class="h4">Descendant Selector</h3></td>
+            <td> div p{ }</td>
+            <td>Target all p tags that are <strong>descendent</strong> (<em>child, grandchild, great-grandchild, and so on)</em> of div tag.</td>
+            <td>1</td>
+         </tr>
+        <tr>
+            <td><h3 class="h4">Child  Selector</h3></td>
+            <td> div>p{ }</td>
+            <td>This selector matches only <strong>direct child</strong> of 
+            element</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><h3 class="h4">Adjacent  Sibling</h3></td>
+            <td> h4+p{ }</td>
+            <td>This selector matches p tag next to h4 and both sharing <strong>same parent</strong>. This means p should come directly after h4.</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td><h3 class="h4">General Sibling</h3></td>
+            <td> h3~p{ }</td>
+            <td>This selector matches all P elements exactly after h3 element.</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <div class="alert alert-danger">
+        <p class="text-danger">General Sibling i.e. ( A~B) selector will only in HTML5 Supported Browsers. IE 8 and lesser doesn't support this selector.</p>
+    </div>
+<hr>
+
+
+<h2>Attribute Selectors</h2>
+<p>Attribute Selectors were introduced in css level 2, i.e. css2. They targets matching elements based on their attributes and attributes value. Attribute Selectors are used in Brackets [].</p>
+<table class="table table-responsive table-bordered">
+  <thead>
+    <td>CSS Selector</td> 
+    <td>Use</td>
+    <td>css level</td>
+  </thead>
+    <tr>
+        
+        <td><h4>E[attr]{}</h4></td>
+        <td>Target only E Element or Elements having exact case-insensitive attribute value. For exp input with disabled attribute, <br><span class="text-danger">input[ disabled]{ cursor:not-allowed }</span> </td>
+        <td>2</td>			    
+   </tr>
+    <tr>
+        
+        <td><h4>E[attr="value"]{}</h4></td>
+        <td>This selector matches only Element with exact attribute and value. For exp, input type checkbox only,<br> <span class="text-danger">input[ type="checkbox" ]</span></td>
+        <td>2</td>
+    </tr>
+    <tr>
+        
+        <td><h4>E[attr~="foo"]{}</h4></td>
+        <td>This selector matches only Elements with exact Attribute with multiple values separated by white-space, and one of the value is exactly equal to "foo".</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        
+        <td><h4>E[attr|="foo"]{}</h4></td>
+        <td>This selector matches only Elements with exact Attribute with  value separated by hyphen (<b>-</b>) , and one of the value is exactly equal to "foo".</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        
+        <td><h4>E[attr^="foo"]{}</h4></td>
+        <td>This selector matches only element E with attribute value starting exactly with foo. For exp, div having class name starting with "col",<br> <span class="text-danger">div[ class^="col" ]</span></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        
+        <td><h4>E[attr$="value"]{}</h4></td>
+        <td>This selector matches only element E with attribute value ending exactly with foo. For exp, div having class name ending with "wrap",<br> <span class="text-danger">div[ class$="wrap" ]</span></td>
+        <td>3</td>
+    </tr>
+    <tr>
+        
+        <td><h4>E[attr*="value"]{}</h4></td>
+        <td>This selector matches only element E with attribute value contains the substring "foo". For exp, div having class name with substring "md",<br> <span class="text-danger">div[ class*="md" ]</span></td>
+        <td>3</td>
+    </tr>
+</table>
+
+<p class="alert alert-danger">E[attr^=foo"]{}, E[attr$=foo"]{} and E[attr*=foo"]{} attribute selectors will only in HTML-5 Supported Browsers. IE 8 and lesser doesn't support these selectors.</p>
+
+
+<h2>Pseudo Selectors</h2>
+<p>CSS Pseudo Selectors are classified in Pseudo Class and pseudo elements. These selectors were first introduced in css1, and then again in css2 and css3. CSS Pseudo Selectors are called using Colon :.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  <div class="right2" ng-include="'/./english/right2.html'">
+  </div>
+  <div class="clear"></div>
+</div>
+<footer>
+    <div ng-include="'../../footer.html'"></div>
+    
+    </footer>
+   </div>
+   <div class="clear"></div>
+ </div>
+</body>
+<!--footer-->
+
+</html>
