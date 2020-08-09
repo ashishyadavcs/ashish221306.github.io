@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emoji99</title>
+<meta content='HTML, CSS, JavaScript,web design, ashishtech' name='keywords'/>
+<meta content='Ashish Kumar' name='author'/>
+<meta content='password manager' property='og:title'/>
+<meta content='password manager | manage your passwords , save your passwords ,retrieve your passwords' property='og:description'/>
+
+<meta content='images/homelogo.svg' property='og:image'/>
+    
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!--materialze css-->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <link rel="styleshhet" href="./stylesheets/style.css">
+  
+    <style>
+        html{margin:0;}
+     footer{background: #000;color: #f1f1f1;text-align:center;width: 100%;margin: 0;}
+  body{background: linear-gradient(#d0fdfb,#ece7e6);background-repeat: no-repeat;
+  background-position: center;margin: 0;}
+  h1{font-size: 25px;}
+  h1 {
+    
+  font-weight:700;
+  
+}
+.emojiss div{display: inline-block;border: 1px solid #555;padding: 3px 5px;margin: 5px;}
+
+
+    </style>
+    
+   
+  </head>
+  <body>
+    <!--nav-->
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Emoji99</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+        
+        <li><a href="/login" class="btn waves-effect waves-light">login</a></li>
+
+          </ul>
+          
+        </div>
+      </nav>
+      
+      <ul class="sidenav" id="mobile-demo">
+       
+        <li><a href="/login" class="btn waves-effect waves-light">login</a></li>
+      </ul>
+    <!--nav end-->
+    <div class="container-fluid">
+        <h1 class="text-center">Emoji &copy; and paste</h1>
+        <div style="height: 100px;"><h1 class="typing"></h1></div>
+       
+      <div class="row">
+        <div class="col-md-12 col-xs-auto col-sm-auto ml-auto mr-auto">
+            <div class="emojiss">
+                <div class="emojidetails"><span onclick="copyit(this)">😎</span>
+                <p>Sunglasses Bro</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥰</span>
+                <p>3 Hearts Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥴</span>
+                <p>Woozy Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥺</span>
+                <p>Pleading Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😉</span>
+                <p>Winking Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😜</span>
+                <p>Winking with Tongue</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😝</span>
+                <p>Squinting With Tongue</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😀</span>
+                <p>Grinning</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😁</span>
+                <p>Smiling</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😂</span>
+                <p>Joy with Tears</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤣</span>
+                <p>Rolling Laughing</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😃</span>
+                <p>Open Mouth Smiling</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😄</span>
+                <p>Grinning Smiling</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😅</span>
+                <p>Grinning Sweat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😆</span>
+                <p>Big Grin XD</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😊</span>
+                <p>Smiling with Eye</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😋</span>
+                <p>Savoring delicious</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😍</span>
+                <p>Heart Eyes</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😘</span>
+                <p>Throwing a Kiss</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😗</span>
+                <p>Kissing Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😙</span>
+                <p>Kissing Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😚</span>
+                <p>Kissing Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙂</span>
+                <p>Slightly Smiling</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤗</span>
+                <p>Hugging Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤩</span>
+                <p>Grinning Star Eyes</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤔</span>
+                <p>Thinking Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤨</span>
+                <p>Eyebrow Raised</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😐</span>
+                <p>Neutral Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😑</span>
+                <p>Expressionless</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😶</span>
+                <p>Without Mouth</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙄</span>
+                <p>Rolling Eyes</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😏</span>
+                <p>Smirking Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😣</span>
+                <p>Persevering Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😥</span>
+                <p>Disappointed</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😮</span>
+                <p>Wow</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤐</span>
+                <p>Zipper Mouth</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😯</span>
+                <p>Hushed Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😪</span>
+                <p>Sleepy Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😫</span>
+                <p>Tired Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 😴</span>
+                <p>Sleeping Zzz's</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😌</span>
+                <p>Relieved Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😛</span>
+                <p>Face and Tongue</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤤</span>
+                <p>Drooling Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😒</span>
+                <p>Unamused Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😓</span>
+                <p>Cold Sweat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😔</span>
+                <p>Sad Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😕</span>
+                <p>Confused Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙃</span>
+                <p>Upside-Down Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤑</span>
+                <p>Money in Mouth</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😲</span>
+                <p>Astonished Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">☹️</span>
+                <p>White Frowning</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙁</span>
+                <p>Sad</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😖</span>
+                <p>Confounded</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😞</span>
+                <p>Disappointed</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 😟</span>
+                <p>Worried</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😤</span>
+                <p>Angery</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😢</span>
+                <p>Crying</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😭</span>
+                <p>Loudly Crying </p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😦</span>
+                <p>Frowning Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😧</span>
+                <p>Anguished Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😨</span>
+                <p>Fearful Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😩</span>
+                <p>Weary Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤯</span>
+                <p>Exploding Head</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😬</span>
+                <p>Grimacing Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😰</span>
+                <p>Cold Sweat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😱</span>
+                <p>Screaming in fear</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥵</span>
+                <p>Hot Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥶</span>
+                <p>Freezing</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😳</span>
+                <p>Flushed Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤪</span>
+                <p>Zany Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😵</span>
+                <p>Dizzy Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😡</span>
+                <p>Angry Red Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😠</span>
+                <p>Angry Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤬</span>
+                <p>Cursing</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😷</span>
+                <p>Mask Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤒</span>
+                <p>Sick</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤕</span>
+                <p>Head-Bandage</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤢</span>
+                <p>Nauseated</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤮</span>
+                <p>Vomiting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤧</span>
+                <p>Sneezing</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😇</span>
+                <p>Angel</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤠</span>
+                <p>Cowboy</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤡</span>
+                <p>Clown</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🥳</span>
+                <p>Party Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤥</span>
+                <p>Lying Face.</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤫</span>
+                <p>Quiet Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤭</span>
+                <p>Hand Over Mouth</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🧐</span>
+                <p>Face With Monocle</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤓</span>
+                <p>Nerdy Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👿</span>
+                <p>Devil</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👹</span>
+                <p>Ogre</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👺</span>
+                <p>Goblin</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💀</span>
+                <p>Skull</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👻</span>
+                <p>Cute Ghost</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👽</span>
+                <p>Alien</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤖</span>
+                <p>Robot Face</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💩</span>
+                <p>Smiling Poop</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😺</span>
+                <p>Smiling Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😸</span>
+                <p>Happy Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😹</span>
+                <p>Laughing Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😻</span>
+                <p>Loving Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😼</span>
+                <p>Wry Smile</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😽</span>
+                <p>Kissing Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙀</span>
+                <p>Weary Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😿</span>
+                <p>Crying Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">😾</span>
+                <p>Pouting Cat</p>
+                </div>
+                </div>
+                <div class="emojiss">
+                <div class="emojidetails"><span onclick="copyit(this)">👶🏻</span>
+                <p>Kids</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👦🏻</span>
+                <p>Young Boy</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👧🏻</span>
+                <p>Young Girl</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👨🏻</span>
+                <p>Man</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻 </span>
+                <p>Woman</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👱🏻‍♀️ </span>
+                <p>White Man</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👱🏻 </span>
+                <p>White Woman</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👴🏻</span>
+                <p>Old Man</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👵🏻 </span>
+                <p>Old Woman</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👲🏻</span>
+                <p>Working Man</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👳🏻‍♀️</span>
+                <p>Young Sikh</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👳🏻 </span>
+                <p>Pouting Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👮🏻‍♀️</span>
+                <p>Pouting Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👮🏻 </span>
+                <p>Pouting Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👷🏻‍♀️</span>
+                <p>Pouting Cat</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👷🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💂🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💂🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🕵🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🕵🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍⚕️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍⚕️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🌾</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🌾</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🍳</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🍳</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🎓</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🎓</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🎤</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🎤</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🏫</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🏫 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🏭</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🏭</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍💻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍💻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍💼</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍💼</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🔧</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🔧</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🔬</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🔬</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🎨</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🎨</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🚒</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🚒</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍✈️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍✈️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍🚀</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍🚀</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👩🏻‍⚖️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👨🏻‍⚖️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤶🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🎅🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👸🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤴🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👰🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤵🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👼🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤰🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙇🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙇🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💁🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 💁🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 🙅🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 🙅🏻‍♂️ </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙆🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙆🏻‍♂️ </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙋🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙋🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤦🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤦🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤷🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤷🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙎🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙎🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙍🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙍🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💇🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💇🏻‍♂️ </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💆🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💆🏻‍♂️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🕴🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💃🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🕺🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🚶🏻‍♀️</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🚶🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🏃🏻‍♀️ </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🏃🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤲🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👐🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 🙌🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👏🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🙏🏻 </span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👍🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👎🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👊🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">✊🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤛🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤜🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤞🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">✌🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤟🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤘🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👌🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👈🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👉🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👆🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👇🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">☝🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> ✋🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤚🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🖐🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🖖🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">👋🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤙🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">💪🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🖕🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">✍🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)">🤳🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 💅🏻</span>
+                <p>Pouting</p>
+                </div>
+                <div class="emojidetails"><span onclick="copyit(this)"> 👂🏻</span>
+                <p>Pouting</p>
+                </div>
+        </div>
+        </div>
+      </div>
+    
+      <script src="./javascripts/nav.js"></script>
+
+      
+      <script src="javascripts/typed.min.js"></script>
+     <script>
+var typed1 = new Typed('.typing', {
+  strings: ["Manage Your Passwords", "Save your passwords","Retrieve your passwords"],
+  typeSpeed: 30,
+  loop:true,
+  smartBackspace: true,
+  cursorChar: ''
+});
+     </script>
+  </body>
+  <footer>
+    <h1 class="entry-title">Emoji Bro 😎 - Get All Best Emojis - One Click ✂️ Copy & Paste 📋</h1>
+    <h2>Describe your mood with emojis 😜😝, don't need to generate easy to
+    use just copy and paste (ง ͡ʘ ͜ʖ ͡ʘ)ง, (one click copied option).</h2>
+    <main class="container">
+    <center><img alt="Best Emoji Faces" style="max-width:70%" src="https://www.emojibro.com/logo.jpg" />
+    </center>
+    <h2>What is EmojiBro.com ?</h2>
+    <p>emojibro.com is one of the best websites which has a collection of almost all emoji icons, which you use
+    to share your emotion with your family, friends or any other social media activities just by emoji icons
+    </p>
+    <h2>Emotions which you can be represent by Emoji Icons</h2>
+    <p>by using emojis you can represent almost all kinds of emotions in icon form like love, angry, winking,
+    laughing, crying, smiling, greedy etc.<br>
+    Lots of things their is no limitation of emotions.</p>
+    <h2>Why EmojiBro.com is Best Emoji Site?</h2>
+    <p>In many way this is the one of the best emoji website on the Google (or on the internet).</p>
+    <p>
+    <ol style="color: #777;text-align: left;">
+    <li>it has a great collection of emojis, and you will get almost all kinds of emojis</li>
+    <li>it has a user-friendly design, and it is responsive</li>
+    <li>it has one click copy option, so just click on any emojis, and it's automatically going to copy
+    in your clipboard</li>
+    <li>it remembers your last used emojis, so you don't have to find every time</li>
+    <li>you can also attach text with emojis in the input area and it's also remembers that</li>
+    </ol>
+    </p>
+
+    </footer>
+</html>

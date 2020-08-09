@@ -82,6 +82,5 @@ table.example td:nth-child(2n+1){color: rgb(71, 247, 48);}
 
    ol.example{list-style-position: outside;list-style: decimal;}
    hr{background: #463d3d;}
-
    .rules{list-style-position: outside;}
    ol.example li{margin-bottom: 7px;border-bottom: 1px solid rgb(70, 64, 64);}

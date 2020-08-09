@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="description" content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta name="keywords" content="buffer solution, ph in buffer solution , buffer">
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta property="og:title" content="Buffer solution explained ">
+    <meta property="og:url" content="site url">
+    <meta property="og:description"
+        content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta property="og:type" content=Website>
+    <meta property="og:image"
+        content="https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png">
+    <meta property="fb:app_id" content=966242767657>
+    <meta property="twitter:card"
+        content='https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png'>
+    <meta property="twitter:site" content="@ashishfgiet">
+    <meta property="twitter:title" content="Buffer solution">
+    <meta property="twitter:description"
+        content="Buffer solution is the solution which resists the change in the pH of solution ">
+    <meta property="twitter:creator" content="@ashishfgiet">
+    <meta property="twitter:image"
+        content="https://1.bp.blogspot.com/-AzoqXCDz-XQ/XyAg7TBWYbI/AAAAAAAAluI/FHfmqjMNijUwfbIWVpVHis8pyYYms87GQCNcBGAsYHQ/d/buffer-solution%2B%25281%2529.png">
+    <link href="" rel=canonical>
+    <style>
+        .red {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: space-between
+        }
+
+        b {
+            padding: 8px;
+            margin: 5px;
+            display: inline-block;
+            border: 1px solid #777;
+            cursor: pointer;
+
+        }
+
+        .ct {
+            display: none;
+            padding: 4px;
+            background: #000;
+            color: greenyellow
+        }
+    </style>
+</head>
+
+<body class="main">
+    <h1>emoji</h1>
+    <div class="red">
+
+    </div>
+
+    <a href="https://github.com/amio/emoji.json/edit/master/emoji.json" download>download</a>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+
+
+        function copytext(element) {
+            var $temp = $("<input>");
+            $("body").append($temp);
+            $temp.val($(element).text()).select();
+            document.execCommand("copy");
+            $temp.remove();
+            $(this.nextSibling).css('display', 'block')
+        }
+
+
+
+
+
+
+
+   fetch("https://unpkg.com/emoji.json@13.0.0/emoji-compact.json")
+  .then(function(response) {
+    return response.json();
+
+  })
+
+  .then(function(data) {
+
+    console.log(data.splice(0,100));
+         for(var i in data){
+      document.querySelector(".red").innerHTML+="<b onclick='copytext(this)'>"+data[i]+"</b><span class='ct'>copied</span>"
+
+    }
+     })
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

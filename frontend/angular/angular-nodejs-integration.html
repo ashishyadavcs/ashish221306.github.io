@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <!--head start-->
+<meta charset="utf-8">
+<title>angular node js integration</title>
+<meta name="description" content=" how to use ngSwitch in angular">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../css/rightdiv.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href="../../english/css/style.css">
+<link rel="stylesheet" href='./angular.css'>
+
+</head>
+<!--head end-->
+<header ng-include="'../../mainnav.html'"></header>
+<body data-ng-app>
+ 
+ 
+ <div class="wrapper">
+   <div class="left">
+<!--left----------------------------------------------------------->
+<div class="leftnav" ng-include="'sidenav.html'">
+  
+</div>
+<!--left end----------------------------------->
+   </div>
+   <div class="right">
+<div class="rightdiv">
+  <div class="left2">
+      <!--main content------------------------------------->
+ <h1 class="text-center text-danger font-weight-bold">Angular Node js Integration</h1>
+<p>we connect angular with node js via angular http-service. </p>
+
+
+
+
+<div class="alert alert-info">
+   <p>
+    <ol>
+        <li>Node js API end points</li>
+        <li><a style="color: #000;" href="./angular-service.html">Angular service</a></li>
+        <li>connect node js api root url with <a style="color: #000;" href="./angular-http-service.html">angular http service</a></li>
+    </ol>
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="alert alert-danger">make sure that your node js api is ready to connect with angular.</p>
+<img src="./image/mean.webp" alt="angular node js integration">
+<p class="bg-success">index.js (in node js )</p>
+<pre class="code" style="margin: 20px auto;">
+    require('dotenv').config();
+    const express=require('express');
+    const path=require('path');
+    const app=express();
+    const mongoose=require('./database/mongoose');
+    const List=require('./database/models/list');
+    const Task=require('./database/models/task');
+    app.use(express.json());
+    const port=process.env.PORT || 3000;
+    const cors=require('cors');
+    app.use(cors());
+    app.use(express.static(path.join(__dirname,'public')));
+    /*
+    CORS -cross origin request sequrity
+    localhost:3000 backend
+    localhost:4200 frontend
+    
+    app.use((req,res,next)=>{
+        res.header('Access-Controll-Allow-Origin','*');
+        res.header('Access-Controll-Allow-Methods','GET,POST,PUT,DELETE,PATCH,HEAD,OPTIONS');
+        res.header('Access-Controll-Allow-Headers','Origin,X-Requested-With,Content-Type,Accept');
+    })
+    */
+    
+    app.get('/',(req,res)=>{
+       res.sendFile(path.join(__dirname,'public/index.html'));
+    })
+    
+    /*task url...................................................*/
+    
+    app.get('/lists',(req,res)=>{
+        List.find({}).then((lists)=>{
+         //  res.send(lists);
+         res.send(lists)
+            console.log(lists)
+        }).catch((error)=>{
+            console.log(error);
+        })
+    })
+    
+    app.post('/lists',(req,res)=>{
+        (new List({'title':req.body.title}))
+        .save()
+        .then((list)=>res.send(list))
+        .catch((error)=>console.log(error))
+    })
+    
+    app.get('/lists/:listId',(req,res)=>{
+        List.find({_id:req.params.listId})
+        .then((list)=>res.send(list))
+        .catch((error)=>console.log(error))
+        
+    })
+    
+    app.patch('/lists/:listId',(req,res)=>{
+        List.findOneAndUpdate({_id:req.params.listId},{$set:req.body})
+        .then((list)=>res.send(list))
+        .catch((error)=>console.log(error))
+    })
+    
+    app.delete('/lists/:listId',(req,res)=>{
+        const deleteTasks=(list)=>{
+            Task.deleteMany({_listId:list._id})
+            .then(()=>list)
+            .catch((error)=>console.log(error))
+        }
+        const list=List.findByIdAndDelete(req.params.listId)
+        .then((list)=>res.send(deleteTasks(list)))
+        .catch((error)=>console.log(error));
+          res.status(200).send(list);
+    })
+    /*task url*/
+    /*https://locahost/3000/lists/:listId/tasks/:taskId.....................*/
+    
+    app.get('/lists/:listId/tasks',(req,res)=>{
+        Task.find({_listId:req.params.listId})
+        .then((tasks)=>res.send(tasks))
+        .catch((error)=>console.log(error))
+    })
+    
+    app.post('/lists/:listId/tasks',(req,res)=>{
+      (new Task({'title':req.body.title,'_listId':req.params.listId}))
+      .save()
+      .then((task)=>res.send(task))
+      .catch((error)=>console.log(error))
+    })
+    
+    app.get('/lists/:listId/tasks/:taskId',(req,res)=>{
+        Task.findOne({_listId:req.params.listId,_id:req.params.taskId})
+        .then((task)=>res.send(task))
+        .catch((error)=>console.log(error))
+        
+    })
+    
+    app.patch('/lists/:listId/tasks/:taskId',(req,res)=>{
+        Task.findOneAndUpdate({_listId:req.params.listId,_id:req.params.taskId},{$set:req.body})
+        .then((task)=>res.send(task))
+        .catch((error)=>console.log(error))
+        
+    })
+    
+    app.delete('/lists/:listId/tasks/:taskId',(req,res)=>{
+        Task.findOneAndDelete({_listId:req.params.listId,_id:req.params.taskId})
+        .then((task)=>res.send(task))
+        .catch((error)=>console.log(error))
+        
+    })
+    
+    app.get('*',(req,res)=>{
+        res.sendFile(path.join(__dirname,'public/index.html'));
+     })
+     
+    
+    app.listen(port,()=>{
+        console.log('server is listening on port '+port+'.......')
+    })
+</pre>
+
+<p class="bg-success" style="margin: 30px auto;">task.service.ts (in angular)</p>
+<pre class="code">
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+@Injectable({
+  providedIn: 'root'
+})
+export class WebService {
+readonly ROOT_URL
+  constructor(private http:HttpClient ) { 
+   <span style="color: lightgreen;"> this.ROOT_URL= 'https://localhost:3000';</span>
+  }
+
+  get(uri:string){
+    return this.http.get(`${this.ROOT_URL}/${uri}`);
+  }
+
+  post(uri:string,payload:Object){
+    return this.http.post(`${this.ROOT_URL}/${uri}`,payload);
+  }
+
+  patch(uri:string,payload:Object){
+    return this.http.patch(`${this.ROOT_URL}/${uri}`,payload);
+  }
+
+  delete(uri:string){
+    return this.http.delete(`${this.ROOT_URL}/${uri}`);
+  }
+
+}
+
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center;">
+    <div class="card">
+        <p class="text-center text-success">Angular + Node Js Integration</p>
+        <img src="./image/taskm.png" alt="angular node js integration">
+        <a href="./image/deployment.zip" download class="custom-button">download source code zip</a><a class="custom-button" target="_BLANK" href="https://meantaskm.herokuapp.com">see it live</a>
+    </div>
+</div>
+
+  </div>
+  <div class="right2">
+    <div ng-include="'./../../english/right2.html'"></div>
+    
+  </div>
+  <div class="clear"></div>
+</div>
+  <footer>
+      <a href="../../css/style.css"></a>
+  <div ng-include="'../../footer.html'"></div>
+  </footer>
+   </div>
+ 
+   <div class="clear"></div>
+ </div>
+
+<div class="sbuttons">
+<a href="https://api.whatsapp.com/send?phone=917068513356&text=&source=&data=" target="_blank" class="sbutton whatsapp" tooltip="WhatsApp"><i class="fa fa-whatsapp"></i></a>  
+<a href="mailto:ashishbhu221306@gmail.com" target="_blank" class="sbutton gplus" tooltip="Email"><i class="fa fa-envelope"></i></a>
+<a href="tel:+917068513356" target="_blank" class="sbutton whatsapp" tooltip="Call"><i class="fa fa-phone"></i></a>
+<a target="_blank" class="sbutton mainsbutton" tooltip="Connect With Us"><i class="fa fa-comment"></i></a> 
+</div>  
+
+ 
+</body>
+<!--footer-->
+
+
+
+</html>

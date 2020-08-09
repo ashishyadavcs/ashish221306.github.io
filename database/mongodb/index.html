@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--head start-->
+    <meta charset="utf-8">
+    <title>Mongodb tutorial</title>
+    <meta name="description" content="Javascript variable - learn javascript from basic to advanced with example.">
+    <meta name="keywords" content="javascript tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+    <link rel="stylesheet" href="/./css/style.css">
+    <link rel="stylesheet" href="./../css/rightdiv.css">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="/frontend/jquery/jquery.css">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>  
+<![endif]-->
+
+
+</head>
+<!--head end-->
+<header ng-include="'/./mainnav.html'"></header>
+
+<body data-ng-app>
+
+
+    <div class="wrapper">
+        <div class="left">
+            <!--left----------------------------------------------------------->
+            <div class="leftnav">
+                <div ng-include="'./sidenav.html'"></div>
+            </div>
+            <!--left end----------------------------------->
+        </div>
+        <div class="right">
+            <div class="rightdiv">
+                <div class="left2">
+
+
+
+<h1 class="text-center">Mongodb tutorial</h1>
+<p>MongoDB is a cross-platform, document oriented database that provides, high performance, high availability, and easy scalability. MongoDB works on concept of collection and document.</p>
+
+<h2>Database</h2>
+<p>Database is a physical container for collections. Each database gets its own set of files on the file system. A single MongoDB server typically has multiple databases.</p>
+
+<h2>Collection in mongodb</h2>
+<p><b>Collection is a group of MongoDB</b> documents. It is the equivalent of an RDBMS table. A collection exists within a single database.</p>
+
+
+<h2>Document</h2>
+<p>A document is a set of key-value pairs. Documents have dynamic schema. Dynamic schema means that documents in the same collection do not need to have the same set of fields or structure, and common fields in a collection's documents may hold different types of data.</p>
+
+
+<table class="table table-bordered table-responsive">
+    <thead class="bg-dark">
+        <td>RDBMS</td>
+        <td>Mongodb</td>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Database</td>
+            <td>Database</td>
+            </tr>
+            <tr>
+            <td>Table</td>
+            <td>Collection</td>
+            </tr>
+            <tr>
+            <td>Tuple/Row</td>
+            <td>Document</td>
+            </tr>
+            <tr>
+            <td>column</td>
+            <td>Field</td>
+            </tr>
+            <tr>
+            <td>Table Join</td>
+            <td>Embedded Documents</td>
+            </tr>
+            <tr>
+            <td>Primary Key</td>
+            <td>Primary Key (Default key _id provided by MongoDB itself)</td>
+            </tr>
+            <tr>
+            <th class="bg-dark" colspan="2" style="text-align:center;">Database Server and Client</th>
+            </tr>
+            <tr>
+            <td>mysqld/Oracle</td>
+            <td>mongod</td>
+            </tr>
+            <tr>
+            <td>mysql/sqlplus</td>
+            <td>mongo</td>
+            </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+                <div class="right2" ng-include="'/./english/right2.html'">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <footer>
+                <div ng-include="'../../footer.html'"></div>
+
+            </footer>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+
+
+
+</body>
+<!--footer-->
+
+
+
+</html>
