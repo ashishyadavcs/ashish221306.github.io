@@ -88,7 +88,7 @@ border: none;
 #bottom-menu>i{color: #f1f1f1;}
 /**/
 #modal1{border-bottom-right-radius: 0!important;border-bottom-left-radius: 0 !important;height: auto!important;outline: none;
-border-bottom: none!important;box-shadow: 1px -1px 100vh #ddd;
+border-bottom: none!important;box-shadow: 1px -1px 100vh #ddd;display: none;
 }
 .modal-content{
  
