@@ -8,7 +8,9 @@ body::-webkit-scrollbar-thumb{background:linear-gradient(red,purple);border-radi
 body::-webkit-scrollbar-track{background: linear-gradient(rgb(238, 231, 231),#ccc);}
 /*custom scrollbar ends.........................................*/
 /*---------------------------------nav----------------------------------------*/
-
+._2pi8{
+	background:#ffffff;
+}
 .nav-wrapper .social-network li a{font-weight: 600;font-size: 19px;display: inline-block;}
 .nav-wrapper .social-network li{display: inline-block;}
 .nav-wrapper ul li:hover a{color: #f1f1f1;text-decoration: none;}
