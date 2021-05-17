@@ -25,6 +25,7 @@
         h2 {
             color: azure!important;
         }
+        
     </style>
 </head>
 <!--head end-->
@@ -32,8 +33,18 @@
 
 <body ng-app>
     <div ng-include="'home.html'"></div>
-
-
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h3 style="font-size: 20px;">subscribe youtube channel</h3>
+            <div class="youtube ">
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channelid="UCSj5DTDPkqGJ6izZs2CvfQA" data-layout="full" data-count="hidden"></div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
