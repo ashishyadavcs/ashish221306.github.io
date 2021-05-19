@@ -43,6 +43,26 @@
     min-height: 100vh;
     display: flex;
     overflow: hidden;
+    position: relative
+}
+
+@keyframes dis {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.outbanner img {
+    animation: dis 1s linear alternate;
+    transition: all 0.3s ease-in;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in;
+    animation-delay: 0.8s;
+    opacity: 0.3;
 }
 
 @media screen and (max-width:600px) {
@@ -64,6 +84,27 @@
         color: #f1f1f1;
         font-size: 17px;
     }
+}
+
+.getstarted {
+    font-size: 20px;
+}
+
+.bannercontent {
+    height: 80vh;
+}
+
+.outbanner img {
+    position: absolute;
+    right: 10%;
+    transition: all 0.3s ease-in;
+}
+
+.bannercontent h1 {
+    font-weight: 700;
+    font-family: roboto, sans-serif;
+    color: #f1f1f1;
+    font-size: 28px;
 }
 
 .bannercontent p {
