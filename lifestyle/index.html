@@ -133,6 +133,7 @@
             this.rp.value = ''
         } else if (rp == this.rp.value) {
             this.parentElement.parentElement.style.opacity = "0";
+            this.parentElement.parentElement.style.zIndex = "1";
         } else {
             alert('wrong password');
             this.rp.value = ''

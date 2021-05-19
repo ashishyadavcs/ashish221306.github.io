@@ -187,3 +187,27 @@
     letter-spacing: 0.6px;
     font-family: sans-serif;
 }
+
+.sign {
+    display: none;
+}
+
+@media screen and (min-width:800px) {
+    .bannercontent {
+        margin: 100px;
+        border-radius: 20px;
+        height: 400px;
+        width: 80vw;
+    }
+    .sign {
+        display: block;
+        position: absolute;
+        bottom: 30px;
+        right: 22%;
+        z-index: 6236467;
+    }
+    .getstarted {
+        background: blue;
+        color: cornsilk;
+    }
+}
