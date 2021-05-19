@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-
+    <script src="./jquery.min.js"></script>
 
     <link rel="stylesheet" href="./../css/style.css">
     <style>
@@ -131,7 +131,7 @@
 </div>
 <script>
     document.login.onsubmit = function() {
-        let rp = 56;
+        let rp = checkp;
         if (this.rp.value == '') {
             alert('enter password');
             this.rp.value = ''
