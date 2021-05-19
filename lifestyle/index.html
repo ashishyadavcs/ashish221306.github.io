@@ -36,7 +36,7 @@
 
 
 <body ng-app>
-    <div ng-include="'./gallery.html'"></div>
+    <div class="change" ng-include="'./gallery.html'"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -70,7 +70,7 @@
 
 <footer>
     <div ng-include="'./../footer.html'"></div>
-    <div ng-include="'./login.html'"></div>
+
 
 </footer>
 
@@ -124,12 +124,15 @@
     <h3>LifeStyle</h3>
     <div class="form">
         <form name="login">
-            <input type="password" placeholder="password....." name="rp">
+            <input type="password" autofocus placeholder="password....." name="rp">
             <input type="submit" class="btn" value="submit" />
         </form>
     </div>
 </div>
 <script>
+    window.onload = function() {
+        $('.form input')[0].focus()
+    }
     document.login.onsubmit = function() {
         let rp = checkp;
         if (this.rp.value == '') {
@@ -138,6 +141,7 @@
         } else if (rp == this.rp.value) {
             this.parentElement.parentElement.style.opacity = "0";
             this.parentElement.parentElement.style.zIndex = "1";
+            $('.change').load('./gallery1.html')
         } else {
             alert('wrong password');
             this.rp.value = ''
