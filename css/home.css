@@ -71,6 +71,7 @@
     }
     .outbanner img {
         margin-left: -18px;
+        display: none;
     }
     .getstarted {
         font-size: 15px;

@@ -19,9 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
 
+    <link rel="stylesheet" href="./../css/style.css">
     <style>
         h2 {
             color: azure!important;
@@ -33,10 +32,11 @@
     </style>
 </head>
 <!--head end-->
-<header ng-include="'mainnav.html'"></header>
+<header ng-include="'./../mainnav.html'"></header>
+
 
 <body ng-app>
-    <div ng-include="'home.html'"></div>
+    <div ng-include="'./gallery.html'"></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -58,8 +58,7 @@
 <div style="background:#ffffff">
     <div id="fb-root"></div>
 </div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/hi_IN/sdk.js#xfbml=1&version=v6.0&appId=589042788608871&autoLogAppEvents=1"></script>
-<div class="fb-comments" data-href="https://ashishtech.com" data-width="100%" data-numposts="15"></div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--footer-->
 <div class="footerupbg">
@@ -67,7 +66,8 @@
 </div>
 
 <footer>
-    <div ng-include="'footer.html'"></div>
+    <div ng-include="'./../footer.html'"></div>
+
 </footer>
 
 </html>
