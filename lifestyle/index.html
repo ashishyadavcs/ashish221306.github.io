@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./../css/style.css">
     <style>
         h2 {
-            color: azure!important;
+            color: azure !important;
         }
         
         * {
@@ -58,16 +58,86 @@
 <div style="background:#ffffff">
     <div id="fb-root"></div>
 </div>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!--footer-->
 <div class="footerupbg">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(8, 5, 39)" fill-opacity="1" d="M0,32L48,37.3C96,43,192,53,288,74.7C384,96,480,128,576,133.3C672,139,768,117,864,96C960,75,1056,53,1152,80C1248,107,1344,181,1392,218.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="rgb(8, 5, 39)" fill-opacity="1"
+            d="M0,32L48,37.3C96,43,192,53,288,74.7C384,96,480,128,576,133.3C672,139,768,117,864,96C960,75,1056,53,1152,80C1248,107,1344,181,1392,218.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
 </div>
 
 <footer>
     <div ng-include="'./../footer.html'"></div>
+    <div ng-include="'./login.html'"></div>
 
 </footer>
+
+<style>
+    #login {
+        width: 60%;
+        background: #000;
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.93;
+        z-index: 78626658788;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #login .form {
+        border-radius: 10px;
+        display: flex;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        background: #f1f1f1;
+        color: #000;
+        width: 300px;
+        text-align: center;
+        z-index: 78626658789;
+        transition: all 0.6s ease-in;
+        opacity: 1;
+    }
+    
+    #login h3 {
+        font-weight: bold;
+        border-bottom: 2px solid #000!important;
+    }
+    
+    #login .form input {
+        width: 100% !important;
+        text-align: center;
+    }
+</style>
+<div id="login">
+    <h3>LifeStyle</h3>
+    <div class="form">
+        <form name="login">
+            <input type="password" placeholder="password....." name="rp">
+            <input type="submit" class="btn" value="submit" />
+        </form>
+    </div>
+</div>
+<script>
+    document.login.onsubmit = function() {
+        let rp = 56;
+        if (this.rp.value == '') {
+            alert('enter password');
+            this.rp.value = ''
+        } else if (rp == this.rp.value) {
+            this.parentElement.parentElement.style.opacity = "0";
+        } else {
+            alert('wrong password');
+            this.rp.value = ''
+        }
+    }
+</script>
 
 </html>
