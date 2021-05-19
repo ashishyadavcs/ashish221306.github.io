@@ -41,19 +41,29 @@
     padding-bottom: 6%;
     border-radius: 0 0 0 170px 0;
     min-height: 100vh;
+    display: flex;
+    overflow: hidden;
 }
 
 @media screen and (max-width:600px) {
     .outbanner {
-        padding-bottom: 12%
+        padding-bottom: 12%;
     }
-}
-
-.bannercontent h1 {
-    font-weight: 700;
-    font-family: roboto, sans-serif;
-    color: #f1f1f1;
-    font-size: 27px;
+    .outbanner img {
+        margin-left: -18px;
+    }
+    .getstarted {
+        font-size: 15px;
+    }
+    .bannercontent {
+        height: 80vh;
+    }
+    .bannercontent h1 {
+        font-weight: 700;
+        font-family: roboto, sans-serif;
+        color: #f1f1f1;
+        font-size: 17px;
+    }
 }
 
 .bannercontent p {
