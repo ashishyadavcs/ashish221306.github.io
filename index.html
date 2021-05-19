@@ -10,10 +10,10 @@
     <meta name="theme-color" content="#000" />
     <meta name="google-site-verification" content="Do2LFMpDl6plWQ28iz1tDXeMC1VlPZBLyXBYhAYUVaM" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-   
-   
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet">
@@ -26,6 +26,9 @@
             color: azure!important;
         }
         
+        * {
+            transition: all 0.3s ease-in;
+        }
     </style>
 </head>
 <!--head end-->
@@ -33,18 +36,18 @@
 
 <body ng-app>
     <div ng-include="'home.html'"></div>
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h3 style="font-size: 20px;">subscribe youtube channel</h3>
-            <div class="youtube ">
-                <script src="https://apis.google.com/js/platform.js"></script>
-                <div class="g-ytsubscribe" data-channelid="UCSj5DTDPkqGJ6izZs2CvfQA" data-layout="full" data-count="hidden"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 style="font-size: 20px;">subscribe youtube channel</h3>
+                <div class="youtube ">
+                    <script src="https://apis.google.com/js/platform.js"></script>
+                    <div class="g-ytsubscribe" data-channelid="UCSj5DTDPkqGJ6izZs2CvfQA" data-layout="full" data-count="hidden"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
- 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
