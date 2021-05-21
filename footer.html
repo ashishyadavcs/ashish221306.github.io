@@ -1,7 +1,6 @@
 <!--footer-->
 
 
-
 <div class="container-fluid">
 
     <div class="row">
@@ -84,10 +83,19 @@
 
 </div>
 <script>
+    let canonical = window.location.href;
+document.head.innerHTML+= `
+<link rel="canonical" href="${canonical}"/>
+<meta name="robots" content="index,follow" />
+
+`
     $(document).ready(function() {
         $('.modal').modal();
         $('footer .modal-content ul li a').prepend('<span style="margin-right:10px" class="fa fa-hand-o-right"></span>')
-        $('head').append('<meta name="theme-color" content="#000"/>')
+        $('head').append('<meta name="theme-color" content="#000"/>');
+
+
+
     });
 </script>
 
