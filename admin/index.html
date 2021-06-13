@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <style>
+        input,
+        textarea {
+            display: block;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 80%;
+            margin: auto
+        }
+
+        button {
+            padding: 20px 30px;
+            background-color: #000;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+
+        body {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="admin" onsubmit="admin(event)">
+        <input type="text" placeholder="title" name="title">
+        <input type="text" placeholder="keywords" name="keywords">
+        <textarea placeholder="description" name="desc"></textarea>
+        <input type="text" placeholder="canonical" name="canonical">
+        <input type="text" placeholder="by">
+        <button type="submit">create post</button>
+    </form>
+    <div class="result">
+        result
+    </div>
+    <script>
+
+        function admin(event) {
+            let title = document.admin.title.value;
+            let keywords = document.admin.keywords.value;
+            let desc = document.admin.desc.value;
+            let by = document.admin.by.value;
+
+            let data = {
+                title, keywords, desc, by
+            }
+            document.querySelector('.result').innerHTML = data;
+            console.log(title)
+            event.preventDefault()
+        }
+
+    </script>
+</body>
+
+</html>
