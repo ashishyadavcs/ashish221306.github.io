@@ -52,6 +52,8 @@
         
             background: url(./img/flatbellytonic.jpeg), rgba(0, 0, 0, 0.8);
             background-size: cover;
+            background-position:center;
+
 
         }
 
@@ -111,6 +113,7 @@
 
         iframe {
             max-height: 100%;
+            max-width: 100%;
         }
 
         @media screen and (max-width:700px) {
@@ -121,6 +124,16 @@
             div {
                 width: 100%;
             }
+            .left{
+                background:rgba(0, 0, 0, 0.8);
+                background-size: contain;
+                background-repeat: no-repeat;
+                
+            }
+            .linkimg{
+                flex-direction: column;
+            }
+            iframe{height: 400px;}
         }
     </style>
 </head>
@@ -140,7 +153,7 @@
         <p>This offer converts like crazy for men and women over 30 who want to lose weight fast… especially if they’ve
             tried other diets, supplements and workout plans but haven’t gotten any lasting results. Then they discover
             the Okinawa Flat Belly Tonic and they love how it helps them lose handfuls of fat so easily.</p>
-     <div style="display: flex;align-items: center;">
+     <div style="display: flex;align-items: center;" class="linkimg">
         <img src="https://theokinawatonic.com/sp-vsl-1/images/product-bottles-1.png?v2" alt="flat belly tonic" />
         <a href="https://theokinawatonic.com/sp/vsl-1/?hop=ashishtech">BUY NOW</a>
      </div>
