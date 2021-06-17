@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div popup using html css and js</title>
+    <meta name="description" content="how to make popup in html and javascript">
+    <link rel="canonical" href="/js/popup.html">
+    <meta name="robots" content="index,follow"/>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #mc_embed_signup {
+            height: 300px;
+            min-width: 80%;
+            max-width: 400px;
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            background: red;
+            transition: all 0.3s ease-in-out;
+            border-radius: 20px;
+            transform: scale(0);
+        }
+
+        .close {
+            position: absolute;
+            right:-10px;
+            top: -10px;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+            border:1px solid rgb(170, 167, 167);
+            font-weight: bold;
+            font-size: 1.2rem;
+           
+        }
+    </style>
+</head>
+<div id="mc_embed_signup">
+    <button class="close">x</button>
+</div>
+
+<body>
+
+</body>
+<script>
+
+    var el = document.getElementById('mc_embed_signup');
+    setTimeout(() => {
+        el.style.transform = "scale(1)";
+    }, 5000);
+    el.querySelector(`button`).onclick = function () {
+        el.style.transform = "scale(0)";
+
+    }
+    window.onload=function(){
+        el.style.transform="scale(1)"
+    }
+</script>
+
+</html>
