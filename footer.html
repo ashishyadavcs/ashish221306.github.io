@@ -97,13 +97,23 @@
 <script>
     let canonical = window.location.href;
     document.head.innerHTML += `
-<link rel="canonical" href="${canonical}"/>
+<link rel="" href="${canonical}"/>
 <meta name="robots" content="index,follow" />
-`
+<meta name="robots" content="index, follow, all" />
+    <meta http-equiv=”content-language” content=”en”>
+    <meta name="geo.placename" content="United States" />
+    <meta name="geo.region" content="usa" />
+    <meta name="revisit-after" content="3 days">
+`;
     $(document).ready(function () {
         $('.modal').modal();
         $('footer .modal-content ul li a').prepend('<span style="margin-right:10px" class="fa fa-hand-o-right"></span>')
         $('head').append('<meta name="theme-color" content="#000"/>');
+        $('a').each(function(){
+            $(this).attr('title',$(this).text());
+        });
+        document.head.innerHTML=document.getElementsByTagName('h1').innerHTML;
+    
     });
 </script>
 
