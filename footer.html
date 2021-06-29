@@ -10,7 +10,7 @@
                 <h2>Quick Links </h2>
                 <ul>
 
-                    <li><a href="./frontend/frontend.html">Web designing tutuorial</a></li>
+                    <li><a href="./frontend/ ">Web designing tutuorial</a></li>
                     <li><a href="./backend/backend.html">Backend tutuorial</a></li>
                     <li><a href="./database/">Database tutorial</a></li>
                     <li><a href="./english/english.html">Learn english from hindi</a></li>
@@ -73,6 +73,18 @@
             </div>
             <!--footer widget ends-->
         </div>
+        <div class="col-md-3 col-sm-3">
+            <!--footer-widget-->
+            <div class="footer-widget">
+                <h2>Products</h2>
+                <ul>
+                    <li><a href="/Okinawa-Flat-Belly-Tonic/">Okinawa-Flat-Belly-Tonic</a></li>
+                    <li><a href="/how-to-manifest-health-and-wealth-within-24hours/">how-to-manifest-health-and-wealth-within-24hours</a></li>
+                    <li><a href="/zulily/">zulily</a></li>
+                </ul>
+            </div>
+            <!--footer widget ends-->
+        </div>
     </div>
 </div>
 <div class="footer-bottom z-depth-2">
@@ -109,11 +121,9 @@
         $('.modal').modal();
         $('footer .modal-content ul li a').prepend('<span style="margin-right:10px" class="fa fa-hand-o-right"></span>')
         $('head').append('<meta name="theme-color" content="#000"/>');
-        $('a').each(function(){
-            $(this).attr('title',$(this).text());
+        $('a').each(function () {
+            $(this).attr('title', $(this).text());
         });
-        document.head.innerHTML=document.getElementsByTagName('h1').innerHTML;
-    
     });
 </script>
 

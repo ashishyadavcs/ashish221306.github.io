@@ -7,7 +7,7 @@ $routeProvider
  
 })
 .when('/frontend', {
-    templateUrl: 'frontend.html',
+    templateUrl: ' ',
    
    })
    .when('/backend', {
