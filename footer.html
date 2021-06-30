@@ -1,10 +1,32 @@
 <!--footer-->
 <style>
-    img{object-fit: cover;}
+    img {
+        object-fit: cover;
+    }
+
+    .show {
+        background: greenyellow;
+        height: 100vh;
+        width: 100vw;
+    }
+.menu{
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+}
+#bottom-menu1{z-index:783267562}
+    #menu1 {
+        
+        overflow: hidden;
+    
+    }
 </style>
 
 <div class="container-fluid">
-    
+
     <div class="row">
         <div class="col-md-3 col-sm-3">
             <div class="footer-widget">
@@ -80,7 +102,9 @@
                 <h2>Products</h2>
                 <ul>
                     <li><a href="/Okinawa-Flat-Belly-Tonic/">Okinawa-Flat-Belly-Tonic</a></li>
-                    <li><a href="/how-to-manifest-health-and-wealth-within-24hours/">how-to-manifest-health-and-wealth-within-24hours</a></li>
+                    <li><a
+                            href="/how-to-manifest-health-and-wealth-within-24hours/">how-to-manifest-health-and-wealth-within-24hours</a>
+                    </li>
                     <li><a href="/zulily/">zulily</a></li>
                 </ul>
             </div>
@@ -99,13 +123,13 @@
 <!--bottom nav-->
 
 
-<a id="bottom-menu" class="waves-effect waves-light btn modal-trigger" href="#menu">menu</a>
+<button id="bottom-menu" class="waves-effect waves-light btn">menu</button>
 
 <!-- Modal Structure -->
-<div id="menu" style="height: 100vh;" class="modal bottom-sheet z-depth-4">
-    <div class="modal-content">
-        <div ng-include="'./sidenav.html'"></div>
-    </div>
+<div class="menu">
+
+    <div ng-include="'./sidenav.html'"></div>
+
 
 </div>
 <script>
@@ -129,53 +153,54 @@
     });
 
     function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
         }
     }
-}
 
-function toggle_full_screen()
-{
-    if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen))
-    {
-        if (document.documentElement.requestFullScreen){
-            document.documentElement.requestFullScreen();
+    function toggle_full_screen() {
+        if ((document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+            if (document.documentElement.requestFullScreen) {
+                document.documentElement.requestFullScreen();
+            }
+            else if (document.documentElement.mozRequestFullScreen) { /* Firefox */
+                document.documentElement.mozRequestFullScreen();
+            }
+            else if (document.documentElement.webkitRequestFullScreen) {   /* Chrome, Safari & Opera */
+                document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+            else if (document.msRequestFullscreen) { /* IE/Edge */
+                document.documentElement.msRequestFullscreen();
+            }
         }
-        else if (document.documentElement.mozRequestFullScreen){ /* Firefox */
-            document.documentElement.mozRequestFullScreen();
-        }
-        else if (document.documentElement.webkitRequestFullScreen){   /* Chrome, Safari & Opera */
-            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-        }
-        else if (document.msRequestFullscreen){ /* IE/Edge */
-            document.documentElement.msRequestFullscreen();
+        else {
+            if (document.cancelFullScreen) {
+                document.cancelFullScreen();
+            }
+            else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            }
+            else if (document.webkitCancelFullScreen) {   /* Chrome, Safari and Opera */
+                document.webkitCancelFullScreen();
+            }
+            else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
         }
     }
-    else
-    {
-        if (document.cancelFullScreen){
-            document.cancelFullScreen();
-        }
-        else if (document.mozCancelFullScreen){ /* Firefox */
-            document.mozCancelFullScreen();
-        }
-        else if (document.webkitCancelFullScreen){   /* Chrome, Safari and Opera */
-            document.webkitCancelFullScreen();
-        }
-        else if (document.msExitFullscreen){ /* IE/Edge */
-            document.msExitFullscreen();
-        }
-    }
-}
 
-document.body.ontouchstart=toggle_full_screen();
-window.onscroll=toggle_full_screen();
-document.body.ondblclick=toggleFullScreen();
+    document.body.ontouchstart = toggle_full_screen();
+    window.onscroll = toggle_full_screen();
+    document.body.ondblclick = toggleFullScreen();
 
+
+    $('#bottom-menu1').click(function () {
+        $('.menu').toggleClass('show');
+    })
 </script>
 
 
