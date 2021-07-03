@@ -143,6 +143,7 @@
     <meta name="geo.placename" content="United States" />
     <meta name="geo.region" content="usa" />
     <meta name="revisit-after" content="3 days">
+    <script src="https://ashish221306.github.io/breadcrumb.js"></script>
 `;
     $(document).ready(function () {
         $('.modal').modal();
@@ -203,46 +204,9 @@
         $('.menu').toggleClass('show');
     })
 </script>
-<script>
-    const host=window.location.host;
-    const currenturl=window.location.pathname;
-    const patharray =currenturl.split('/').filter(function (el) {return el != "";});
-    var bdschemaitem='';
-    var pathname=''
-    for(path in patharray){
-    if(path==patharray.length-1){
-      pathname+=patharray[path];
-    }else{
-      pathname+=patharray[path]+'/';
-    }
-     bdschemaitem+=`
-     ,{
-        "@type": "ListItem", 
-        "position": ${parseInt(path)+2}, 
-        "name": "${patharray[path]}",
-        "item": "https://ashish221306.github.io/${pathname}"  
-      }
-     
-     `
+<div>
 
-    }
-    const script = document.createElement('script');
-    script.setAttribute('type', 'application/ld+json');
-    script.textContent = `
-    {
-      "@context": "https://schema.org/", 
-      "@type": "BreadcrumbList", 
-      "itemListElement": [{
-        "@type": "ListItem", 
-        "position": 1, 
-        "name": "home",
-        "item": "https://ashish221306.github.io"  
-      }${bdschemaitem}]
-    }
-    `;
-    document.head.appendChild(script);
-  
-  </script>
+  </div>
 
 
 
