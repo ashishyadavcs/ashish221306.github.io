@@ -1,5 +1,5 @@
 
-    const host=window.location.host;
+    const host='https://ashish221306.github.io';
     const currenturl=window.location.pathname;
     const patharray =currenturl.split('/').filter(function (el) {return el != "";});
     var bdschemaitem='';
