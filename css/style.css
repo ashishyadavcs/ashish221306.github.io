@@ -92,7 +92,7 @@ nav {
         padding: 0 12px;
     }
 }
-
+.wrapper{display: flex;}
 .footerupbg svg {
     stroke: transparent;
     stroke-width: 0px;
