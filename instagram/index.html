@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var token = 'your access token',
+            hashtag = 'wordcamprussia2015', // hashtag without # symbol
+            num_photos = 4;
+
+        $.ajax({
+            url: 'https://api.instagram.com/v1/tags/' + hashtag + '/media/recent',
+            dataType: 'jsonp',
+            type: 'GET',
+            data: { access_token: token, count: num_photos },
+            success: function (data) {
+                console.log(data);
+                for (x in data.data) {
+                    $('ul').append('<li><img src="' + data.data[x].images.standard_resolution.url + '"></li>');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    </script>
+</body>
+
+</html>

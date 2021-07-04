@@ -1,0 +1,8 @@
+.blogpost{
+    grid-template-columns: auto;
+}
+.post .image{
+    display: flex;
+    justify-content: center;
+    
+}
