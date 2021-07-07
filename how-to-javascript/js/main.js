@@ -63,6 +63,8 @@ script.textContent = `
 document.head.appendChild(script);
 
 
+$(document.body).append('<div class="footer"></a>')
+$('.footer').load('./footer.html')
 
 
 
