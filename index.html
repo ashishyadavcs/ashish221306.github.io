@@ -46,6 +46,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                <button onclick="mobiles()">share on mobi</button>
                 <h3 style="font-size: 20px;">subscribe youtube channel</h3>
                 <div class="youtube ">
                     <script src="https://apis.google.com/js/platform.js"></script>
@@ -89,9 +90,24 @@
       <meta itemprop="priceCurrency" content="USD">
     </div>
   </div>
+ 
 <footer>
     <div ng-include="'footer.html'"></div>
 </footer>
-
+<script>
+    function mobiles(){
+        console.log('clicked')
+     if (navigator.share) {
+         console.log('sio')
+navigator.share({
+ title: 'web.dev',
+ text: 'Check out web.dev.',
+ url: 'https://web.dev/',
+})
+ .then(() => console.log('Successful share'))
+ .catch((error) => console.log('Error sharing', error));
+}
+    }
+ </script>
 
 </html>
