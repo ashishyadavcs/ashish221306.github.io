@@ -12,7 +12,7 @@ body, html {
 
 /*custom scrollbar.........................................*/
 
-::-webkit-scrollbar {
+:root::-webkit-scrollbar {
     width: 6px;
 }
 
@@ -93,7 +93,7 @@ nav {
     border: none;
     outline: none;
 }
-
+                                                   
 /* footer...........................................................................*/
 
 footer {
@@ -302,3 +302,30 @@ ul#mobile-demo {
 }
 
 /*sidenav bottom*/
+
+
+
+#share{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: transparent;
+    outline: none;
+    border: none;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    width: 70px;
+    color: #fff;
+    background: brown;
+    border-radius:50% ;
+    z-index: 2;
+}
+@media screen and (max-width:768px) {
+    #share{
+        height: 50px;
+        width: 50px;
+    }
+}
