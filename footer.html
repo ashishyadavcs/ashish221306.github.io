@@ -1,6 +1,10 @@
 <!--footer-->
-<button id="share">
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+<button id="share" class="share">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z">
+    </path>
+  </svg>
 </button>
 <div class="container-fluid">
 
@@ -116,35 +120,30 @@
     $('.modal').modal();
     $('footer .modal-content ul li a').prepend('<span style="margin-right:10px" class="fa fa-hand-o-right"></span>')
   });
-</script>
-
-<script>
-  let canonical = window.location.href;
-  document.head.append( `
-<link rel="" href="${canonical}"/>
-
-<meta name="robots" content="index, follow, all" />
-    <meta http-equiv=”content-language” content=”en”>
-    <meta name="geo.placename" content="United States" />
-    <meta name="geo.region" content="usa" />
-    <meta name="revisit-after" content="3 days">
-    
-`);
-
-document.getElementById('#share').addEventListener('click',()=>{
-  let urll=window.location.href;
-  let linktext=document.head.title;
+  document.querySelector('.share').addEventListener('click', () => {
+    var urll = window.location.href;
+  var  whatsappshare = `https://web.whatsapp.com/send?text=${urll}`
+  var linktext = document.head.title;
   console.log(linktext);
+  
   if (navigator.share) {
-          navigator.share({
-            title: 'Ashishtech',
-            text: linktext,
-            url: urll,
-          })
-            .then(() => console.log('Successful share'))
-            .catch((error) => console.log('Error sharing', error));
-        } else {
-          
-        }
-})
+    navigator.share({
+      title: 'Ashishtech',
+      text: linktext,
+      url: urll,
+    })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  } else {
+    var left = (screen.width / 2) - (800 / 2);
+    var top = (screen.height / 2) - (600 / 2);
+   
+      
+      window.open(whatsappshare, 'popup', `width=800,height=600,top=${top},left=${left}`); return false;
+     
+  
+  }
+  })
+
 </script>
+
