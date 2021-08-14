@@ -240,7 +240,7 @@ ul#mobile-demo {
 
 #mobile-demo li:not(:first-child):hover {
     background: rgba(218, 216, 233, 0.28);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 #mobile-demo li:first-child {
