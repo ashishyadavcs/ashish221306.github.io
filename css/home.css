@@ -5,7 +5,13 @@
     border-radius: 0 0 170px 0;
     position: relative;
 }
-
+.subscribe{
+    width: max-content;
+    height: min-content;
+    background: linear-gradient(rgb(255, 0, 0),#fff);
+}
+.subscribe h3{line-height: 1.5!important;margin: 0;color: #f1f1f1;font-weight: bold;}
+.subscribe img{border-radius: 10px!important;}
 .getstarted {
     
     margin-top: 30px;
@@ -132,7 +138,7 @@
 .services {
     background: transparent;
     margin: 0;
-    padding: 50px 20px;
+    
 }
 
 .services a {
@@ -156,6 +162,7 @@
 @media screen and (max-width:600px) {
     .service {
         margin: 4% -7%;
+       
     }
 }
 
@@ -214,4 +221,5 @@
         background: blue;
         color: cornsilk;
     }
+   
 }
