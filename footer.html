@@ -127,7 +127,11 @@
     $('.modal').modal();
     $('footer .modal-content ul li a').prepend('<span style="margin-right:10px" class="fa fa-hand-o-right"></span>')
   });
-  document.head.append('<meta name="theme-color" content="#000" />')
+let themecolor=document.createElement('meta');
+themecolor.name='theme-color';
+themecolor.content='#000';
+document.head.append(themecolor);
+
   document.querySelector('.share').addEventListener('click', () => {
     var urll = window.location.href;
   var  whatsappshare = `https://web.whatsapp.com/send?text=${urll}`
