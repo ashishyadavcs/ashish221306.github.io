@@ -2,7 +2,7 @@
     "name":"Ashishtech",
     "short_name":"ashishtech",
     "start_url":".",
-    "background_color":"#6dcdb1",
+    "background_color":"#000",
     "theme_color":"#000",
     "display":"standalone",
     "icons":[
@@ -15,6 +15,14 @@
             "src":"images/logo512.png",
             "sizes":"512x512",
             "type":"image/png"
+            
+        },
+        {
+            "src":"images/logo512.png",
+            "sizes":"512x512",
+            "type":"image/png",
+            "purpose": "any maskable"
         }
+
     ]
 }
