@@ -134,7 +134,12 @@ document.head.append(themecolor);
 
   document.querySelector('.share').addEventListener('click', () => {
     var urll = window.location.href;
-  var  whatsappshare = `https://web.whatsapp.com/send?text=${urll}`
+  var  whatsappshare ;
+  if(window.innerWidth>800){
+    whatsappshare=`https://web.whatsapp.com/send?text=${urll}`
+  }else{
+    whatsappshare=`https://api.whatsapp.com/send?text=${urll}`
+  }
   var linktext = document.head.title;
   console.log(linktext);
   
