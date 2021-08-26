@@ -1,0 +1,84 @@
+h4{letter-spacing: 1px;}
+.Accordion {
+padding: 2rem 4rem;
+}
+.Accordion__tabs {
+list-style-type: decimal;
+color: aqua;
+
+}
+p strong{
+    color: aqua;
+    background: rgba(0, 0, 0, 0.123);
+    padding: 3px;
+    border-radius: 4px;
+    text-decoration: underline;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+p strong a{color: aqua;}
+.Accordion__tab {
+ width: 100%;
+}
+.Accordion__tab__headline {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 1px solid rgba(248, 248, 248, 0.5);
+ transition: 0.2s ease all;
+ padding: 20px 15px;
+ cursor: pointer;
+ font-weight: 400;
+}
+.Accordion__tab__headline:hover {
+ background-color: rgba(0, 0, 0, 0.123)}
+.Accordion__tab__headline > h4 {
+ user-select: none;
+margin: 0;
+ color: #ddd;
+}
+.Accordion__tab__headline .icon {
+ display: inline-block;
+ width: 22px;
+ height: 22px;
+ border: 1px solid;
+ color: #000;
+ border-radius: 22px;
+ position: relative;
+}
+.Accordion__tab__headline .icon::before {
+ display: block;
+ position: absolute;
+ content: "";
+ top: 10px;
+ left: 6px;
+ width: 10px;
+ height: 2px;
+ background: currentColor;
+}
+.Accordion__tab__headline .icon::after {
+ display: block;
+ position: absolute;
+ content: "";
+ top: 6px;
+ left: 10px;
+ width: 2px;
+ height: 10px;
+ background: currentColor;
+ transition: 0.2s ease all;
+}
+.Accordion__tab__content {
+ overflow: hidden;
+ padding: 0px 15px;
+ box-sizing: border-box;
+ height: 100%;
+ color: #ddd;
+ max-height: 0;
+ transition: 0.4s ease all;
+}
+.Accordion__tab__content p{line-height: 1.5;}
+.Accordion__tab--open .Accordion__tab__headline .icon::after {
+ transform: scaleY(0);
+}
+
+.Accordion__tab--open .Accordion__tab__content{padding: 10px 15px;}
