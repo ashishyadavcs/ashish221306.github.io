@@ -106,7 +106,7 @@
             <li><a href="vocabulary.html">Vocabulary</a></li>
             <li><a class="active" href="uses.html">uses</a></li>
             <li>
-              <a href="">Tense <i class="material-icons">play_arrow</i></a>
+              <button href="#">Tense <i class="material-icons">play_arrow</i></button>
             </li>
             <li>
               <ul class="drop">
@@ -261,7 +261,8 @@
       document.querySelectorAll(".leftnav a").forEach((a) => {
         let link = a.getAttribute("href").split("/").pop();
         link = window.location.host + "/english/" + link;
-        a.setAttribute("href", link);
+        a.setAttribute('href',`https://${link}`)
+        
       });
 
       $(".wrapper .left ul li").click(function () {
